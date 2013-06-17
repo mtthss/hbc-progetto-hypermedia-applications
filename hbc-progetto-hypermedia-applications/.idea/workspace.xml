@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="980d6e0e-efd5-4bf8-9b2f-767570a67779" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/User," />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_id," />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130617122450_create_regions.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130617122610_create_counties.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130617123007_create_product_types.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130617123017_create_shop_types.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/county.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/home_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/product_type.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/region.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/shop_type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb" afterPath="$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/User," afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/friend_id," afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hbc-project.iws" />
@@ -39,7 +26,7 @@
     <file path="/20130610172709_create_products_suggested_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370896896733" ignored="false" />
     <file path="/20130610163527_create_designers_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895035740" ignored="false" />
     <file path="/temp.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895127138" ignored="false" />
-    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371472310983" ignored="false" />
+    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371472998774" ignored="false" />
     <file path="/20130610161725_create_customer_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471576781" ignored="false" />
     <file path="/20130610161703_create_event_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471548935" ignored="false" />
     <file path="/20130610150347_create_product_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471392244" ignored="false" />
@@ -76,7 +63,7 @@
       <file leaf-file-name="county.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/county.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="20" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
+            <state line="4" column="3" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,7 +72,7 @@
       <file leaf-file-name="20130610161703_create_event_images.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="17" selection-start="118" selection-end="118" vertical-scroll-proportion="0.11670481">
+            <state line="3" column="17" selection-start="118" selection-end="118" vertical-scroll-proportion="0.09426987">
               <folding />
             </state>
           </provider>
@@ -132,7 +119,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-6" />
     <option name="width" value="1378" />
-    <option name="height" value="640" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -483,11 +470,15 @@
       <created>1371472367160</created>
       <updated>1371472367160</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003">
+      <created>1371473237105</created>
+      <updated>1371473237105</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1378" height="640" extended-state="6" />
+    <frame x="-6" y="0" width="1378" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -571,13 +562,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/shop.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/event_image.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="14" selection-start="92" selection-end="92" vertical-scroll-proportion="0.18438178">
@@ -671,14 +655,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/county.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
+        <state line="4" column="3" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="118" selection-end="118" vertical-scroll-proportion="0.11670481">
+        <state line="3" column="17" selection-start="118" selection-end="118" vertical-scroll-proportion="0.09426987">
           <folding />
         </state>
       </provider>
