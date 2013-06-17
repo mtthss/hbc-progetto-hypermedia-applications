@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
   end
 
   create_table "customer_images", :force => true do |t|
+    t.string   "image_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
   add_index "designers_products", ["designer_id", "product_id"], :name => "index_designers_products_on_designer_id_and_product_id"
 
   create_table "event_images", :force => true do |t|
+    t.string   "image_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -70,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
   add_index "events_products", ["event_id", "product_id"], :name => "index_events_products_on_event_id_and_product_id"
 
   create_table "product_images", :force => true do |t|
+    t.string   "image_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -105,15 +108,14 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
 
   create_table "shops", :force => true do |t|
     t.string   "name"
-    t.text     "description"
     t.string   "type"
     t.string   "address"
     t.string   "tel"
     t.string   "email"
     t.string   "regione"
     t.string   "provincia"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
