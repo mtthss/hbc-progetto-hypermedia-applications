@@ -1,45 +1,4 @@
 HbcProject::Application.routes.draw do
-  get "products/list"
-
-  get "products/show"
-
-  get "products/show_datasheet"
-
-  get "products/show_drawing"
-
-  get "products/new"
-
-  get "products/create"
-
-  get "products/edit"
-
-  get "products/update"
-
-  get "products/delete"
-
-  get "products/destroy"
-
-  get "product/list"
-
-  get "product/show"
-
-  get "product/show_datasheet"
-
-  get "product/show_drawing"
-
-  get "product/new"
-
-  get "product/create"
-
-  get "product/edit"
-
-  get "product/update"
-
-  get "product/delete"
-
-  get "product/destroy"
-
-  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -97,4 +56,24 @@ HbcProject::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+     resources :designers, :only => [:index, :show, :new, :create] do
+       member do
+         get 'products'
+       end
+     end
+
+     resources :events, :only => [:index, :show, :new, :create] do
+       member do
+         get 'exposed_products'
+       end
+     end
+
+     resources :product_types, :only => [:index, :new, :create] do
+       member do
+         get 'products'
+       end
+     end
+
+
 end
