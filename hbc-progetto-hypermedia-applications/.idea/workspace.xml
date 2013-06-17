@@ -2,35 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="980d6e0e-efd5-4bf8-9b2f-767570a67779" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/test.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610141434_create_customers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610141924_create_events.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610142731_create_designers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610150347_create_product_images.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610152416_create_products.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610154458_create_shops.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610154844_create_services.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610161725_create_customer_images.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610162446_create_events_products_join.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610163527_create_designers_products_join.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610164516_create_products_services_join.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130610172709_create_products_suggested_products_join.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130612092034_create_admins.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/admin.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/customer.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/customer_image.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/designer.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/event.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/event_image.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/product_image.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/service.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/shop.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/prova_controller.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130610150347_create_product_images.rb" afterPath="$PROJECT_DIR$/db/migrate/20130610150347_create_product_images.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130610154458_create_shops.rb" afterPath="$PROJECT_DIR$/db/migrate/20130610154458_create_shops.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb" afterPath="$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130610161725_create_customer_images.rb" afterPath="$PROJECT_DIR$/db/migrate/20130610161725_create_customer_images.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/customer_image.rb" afterPath="$PROJECT_DIR$/app/models/customer_image.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event_image.rb" afterPath="$PROJECT_DIR$/app/models/event_image.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product_image.rb" afterPath="$PROJECT_DIR$/app/models/product_image.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/shop.rb" afterPath="$PROJECT_DIR$/app/models/shop.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hbc-project.iws" />
@@ -39,7 +22,7 @@
     <file path="/20130610135853_create_events.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370873311677" ignored="false" />
     <file path="/product_image.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370878071578" ignored="false" />
     <file path="/product.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895827404" ignored="false" />
-    <file path="/event_image.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370881067147" ignored="false" />
+    <file path="/event_image.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371465849065" ignored="false" />
     <file path="/customer_image.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370881084367" ignored="false" />
     <file path="/customer.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370881111499" ignored="false" />
     <file path="/20130610162446_create_products_event_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370882624323" ignored="false" />
@@ -53,7 +36,12 @@
     <file path="/20130610172709_create_products_suggested_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370896896733" ignored="false" />
     <file path="/20130610163527_create_designers_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895035740" ignored="false" />
     <file path="/temp.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895127138" ignored="false" />
-    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371030018187" ignored="false" />
+    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371030266933" ignored="false" />
+    <file path="/20130610161725_create_customer_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471576781" ignored="false" />
+    <file path="/20130610161703_create_event_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471548935" ignored="false" />
+    <file path="/20130610150347_create_product_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471392244" ignored="false" />
+    <file path="/region.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371472071733" ignored="false" />
+    <file path="/county.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371472092663" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,19 +61,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <file leaf-file-name="20130617123007_create_product_types.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130617123007_create_product_types.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="24" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/admin.rb">
+      <file leaf-file-name="20130617123017_create_shop_types.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130617123017_create_shop_types.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="34" selection-start="67" selection-end="67" vertical-scroll-proportion="0.086440675">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,29 +89,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/customer_image.rb" />
-        <option value="$PROJECT_DIR$/app/models/customer.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130610163527_create_products_designers_join.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130610162446_create_products_event_join.rb" />
-        <option value="$PROJECT_DIR$/app/models/shop.rb" />
-        <option value="$PROJECT_DIR$/app/models/service.rb" />
-        <option value="$PROJECT_DIR$/app/models/event.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130610162446_create_products_events_join.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130610164516_create_products_services_join.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130610164801_create_products_products_join.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130610172709_create_products_products_join.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130610162446_create_events_products_join.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130610163527_create_designers_products_join.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130610152416_create_products.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130610172709_create_products_suggested_products_join.rb" />
+        <option value="$PROJECT_DIR$/app/models/shop.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130610154458_create_shops.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/product_helper.rb" />
+        <option value="$PROJECT_DIR$/app/models/event_image.rb" />
+        <option value="$PROJECT_DIR$/app/models/customer_image.rb" />
+        <option value="$PROJECT_DIR$/app/models/product_image.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130610150347_create_product_images.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130610161725_create_customer_images.rb" />
+        <option value="$PROJECT_DIR$/app/models/region.rb" />
+        <option value="$PROJECT_DIR$/app/models/county.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-6" />
     <option name="width" value="1378" />
-    <option name="height" value="744" />
+    <option name="height" value="640" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -152,6 +140,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,111 +149,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,6 +282,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
@@ -551,27 +444,32 @@
       <created>1370863902023</created>
       <updated>1370863902023</updated>
     </task>
+    <task id="LOCAL-00001">
+      <created>1371030289145</created>
+      <updated>1371030289145</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1378" height="744" extended-state="6" />
+    <frame x="-6" y="0" width="1378" height="640" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28939393" sideWeight="0.6704362" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29848486" sideWeight="0.6704362" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3257443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -638,94 +536,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610161725_create_customer_images.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/service.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="71" selection-end="71" vertical-scroll-proportion="0.07798165" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/shop.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="68" selection-end="68" vertical-scroll-proportion="0.08037825" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610154844_create_services.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/event_image.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="12" selection-start="59" selection-end="59" vertical-scroll-proportion="0.04735376" />
+        <state line="5" column="14" selection-start="92" selection-end="92" vertical-scroll-proportion="0.18438178">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610162446_create_events_products_join.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/customer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="56" selection-start="241" selection-end="241" vertical-scroll-proportion="0.20647773" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610164516_create_products_services_join.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/customer_image.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="61" selection-end="310" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610152416_create_products.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="196" selection-end="234" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610172709_create_products_suggested_products_join.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" />
+        <state line="1" column="28" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130610150347_create_product_images.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="69" selection-start="412" selection-end="412" vertical-scroll-proportion="0.29882812">
+        <state line="3" column="27" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130610161703_create_event_images.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/designer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="84" selection-end="84" vertical-scroll-proportion="0.13212435">
+        <state line="4" column="16" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610141924_create_events.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130610161725_create_customer_images.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="102" selection-start="182" selection-end="182" vertical-scroll-proportion="0.3523316">
+        <state line="1" column="28" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130610163527_create_designers_products_join.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130612092034_create_admins.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130617122610_create_counties.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="24" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/admin.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130617122450_create_regions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="34" selection-start="67" selection-end="67" vertical-scroll-proportion="0.086440675">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/county.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="20" selection-start="92" selection-end="92" vertical-scroll-proportion="0.14750542">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/region.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="20" selection-start="79" selection-end="79" vertical-scroll-proportion="0.11062907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.92410713">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130617123017_create_shop_types.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130617123007_create_product_types.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

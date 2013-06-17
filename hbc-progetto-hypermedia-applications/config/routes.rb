@@ -1,4 +1,46 @@
 HbcProject::Application.routes.draw do
+  get "products/list"
+
+  get "products/show"
+
+  get "products/show_datasheet"
+
+  get "products/show_drawing"
+
+  get "products/new"
+
+  get "products/create"
+
+  get "products/edit"
+
+  get "products/update"
+
+  get "products/delete"
+
+  get "products/destroy"
+
+  get "product/list"
+
+  get "product/show"
+
+  get "product/show_datasheet"
+
+  get "product/show_drawing"
+
+  get "product/new"
+
+  get "product/create"
+
+  get "product/edit"
+
+  get "product/update"
+
+  get "product/delete"
+
+  get "product/destroy"
+
+  get "home/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
