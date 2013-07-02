@@ -1,2 +1,22 @@
-<h1>Designers#index</h1>
+
+<% if @top %>
+<h1>Top Designers#index</h1>
 <p>Find me in app/views/designers/index.html.erb</p>
+<% else  %>
+<h1>Designers' List#index</h1>
+<p>Find me in app/views/designers/index.html.erb</p>
+<% end  %>
+
+
+<table>
+  <% @designers.each do |designer| %>
+      <tr>
+        <td>
+          <%= designer.name %>
+          <%= link_to designer_path(designer) do%>
+              <%= image_tag("/designers/#{designer.designer_url}") %>
+          <% end %>
+        </td>
+      </tr>
+  <% end  %>
+</table>
