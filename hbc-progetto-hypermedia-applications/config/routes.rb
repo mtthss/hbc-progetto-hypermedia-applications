@@ -69,11 +69,20 @@ HbcProject::Application.routes.draw do
        end
      end
 
-     resources :product_types, :only => [:index, :new, :create] do
+     resources :product_types, :only => [:index, :new, :create]
+
+     resources :product_types, :only => [:index] do
        member do
-         get 'products'
+         get 'shops_by_location'
        end
      end
 
+     resources :products, :only => [:index, :show, :new, :create] do
+       member do
+         get 'datasheet'
+         get 'shops_for_this_product'
+       end
+     end
 
+     root :to => 'home#index'
 end
