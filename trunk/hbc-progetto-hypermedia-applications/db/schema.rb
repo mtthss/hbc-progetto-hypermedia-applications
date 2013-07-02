@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612092034) do
+ActiveRecord::Schema.define(:version => 20130702122100) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -20,10 +20,18 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "customer_images", :force => true do |t|
-    t.string   "image_url"
+  create_table "counties", :force => true do |t|
+    t.string   "name"
+    t.integer  "region_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "customer_images", :force => true do |t|
+    t.integer  "customer_id"
+    t.string   "image_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "customers", :force => true do |t|
@@ -50,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
   add_index "designers_products", ["designer_id", "product_id"], :name => "index_designers_products_on_designer_id_and_product_id"
 
   create_table "event_images", :force => true do |t|
+    t.integer  "event_id"
     t.string   "image_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -60,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
     t.date     "date"
     t.string   "location"
     t.text     "description"
+    t.string   "image_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -72,7 +82,14 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
   add_index "events_products", ["event_id", "product_id"], :name => "index_events_products_on_event_id_and_product_id"
 
   create_table "product_images", :force => true do |t|
+    t.integer  "product_id"
     t.string   "image_url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "product_types", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -80,8 +97,11 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.date     "on_market_on"
+    t.string   "type"
     t.boolean  "must_have"
     t.text     "description"
+    t.string   "image_url"
+    t.text     "datasheet"
     t.integer  "suggested_product_id"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
@@ -94,9 +114,22 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
 
   add_index "products_services", ["product_id", "service_id"], :name => "index_products_services_on_product_id_and_service_id"
 
+  create_table "products_shops", :id => false, :force => true do |t|
+    t.integer "shop_id"
+    t.integer "product_id"
+  end
+
+  add_index "products_shops", ["product_id", "shop_id"], :name => "index_products_shops_on_product_id_and_shop_id"
+
   create_table "products_suggested_products", :id => false, :force => true do |t|
     t.integer "product_id"
     t.integer "suggested_product_id"
+  end
+
+  create_table "regions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "services", :force => true do |t|
@@ -104,6 +137,12 @@ ActiveRecord::Schema.define(:version => 20130612092034) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "shop_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "shops", :force => true do |t|

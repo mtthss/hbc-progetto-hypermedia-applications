@@ -4,8 +4,11 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :name
       t.date :on_market_on
+      t.string :type
       t.boolean :must_have
       t.text :description
+      t.string :image_url
+      t.text :datasheet
       t.integer :suggested_product_id
       t.timestamps
     end

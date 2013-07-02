@@ -1,4 +1,7 @@
 class ServicesController < ApplicationController
+
+  #controller not implemented because is not required for the scenarios
+
   def index
   end
 
