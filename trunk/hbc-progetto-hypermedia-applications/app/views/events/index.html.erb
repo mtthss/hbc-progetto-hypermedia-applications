@@ -1,2 +1,15 @@
-<h1>Events#index</h1>
+<h1>All events</h1>
+
+<div class="gridList">
+  <% @events.each do |events| %>
+      <div class="gridBox">
+        <%= event.name %>
+        <%= link_to event_path(event) do%>
+            <%= image_tag("/events/#{event.image_url}") %>
+        <% end %>
+      </div>
+  <% end  %>
+</div>
+
+
 <p>Find me in app/views/events/index.html.erb</p>

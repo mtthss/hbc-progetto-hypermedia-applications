@@ -84,5 +84,6 @@ HbcProject::Application.routes.draw do
        end
      end
 
+     match 'home' => 'home#index', :via => :get
      root :to => 'home#index'
 end

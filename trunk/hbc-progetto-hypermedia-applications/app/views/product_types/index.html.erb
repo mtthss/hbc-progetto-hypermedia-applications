@@ -1,2 +1,17 @@
-<h1>ProductTypes#index</h1>
+<h1>Product Types</h1>
+<div class="gridList">
+  <% @product_types.each do |product_type| %>
+      <div class="gridBox">
+        <%= product_type.name %>
+        <%= link_to product_type_path(product_type) do%>
+            <%= image_tag("/product_types/#{product_type.image_url}") %>
+        <% end %>
+      </div>
+  <% end  %>
+</div>
+
+
+
+
+
 <p>Find me in app/views/product_types/index.html.erb</p>

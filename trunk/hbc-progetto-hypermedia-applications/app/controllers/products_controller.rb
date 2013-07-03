@@ -2,12 +2,16 @@ class ProductsController < ApplicationController
   def index
     if(params[:type])
       @products=Product.find(params[:type])
+      @title=Product_type.find(params[:type]).name
     elsif(params[:must])
       @products=Product.where(:must_have=>true)
+      @title="Must have"
     elsif(params[:new])
       @products=Product.order('on_market_on DESC').limit(9)
+      @title= "New"
     else
       @products=Product.all
+      @title="All"
     end
   end
 
