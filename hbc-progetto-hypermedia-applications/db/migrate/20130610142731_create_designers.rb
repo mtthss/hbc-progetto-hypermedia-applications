@@ -3,7 +3,7 @@ class CreateDesigners < ActiveRecord::Migration
     create_table :designers do |t|
       t.string :name
       t.text :bio
-      t.string :image
+      t.string :image_url
       t.boolean :top
 
       t.timestamps

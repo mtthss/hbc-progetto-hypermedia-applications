@@ -1,2 +1,13 @@
-<h1>Products#index</h1>
+<h1><%= @title %> products</h1>
+
+    <div class="gridList">
+  <% @products.each do |product| %>
+       <div class="gridBox">
+       <%= product.name %>
+          <%= link_to product_path(product) do%>
+              <%= image_tag("/products/#{product.image_url}") %>
+          <% end %>
+          </div>
+  <% end  %>
+    </div>
 <p>Find me in app/views/products/index.html.erb</p>
