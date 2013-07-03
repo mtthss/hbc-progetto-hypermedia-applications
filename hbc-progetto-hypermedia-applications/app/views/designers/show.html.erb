@@ -1,2 +1,7 @@
-<h1>Designers#show</h1>
-<p>Find me in app/views/designers/show.html.erb</p>
+<h1><%= @designer.name %> </h1>
+
+<p><%= @designer.bio %></p>
+
+<%= image_tag("/designers/#{@designer.image_url}") %>
+
+<%= link_to "Look at #{@designer.name}'s products", products_designer_path(@designer) %>

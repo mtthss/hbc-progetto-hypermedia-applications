@@ -19,9 +19,7 @@
   <div id="outer">
     <div id="header">
       <div id="logo">
-        <h1>
-          <%= image_tag("/ritagliato.jpg") %>
-        </h1>
+        <%= link_to image_tag("/ritagliato.jpg", :border=>0), root_path %>
       </div>
       <div id="nav">
         <ul>
@@ -29,13 +27,13 @@
             <%= link_to 'Home', root_path %>
           </li>
           <li>
-            <a href="#">Company</a>
+            <%= link_to 'Company', company_path %>
           </li>
           <li>
-            <a href="#">Contacts</a>
+            <%= link_to 'Contacts', contacts_path %>
           </li>
           <li>
-            <a href="#">All customers</a>
+            <%= link_to 'Customers', all_customers_path %>
           </li>
           <li class="last">
             <a href="#">Log Admin</a>
@@ -50,32 +48,23 @@
 
         <ul id="container">
           <li>
-            <a href="#">PRODUCTS</a>
-            <a href="#">Product types</a>
-            <a href="#">Must have</a>
-            <a href="#">What's new</a>
-            <a href="#">All product</a>
+            <a> PRODUCTS </a>
+            <%= link_to 'Products type', product_types_path %>
+            <%= link_to 'Must have', products_path(:must=>true) %>
+            <%= link_to 'What\'s new', products_path(:new=>true) %>
+            <%= link_to 'All product', products_path %>
+
           </li>
-          <li>
-            <a href="#">DESIGNERS</a>
-            <a href="#">Sub #21</a>
-            <a href="#">Sub #22</a>
-            <a href="#">Sub #23</a>
-            <a href="#">Sub #24</a>
+          <li id=container_designers>
+            <a> DESIGNERS</a>
+            <%= link_to 'Top designers', designers_path(:top=>true) %>
+            <%= link_to 'All designers', designers_path %>
           </li>
-          <li>
-            <a href="#">EVENTS</a>
-            <a href="#">Sub #31</a>
-            <a href="#">Sub #32</a>
-            <a href="#">Sub #33</a>
-            <a href="#">Sub #34</a>
+          <li id=container_without_sublist>
+            <%= link_to 'EVENTS', events_path %>
           </li>
-          <li>
-            <a href="#">SHOPS</a>
-            <a href="#">Sub #41</a>
-            <a href="#">Sub #42</a>
-            <a href="#">Sub #43</a>
-            <a href="#">Sub #44</a>
+          <li id=container_without_sublist>
+            <%= link_to 'SHOPS', shopfinders_path %>
           </li>
         </ul>
 
@@ -83,10 +72,8 @@
       <div id="content">
         <%= yield %>
       </div>
-
-      <div id="copyright">
-        HBCsite | Design by HesselBuzzoniCalabrese(HBC)
-      </div>
     </div>
+  </div>
+ </div>
 </body>
 </html>

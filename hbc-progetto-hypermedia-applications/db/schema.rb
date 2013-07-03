@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
   create_table "designers", :force => true do |t|
     t.string   "name"
     t.text     "bio"
-    t.string   "image"
+    t.string   "image_url"
     t.boolean  "top"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
 
   create_table "product_types", :force => true do |t|
     t.string   "name"
+    t.string   "image_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -151,8 +152,8 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
     t.string   "address"
     t.string   "tel"
     t.string   "email"
-    t.string   "regione"
-    t.string   "provincia"
+    t.string   "region"
+    t.string   "county"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
