@@ -1,7 +1,7 @@
 class ShopfindersController < ApplicationController
   def index
       @counties=County.all
-      @region=Region.all
+      @country=Country.all
   end
 
   def shops_by_location
