@@ -1,5 +1,5 @@
 class County < ActiveRecord::Base
-  attr_accessible :name, :region
+  attr_accessible :name, :country
 
-  belongs_to :region
+  belongs_to :country
 end

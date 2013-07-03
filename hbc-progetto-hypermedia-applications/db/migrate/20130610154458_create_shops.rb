@@ -6,7 +6,7 @@ class CreateShops < ActiveRecord::Migration
       t.string :address
       t.string :tel
       t.string :email
-      t.string :region
+      t.string :country
       t.string :county
 
       t.timestamps
