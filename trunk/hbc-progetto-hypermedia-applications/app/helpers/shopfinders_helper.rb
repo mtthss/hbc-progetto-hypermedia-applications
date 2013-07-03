@@ -1,0 +1,2 @@
+module ShopfindersHelper
+end
