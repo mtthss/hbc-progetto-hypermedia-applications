@@ -1,0 +1,15 @@
+<h1>Shop for <%= @product.name%></h1>
+
+<div class="gridList">
+  <% @shops.each do |shop| %>
+      <div class="gridBox">
+        <p><%= shop.name%></p><br>
+        <p><%= shop.address%></p><br>
+        <p><%= shop.county%></p><br>
+        <p><%= shop.region%></p><br>
+        <p><%= shop.tel%></p><br>
+        <p><%= shop.email%></p><br>
+        <br><br>
+      </div>
+  <% end  %>
+</div>
