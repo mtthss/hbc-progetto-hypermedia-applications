@@ -1,11 +1,4 @@
-
-<% if @top %>
-<h1>Top Designers</h1>
-<% else  %>
-<h1>Designers' List</h1>
-
-<% end  %>
-
+<h1><%= @title %> designers</h1>
 
 <table>
   <% @designers.each do |designer| %>

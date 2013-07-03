@@ -1,9 +1,11 @@
 class DesignersController < ApplicationController
   def index
     if(params[:top])
-      @designers=Designer.find(params[:top])
+      @designers=Designer.where(:top=>true)
+      @title="Top"
     else
       @designers=Designer.all
+      @title="All"
     end
   end
 
@@ -19,7 +21,7 @@ class DesignersController < ApplicationController
   end
 
   def products
-    @designer=Designer.find(params[:id])
+    @designer=Designer.find(params[:designer_id])
     @products=@designer.products.order('name ASC')
   end
 end
