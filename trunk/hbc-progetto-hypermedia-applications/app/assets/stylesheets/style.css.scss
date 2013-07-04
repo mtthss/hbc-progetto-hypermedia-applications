@@ -30,19 +30,6 @@ h2,h3,h4 {
 	color: #ffffff;
 }
 
-img {
-     width: 100%;
-}
-
-img.left {
-	float: left;
-	margin: 5px 20px 20px 0;
-}
-
-img.top {
-	margin: 5px 0 20px 0;
-}
-
 p {
 	margin-bottom: 1.5em;
 }
@@ -54,37 +41,10 @@ ul {img {
 
 	margin-bottom: 1.5em;
 }
-
-.imageList {
-	list-style: none;
-}
-
-.imageList li {
-	clear: both;
-}
 	
 #bg {
 	background: url('/shadow.png') top left repeat-x;
 	padding: 60px 0 80px 0;
-}
-
-#banner {
-	position: relative;
-	padding: 30px;
-	height: 200px;
-	width: 1120px;
-	margin: 0px 0 0 0;
-	background: #ffffff;
-}
-
-#box1 {
-	margin: 0px 0 25px 0;
-	overflow: hidden;
-}
-
-#box2 {
-	margin: 0px 0 25px 0;
-	overflow: hidden;
 }
 
 #sidebar {
@@ -106,52 +66,6 @@ ul {img {
 	margin: 0px 0 0 265px;
 	padding: 30px;
 	background: #ffffff;
-}
-
-
-#footer {
-	position: relative;
-	padding: 30px;
-	width: 1120px;
-	background: #3ca9cd;
-	color: #addbea;
-}
-
-#footer a {
-	color: #e2f2f8;
-}
-
-#footer h2, #footer h3, #footer h4 {
-	color: #ffffff;
-}
-
-#footer ul {
-	list-style: none;
-	margin-bottom: 0;
-}
-
-#footer p {
-	margin-bottom: 0;
-}
-
-#footer ul li {
-	padding: 10px 0 10px 0;
-	border-top: dashed 1px #6dbfda;
-}
-
-#footer ul li.first {
-	padding-top: 0;
-	border-top: 0;
-}
-
-#footerContent {
-	width: 855px;
-	margin: 0px 0 0 265px;
-}
-
-#footerSidebar {
-	width: 180px;
-	float: left;
 }
 
 #header {
@@ -209,11 +123,6 @@ ul {img {
 	border-top: dashed 1px #bfbfbf;
 }
 
-#main ul li.first {
-	padding-top: 0;
-	border-top: 0;
-}
-
 #nav {
 	position: absolute;
 	left: 320px;
@@ -233,36 +142,30 @@ ul {img {
 	padding: 0.25em 1.1em 0.25em 1.1em;
 }
 
-#nav ul li.active {
-	background: #3CA9CD;
-}
-
 #nav li a {
-	text-decoration: none;
-	color: #d9dada;
+  float: left;
+  margin: 0 0.5em 0 0.5em;
+  padding: 0.25em 1.1em 0.25em 1.1em;
+  text-decoration: none;
+  color: #d9dada;
 }
 
-#nav ul li.active a {
-	color: #ffffff;
+
+#nav a:hover{
+  background: #3ca9cd;
+  color: #424545;
 }
+
+#nav ul li.active a{
+  background: #3ca9cd;
+  color: #424545;
+}
+
 	
 #outer {
 	position: relative;
 	width: 1180px;
 	margin: 0 auto;
-}
-
-#search input.button {
-	margin-left: 1em;
-	border: 0px;
-	color: #ffffff;
-	background: #d43535;
-	padding: 6px;
-}
-
-#search input.text {
-	border: dashed 1px #ffffff;
-	padding: 5px;
 }
 
 #sidebar {
