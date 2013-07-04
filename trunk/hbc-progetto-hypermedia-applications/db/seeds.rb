@@ -11,7 +11,7 @@
 Product.delete_all
 products = Product.create([{name: 'Arc', must_have: true,
                             description: 'Fantastic table oh my god', image_url: 'imagearc.jpg',
-                           datasheet: 'height 110 cm, width 100 cm'},
+                           tech_image_url: 'tech_imagearc.jpg',datasheet: 'height 110 cm, width 100 cm'},
                            {name: 'Less less', must_have: true,
                             description: 'Fantastic table', image_url: 'imagelessless.jpg',
                             datasheet: 'height 166 cm, width 100 cm'},
@@ -86,6 +86,12 @@ products[0].designers << Designer.find_by_name('Giorgio Armani')
 #JOIN TABLE EVENT_PRODUCTS
 products[0].events << Event.find_by_name('Salone del mobile 2013')
 products[0].events << Event.find_by_name('Expo 2015')
+
+#JOIN TABLE PRODUCTS_SUGGESTED_PRODUCTS
+products[0].suggested_products << Product.find_by_name('Biotab')
+products[0].suggested_products << Product.find_by_name('Less less')
+
+
 
 #RELATION PRODUCT_TYPE_PRODUCTS
 product_types[0].products << Product.where(:name => "Arc")
