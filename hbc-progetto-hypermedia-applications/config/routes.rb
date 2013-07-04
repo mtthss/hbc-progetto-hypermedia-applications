@@ -85,7 +85,7 @@ HbcProject::Application.routes.draw do
 
     resources :shopfinders, :only => [:index] do
       member do
-        get 'shops_by_location'
+        get 'shopsbylocation'
       end
     end
 

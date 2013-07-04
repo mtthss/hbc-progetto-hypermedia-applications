@@ -71,6 +71,14 @@ counties = County.create([
                           {name: 'Massachussets'}
                          ])
 
+#SHOPS
+Shop.delete_all
+shops = Shop.create([
+                        {address: "Milan, largo V alpini 15", email:"best.shop@mail.it",
+                         name:"HBC flagship store Milan", county: "Veneto", country: "Italy",
+                         tel:"02/567890", shop_type:"flagship store"}
+                    ])
+
 #JOIN TABLE DESIGNERS_PRODUCTS
 products[0].designers << Designer.find_by_name('Dante Alighieri')
 products[0].designers << Designer.find_by_name('Giorgio Armani')
