@@ -9,8 +9,4 @@ class ProductTypesController < ApplicationController
 
   def create
   end
-
-  def products
-    @product_type=ProductType.find(params[:id])
-  end
 end

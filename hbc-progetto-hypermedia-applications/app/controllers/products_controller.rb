@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    if(params[:product_type_id])
+    if(params[:type_of_product])
       @products=Product.find(params[:type_of_product])
       @title=Product_type.find(params[:type_of_product]).name
     elsif(params[:must])
