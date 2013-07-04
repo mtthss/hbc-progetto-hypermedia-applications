@@ -12035,3 +12035,130 @@ Served asset /menu.css - 304 Not Modified (0ms)
 
 Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 12:54:04 +0200
 Served asset /style.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-04 12:57:40 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 93ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 12:57:41 +0200
+Served asset /menu.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 12:57:41 +0200
+Served asset /style.css - 304 Not Modified (5ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 12:57:44 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered shopfinders/index.html.erb within layouts/application (32.1ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (undefined local variable or method `country' for #<#<Class:0xa536218>:0xa535b74>):
+    18:       <select name="mydropdown">
+    19: 
+    20:         <% @countries.each do |countries| %>
+    21:         <option value= <%=country.name%>>
+    22:           <%=country.name%>
+    23:         </option>
+    24:         <% end %>
+  app/views/shopfinders/index.html.erb:21:in `block in _app_views_shopfinders_index_html_erb___347717289_86616520'
+  app/views/shopfinders/index.html.erb:20:in `each'
+  app/views/shopfinders/index.html.erb:20:in `_app_views_shopfinders_index_html_erb___347717289_86616520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (117.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-04 13:11:00 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 136ms (Views: 134.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 13:11:00 +0200
+Served asset /style.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 13:11:00 +0200
+Served asset /menu.css - 304 Not Modified (5ms)
+
+
+Started GET "/designers?top=true" for 127.0.0.1 at 2013-07-04 13:11:04 +0200
+Processing by DesignersController#index as HTML
+  Parameters: {"top"=>"true"}
+  [1m[36mDesigner Load (0.4ms)[0m  [1mSELECT "designers".* FROM "designers" WHERE "designers"."top" = 't'[0m
+  Rendered designers/index.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 135ms (Views: 80.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 13:11:05 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 13:11:05 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/designers?top=true" for 127.0.0.1 at 2013-07-04 13:20:07 +0200
+Processing by DesignersController#index as HTML
+  Parameters: {"top"=>"true"}
+  [1m[35mDesigner Load (0.4ms)[0m  SELECT "designers".* FROM "designers" WHERE "designers"."top" = 't'
+  Rendered designers/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 13:20:07 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 13:20:07 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/designers?top=true" for 127.0.0.1 at 2013-07-04 13:20:16 +0200
+Processing by DesignersController#index as HTML
+  Parameters: {"top"=>"true"}
+  [1m[36mDesigner Load (1.4ms)[0m  [1mSELECT "designers".* FROM "designers" WHERE "designers"."top" = 't'[0m
+  Rendered designers/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 13:20:16 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 13:20:16 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 13:31:34 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[35mCountry Load (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered shopfinders/index.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (undefined local variable or method `country' for #<#<Class:0xaa3de3c>:0xaa3cdc0>):
+    18:       <select name="mydropdown">
+    19: 
+    20:         <% @countries.each do |countries| %>
+    21:         <option value= <%=country.name%>>
+    22:           <%=country.name%>
+    23:         </option>
+    24:         <% end %>
+  app/views/shopfinders/index.html.erb:21:in `block in _app_views_shopfinders_index_html_erb__931953040_89274670'
+  app/views/shopfinders/index.html.erb:20:in `each'
+  app/views/shopfinders/index.html.erb:20:in `_app_views_shopfinders_index_html_erb__931953040_89274670'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
