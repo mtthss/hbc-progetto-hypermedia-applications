@@ -3,24 +3,36 @@ class ShopfindersController < ApplicationController
 
   def index
 
-      if(params[:country])
-
-        @countries=Country.where('country= :country', {
+      if(params[:country]&&params[:county])
+        @countries=Country.all
+        @country_chosen=Country.find(params[:country])
+        @county_chosen=County.find(params[:county])
+        @counties=County.where('country_id= :country', {
             :country => params[:country]
         })
+        @shops=Shop.where('country= :country and county= :county', {
+            :country => @country_chosen.name,
+            :county => @county_chosen.name
+        })
 
-        @counties=County.where('country= :country', {
+      elsif(params[:country])
+
+        @countries=Country.all
+        @country_chosen=Country.find(params[:country])
+        @counties=County.where('country_id= :country', {
             :country => params[:country]
         })
 
       else
       @countries=Country.all
+      @country_chosen=nil
+      @counties=nil
       end
 
   end
 
 
-  def shops_by_location
+  def shopsbylocation
 
     @shops=Shop.where('country= :country and county= :county', {
         :country => params[:country],
