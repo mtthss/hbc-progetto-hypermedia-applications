@@ -1,10 +1,5 @@
 HbcProject::Application.routes.draw do
 
-  get "all_customers/show"
-
-  get "contacts/show"
-
-  get "company/show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -75,13 +70,9 @@ HbcProject::Application.routes.draw do
        end
      end
 
-     resources :product_types, :only => [:index, :new, :create]
-
-    resources :product_types, :only => [:show, :new, :create]
-
-     resources :product_types, :only => [:index] do
+         resources :product_types, :only => [:index, :new, :create] do
        member do
-         get 'shops_by_location'
+         get 'products'
        end
      end
 

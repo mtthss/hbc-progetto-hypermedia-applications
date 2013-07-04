@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.date     "on_market_on"
-    t.string   "type"
+    t.string   "type_of_product"
     t.boolean  "must_have"
     t.text     "description"
     t.string   "image_url"
