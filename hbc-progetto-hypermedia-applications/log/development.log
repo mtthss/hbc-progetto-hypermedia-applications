@@ -9329,3 +9329,144 @@ Served asset /style.css - 304 Not Modified (0ms)
 
 Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 10:39:30 +0200
 Served asset /menu.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-07-04 10:44:58 +0200
+Served asset /rails.png - 404 Not Found (17ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/rails.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-04 10:46:06 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 162ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 10:46:07 +0200
+Served asset /style.css - 200 OK (19ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 10:46:07 +0200
+Served asset /menu.css - 200 OK (7ms)
+
+
+Started GET "/designers?top=true" for 127.0.0.1 at 2013-07-04 10:46:14 +0200
+Processing by DesignersController#index as HTML
+  Parameters: {"top"=>"true"}
+  [1m[36mDesigner Load (0.3ms)[0m  [1mSELECT "designers".* FROM "designers" WHERE "designers"."top" = 't'[0m
+  Rendered designers/index.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 167ms (Views: 91.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/designers/2" for 127.0.0.1 at 2013-07-04 10:46:17 +0200
+Processing by DesignersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDesigner Load (0.5ms)[0m  SELECT "designers".* FROM "designers" WHERE "designers"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered designers/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 114ms (Views: 109.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/product_types" for 127.0.0.1 at 2013-07-04 10:46:26 +0200
+Processing by ProductTypesController#index as HTML
+  [1m[36mProductType Load (0.2ms)[0m  [1mSELECT "product_types".* FROM "product_types" [0m
+  Rendered product_types/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 31.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products?must=true" for 127.0.0.1 at 2013-07-04 10:46:29 +0200
+Processing by ProductsController#index as HTML
+  Parameters: {"must"=>"true"}
+  [1m[35mProduct Load (5.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."must_have" = 't'
+  Rendered products/index.html.erb within layouts/application (25.9ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (The single-table inheritance mechanism failed to locate the subclass: 'table'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Product.inheritance_column to use another column for that information.):
+    1: <h1><%= @title %> products</h1>
+    2: 
+    3:     <div class="gridList">
+    4:   <% @products.each do |product| %>
+    5:        <div class="gridBox">
+    6:        <%= product.name %>
+    7:           <%= link_to product_path(product) do%>
+  app/views/products/index.html.erb:4:in `_app_views_products_index_html_erb__417614309_84760580'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/products" for 127.0.0.1 at 2013-07-04 10:49:14 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" [0m
+Completed 500 Internal Server Error in 42ms
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'table'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Product.inheritance_column to use another column for that information.):
+  app/controllers/products_controller.rb:13:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-04 10:49:17 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/product_types" for 127.0.0.1 at 2013-07-04 10:49:20 +0200
+Processing by ProductTypesController#index as HTML
+  [1m[35mProductType Load (0.2ms)[0m  SELECT "product_types".* FROM "product_types" 
+  Rendered product_types/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products?must=true" for 127.0.0.1 at 2013-07-04 10:49:23 +0200
+Processing by ProductsController#index as HTML
+  Parameters: {"must"=>"true"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."must_have" = 't'[0m
+  Rendered products/index.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (The single-table inheritance mechanism failed to locate the subclass: 'table'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Product.inheritance_column to use another column for that information.):
+    1: <h1><%= @title %> products</h1>
+    2: 
+    3:     <div class="gridList">
+    4:   <% @products.each do |product| %>
+    5:        <div class="gridBox">
+    6:        <%= product.name %>
+    7:           <%= link_to product_path(product) do%>
+  app/views/products/index.html.erb:4:in `_app_views_products_index_html_erb___71817816_86369620'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (64.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (84.5ms)
