@@ -17879,3 +17879,891 @@ Served asset /style.css - 304 Not Modified (0ms)
 
 Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:00:44 +0200
 Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=4" for 127.0.0.1 at 2013-07-04 18:06:09 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"4"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  [1m[36mShop Load (0.4ms)[0m  [1mSELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Veneto')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (71.1ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (undefined method `integer' for #<#<Class:0x9ffe890>:0xa1e6748>):
+    75: 
+    76: 
+    77: <% if(@shops!=nil) %>
+    78:         <% integer i=1 %>
+    79:         <% @shops.each do |shop| %>
+    80:             <%= shop.name %> <br>
+    81:             <%= shop.address %>  <br>
+  app/views/shopfinders/index.html.erb:78:in `_app_views_shopfinders_index_html_erb___744749496_84877890'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (44.5ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 18:06:38 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered shopfinders/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 63ms (Views: 46.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:38 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:38 +0200
+Served asset /menu.css - 304 Not Modified (3ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:06:41 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 43ms (Views: 35.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:41 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:41 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=7" for 127.0.0.1 at 2013-07-04 18:06:46 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"7"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (1.4ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '7')
+  Rendered shopfinders/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:46 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:46 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:06:49 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 39ms (Views: 33.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:49 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:49 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=4" for 127.0.0.1 at 2013-07-04 18:06:51 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"4"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.3ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  [1m[35mShop Load (0.4ms)[0m  SELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Veneto')
+  Rendered shopfinders/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 42ms (Views: 34.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:51 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:06:51 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 18:07:26 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered shopfinders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:07:26 +0200
+Served asset /style.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:07:26 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:07:30 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  Rendered shopfinders/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 42ms (Views: 37.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:07:30 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:07:30 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=4" for 127.0.0.1 at 2013-07-04 18:07:47 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"4"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.3ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.5ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  [1m[36mShop Load (0.3ms)[0m  [1mSELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Veneto')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 114ms (Views: 105.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:07:47 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:07:47 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 18:08:00 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered shopfinders/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:08:01 +0200
+Served asset /style.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:08:01 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:08:03 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.3ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:08:03 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:08:03 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=4" for 127.0.0.1 at 2013-07-04 18:08:05 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"4"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.1ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  [1m[35mShop Load (0.5ms)[0m  SELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Veneto')
+  Rendered shopfinders/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:08:05 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:08:05 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 18:11:04 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered shopfinders/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:11:04 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:11:04 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:11:06 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered shopfinders/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    46:           <select name="county_drop_down" onChange="window.location.href=this.options[this.selectedIndex].value;">
+    47: 
+    48:                 <option value="" >
+    49:                   <%= @county_chosen.name %>
+    50:                 </option>
+    51: 
+    52:             <% @counties.each do |county| %>
+  app/views/shopfinders/index.html.erb:49:in `_app_views_shopfinders_index_html_erb___744749496_90044700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (34.2ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:11:57 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[35mCountry Load (0.6ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (1.2ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  Rendered shopfinders/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 67ms (Views: 56.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:11:58 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:11:58 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 18:12:00 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered shopfinders/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:00 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:00 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:12:03 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  Rendered shopfinders/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:03 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:03 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=1" for 127.0.0.1 at 2013-07-04 18:12:07 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"1"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.1ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCounty Load (0.5ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  [1m[36mShop Load (0.2ms)[0m  [1mSELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Lombardia')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 44ms (Views: 34.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:07 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:07 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=4" for 127.0.0.1 at 2013-07-04 18:12:10 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"4"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (1.8ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  [1m[35mShop Load (0.4ms)[0m  SELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Veneto')
+  Rendered shopfinders/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 32.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:10 +0200
+Served asset /menu.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:12:10 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (42.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateCustomers (20130610141434)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610141434')[0m
+  [1m[35m (285.1ms)[0m  commit transaction
+Migrating to CreateEvents (20130610141924)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" date, "location" varchar(255), "description" text, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610141924')[0m
+  [1m[35m (3.2ms)[0m  commit transaction
+Migrating to CreateDesigners (20130610142731)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "designers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bio" text, "image_url" varchar(255), "top" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610142731')[0m
+  [1m[35m (4.5ms)[0m  commit transaction
+Migrating to CreateProductImages (20130610150347)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "product_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610150347')[0m
+  [1m[35m (12.1ms)[0m  commit transaction
+Migrating to CreateProducts (20130610152416)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "on_market_on" date, "product_type_id" integer, "must_have" boolean, "description" text, "image_url" varchar(255), "datasheet" text, "suggested_product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610152416')[0m
+  [1m[35m (4.0ms)[0m  commit transaction
+Migrating to CreateShops (20130610154458)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "shops" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "shop_type" varchar(255), "address" varchar(255), "tel" varchar(255), "email" varchar(255), "country" varchar(255), "county" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610154458')[0m
+  [1m[35m (6.6ms)[0m  commit transaction
+Migrating to CreateServices (20130610154844)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610154844')[0m
+  [1m[35m (4.4ms)[0m  commit transaction
+Migrating to CreateEventImages (20130610161703)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.9ms)[0m  CREATE TABLE "event_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610161703')[0m
+  [1m[35m (3.3ms)[0m  commit transaction
+Migrating to CreateCustomerImages (20130610161725)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "customer_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610161725')[0m
+  [1m[35m (4.8ms)[0m  commit transaction
+Migrating to CreateEventsProductsJoin (20130610162446)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "events_products" ("event_id" integer, "product_id" integer) 
+  [1m[36m (0.5ms)[0m  [1mCREATE INDEX "index_events_products_on_event_id_and_product_id" ON "events_products" ("event_id", "product_id")[0m
+  [1m[35m (4.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610162446')
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateDesignersProductsJoin (20130610163527)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (13.1ms)[0m  [1mCREATE TABLE "designers_products" ("designer_id" integer, "product_id" integer) [0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_designers_products_on_designer_id_and_product_id" ON "designers_products" ("designer_id", "product_id")
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610163527')[0m
+  [1m[35m (4.4ms)[0m  commit transaction
+Migrating to CreateProductsServicesJoin (20130610164516)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "products_services" ("product_id" integer, "service_id" integer) 
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_products_services_on_product_id_and_service_id" ON "products_services" ("product_id", "service_id")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610164516')
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductsSuggestedProductsJoin (20130610172709)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.4ms)[0m  [1mCREATE TABLE "products_suggested_products" ("product_id" integer, "suggested_product_id" integer) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610172709')
+  [1m[36m (20.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20130612092034)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "psw" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130612092034')
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCountries (20130617122450)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "Countries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617122450')
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCounties (20130617122610)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "counties" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "country_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617122610')
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductTypes (20130617123007)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "product_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617123007')
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateShopTypes (20130617123017)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "shop_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617123017')
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (3.2ms)[0m  DELETE FROM "products"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["datasheet", "height 110 cm, width 100 cm"], ["description", "Fantastic table oh my god"], ["image_url", "imagearc.jpg"], ["must_have", true], ["name", "Arc"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["datasheet", "height 166 cm, width 100 cm"], ["description", "Fantastic table"], ["image_url", "imagelessless.jpg"], ["must_have", true], ["name", "Less less"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["datasheet", "height 120 cm, width 80 cm"], ["description", "Fantastic biotable"], ["image_url", "imagebiotab.jpg"], ["must_have", false], ["name", "Biotab"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "designers"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "Nel mezzo del cammin di nostra vita"], ["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["image_url", "fotodante.jpg"], ["name", "Dante Alighieri"], ["top", true], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["bio", "è un piglianculo"], ["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["image_url", "fotogiorgio.jpg"], ["name", "Giorgio Armani"], ["top", true], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "è il più scarso dei nostri designer"], ["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["image_url", "fotoenrico.jpg"], ["name", "Enrico Coveri"], ["top", false], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "product_types"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["image_url", "tablesimage.jpg"], ["name", "tables"], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00], ["image_url", "chairsimage.jpg"], ["name", "chairs"], ["updated_at", Thu, 04 Jul 2013 16:31:16 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "events" ("created_at", "date", "description", "image_url", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["date", nil], ["description", "Bell'evento pieno di piglianculo"], ["image_url", "saloneimage.jpg"], ["location", "Milano"], ["name", "Salone del mobile 2013"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "events" ("created_at", "date", "description", "image_url", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["date", nil], ["description", "Evento internazionale"], ["image_url", "saloneimage.jpg"], ["location", "Rho"], ["name", "Expo 2015"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "countries"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Australia"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "France"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Germany"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Italy"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Spain"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "UK"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "USA"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (3.5ms)[0m  DELETE FROM "counties"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Lombardia"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Basilicata"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (68.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Marche"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Veneto"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Lazio"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Kent"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Sussex"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "California"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "New York"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Texas"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["name", "Massachussets"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (45.3ms)[0m  DELETE FROM "shops"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "shops" ("address", "country", "county", "created_at", "email", "name", "shop_type", "tel", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Milan, largo V alpini 15"], ["country", "Italy"], ["county", "Lombardia"], ["created_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00], ["email", "best.shop@mail.it"], ["name", "HBC flagship store Milan"], ["shop_type", "flagship store"], ["tel", "02/567890"], ["updated_at", Thu, 04 Jul 2013 16:31:17 UTC +00:00]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mDesigner Load (0.3ms)[0m  SELECT "designers".* FROM "designers" WHERE "designers"."name" = 'Dante Alighieri' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "designers_products" ("product_id", "designer_id") VALUES (1, 1)
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDesigner Load (0.2ms)[0m  SELECT "designers".* FROM "designers" WHERE "designers"."name" = 'Giorgio Armani' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "designers_products" ("product_id", "designer_id") VALUES (1, 2)
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" = 'Salone del mobile 2013' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "events_products" ("product_id", "event_id") VALUES (1, 1)
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."name" = 'Expo 2015' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "events_products" ("product_id", "event_id") VALUES (1, 2)
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."name" = 'Arc'[0m
+  [1m[35m (0.4ms)[0m  UPDATE "products" SET "product_type_id" = 1, "updated_at" = '2013-07-04 16:31:17.408021' WHERE "products"."id" = 1
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."name" = 'Biotab'[0m
+  [1m[35m (0.3ms)[0m  UPDATE "products" SET "product_type_id" = 1, "updated_at" = '2013-07-04 16:31:17.417129' WHERE "products"."id" = 3
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.9ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lombardia'[0m
+  [1m[35m (0.4ms)[0m  UPDATE "counties" SET "country_id" = 4, "updated_at" = '2013-07-04 16:31:17.425553' WHERE "counties"."id" = 1
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Basilicata'[0m
+  [1m[35m (0.3ms)[0m  UPDATE "counties" SET "country_id" = 4, "updated_at" = '2013-07-04 16:31:17.433288' WHERE "counties"."id" = 2
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Marche'[0m
+  [1m[35m (0.4ms)[0m  UPDATE "counties" SET "country_id" = 4, "updated_at" = '2013-07-04 16:31:17.439051' WHERE "counties"."id" = 3
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Veneto'[0m
+  [1m[35m (0.3ms)[0m  UPDATE "counties" SET "country_id" = 4, "updated_at" = '2013-07-04 16:31:17.444163' WHERE "counties"."id" = 4
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lazio'[0m
+  [1m[35m (0.2ms)[0m  UPDATE "counties" SET "country_id" = 4, "updated_at" = '2013-07-04 16:31:17.449362' WHERE "counties"."id" = 5
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.3ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Kent'[0m
+  [1m[35m (1.5ms)[0m  UPDATE "counties" SET "country_id" = 6, "updated_at" = '2013-07-04 16:31:17.455378' WHERE "counties"."id" = 6
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Sussex'[0m
+  [1m[35m (0.4ms)[0m  UPDATE "counties" SET "country_id" = 6, "updated_at" = '2013-07-04 16:31:17.462588' WHERE "counties"."id" = 7
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'California'[0m
+  [1m[35m (0.5ms)[0m  UPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 16:31:17.469424' WHERE "counties"."id" = 8
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'New York'[0m
+  [1m[35m (1.1ms)[0m  UPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 16:31:17.475699' WHERE "counties"."id" = 9
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.0ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Texas'[0m
+  [1m[35m (0.3ms)[0m  UPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 16:31:17.482624' WHERE "counties"."id" = 10
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Massachussets'[0m
+  [1m[35m (0.2ms)[0m  UPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 16:31:17.488296' WHERE "counties"."id" = 11
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-04 18:31:52 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 90ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:31:53 +0200
+Served asset /style.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:31:53 +0200
+Served asset /menu.css - 304 Not Modified (12ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 18:31:56 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered shopfinders/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 129ms (Views: 37.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:31:56 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:31:56 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:31:59 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[35mCountry Load (0.6ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (4.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.5ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  Rendered shopfinders/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 211ms (Views: 185.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:31:59 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:31:59 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=1" for 127.0.0.1 at 2013-07-04 18:32:02 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"1"}
+  [1m[36mCountry Load (0.6ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.5ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  [1m[36mShop Load (0.0ms)[0m  [1mSELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Lombardia')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 105ms (Views: 80.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:32:02 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:32:02 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=1" for 127.0.0.1 at 2013-07-04 18:36:31 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"1"}
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  [1m[35mShop Load (0.4ms)[0m  SELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Lombardia')
+  Rendered shopfinders/index.html.erb within layouts/application (58.9ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::Template::Error (undefined local variable or method `county' for #<#<Class:0xb9e5e34>:0xb6e624c>):
+    49:                 <option value="" >
+    50:                   <%= @county_chosen.name %>
+    51:                 </option>
+    52:                 <option value=<%= shopfinders_path(:country => @country_chosen.id, :county=> county.id) %> >
+    53:                   ----------
+    54:                 </option>
+    55:             <% else %>
+  app/views/shopfinders/index.html.erb:52:in `_app_views_shopfinders_index_html_erb__209921313_95890600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.1ms)
+
+
+Started GET "/shopfinders?country=4&county=1" for 127.0.0.1 at 2013-07-04 18:36:53 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"1"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  [1m[36mShop Load (0.2ms)[0m  [1mSELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Lombardia')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (121.9ms)
+Completed 500 Internal Server Error in 146ms
+
+ActionView::Template::Error (undefined local variable or method `county_chosen' for #<#<Class:0xb9e5e34>:0xba23ab8>):
+    49:                 <option value="" >
+    50:                   <%= @county_chosen.name %>
+    51:                 </option>
+    52:                 <option value=<%= shopfinders_path(:country => @country_chosen.id, :county=> county_chosen.id) %> >
+    53:                   ----------
+    54:                 </option>
+    55:             <% else %>
+  app/views/shopfinders/index.html.erb:52:in `_app_views_shopfinders_index_html_erb__209921313_97589520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (13.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (57.9ms)
+
+
+Started GET "/shopfinders" for 127.0.0.1 at 2013-07-04 18:37:00 +0200
+Processing by ShopfindersController#index as HTML
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered shopfinders/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:00 +0200
+Served asset /style.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:00 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4" for 127.0.0.1 at 2013-07-04 18:37:15 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (1.5ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 139ms (Views: 131.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:15 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:15 +0200
+Served asset /menu.css - 304 Not Modified (2ms)
+
+
+Started GET "/shopfinders?country=4&county=1" for 127.0.0.1 at 2013-07-04 18:37:17 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"1"}
+  [1m[35mCountry Load (0.5ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.0ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCounty Load (0.8ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  [1m[35mShop Load (0.4ms)[0m  SELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Lombardia')
+  Rendered shopfinders/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 81ms (Views: 62.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:18 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:18 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=1" for 127.0.0.1 at 2013-07-04 18:37:20 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"1"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.2ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCounty Load (0.9ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  [1m[36mShop Load (0.5ms)[0m  [1mSELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Lombardia')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 46ms (Views: 36.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:20 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:20 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=2" for 127.0.0.1 at 2013-07-04 18:37:23 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"2"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.1ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  [1m[35mShop Load (0.3ms)[0m  SELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Basilicata')
+  Rendered shopfinders/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 44ms (Views: 35.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:23 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:23 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=3" for 127.0.0.1 at 2013-07-04 18:37:26 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"3"}
+  [1m[36mCountry Load (2.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mCounty Load (0.1ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE (country_id= '4')
+  [1m[36mShop Load (0.6ms)[0m  [1mSELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Marche')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 45ms (Views: 35.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:26 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:26 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=4&county=1" for 127.0.0.1 at 2013-07-04 18:37:28 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"4", "county"=>"1"}
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCountry Load (1.0ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '4')[0m
+  [1m[35mShop Load (0.3ms)[0m  SELECT "shops".* FROM "shops" WHERE (country= 'Italy' and county= 'Lombardia')
+  Rendered shopfinders/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 42ms (Views: 32.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:28 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:28 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
+
+
+Started GET "/shopfinders?country=7" for 127.0.0.1 at 2013-07-04 18:37:32 +0200
+Processing by ShopfindersController#index as HTML
+  Parameters: {"country"=>"7"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mCounty Load (0.4ms)[0m  [1mSELECT "counties".* FROM "counties" WHERE (country_id= '7')[0m
+  Rendered shopfinders/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:32 +0200
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/menu.css?body=1" for 127.0.0.1 at 2013-07-04 18:37:32 +0200
+Served asset /menu.css - 304 Not Modified (0ms)
