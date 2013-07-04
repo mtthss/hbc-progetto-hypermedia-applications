@@ -13,6 +13,12 @@
 
 ActiveRecord::Schema.define(:version => 20130702122100) do
 
+  create_table "Countries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "admins", :force => true do |t|
     t.string   "name"
     t.string   "psw"
@@ -22,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
 
   create_table "counties", :force => true do |t|
     t.string   "name"
-    t.integer  "region_id"
+    t.integer  "country_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -127,12 +133,6 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
     t.integer "suggested_product_id"
   end
 
-  create_table "regions", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "services", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -152,7 +152,7 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
     t.string   "address"
     t.string   "tel"
     t.string   "email"
-    t.string   "region"
+    t.string   "country"
     t.string   "county"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
