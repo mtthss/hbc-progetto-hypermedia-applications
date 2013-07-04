@@ -1,2 +1,31 @@
-<h1>Shopfinders#index</h1>
-<p>Find me in app/views/shopfinders/index.html.erb</p>
+<h1>Shop finders</h1>
+<h6>Look for HBC's shops in your area</h6>
+
+<br>
+
+<p>
+  select your country and then a county/region <br>
+  and view the flagship stores, the showrooms and retailers <br>
+  where you can find our products <br>
+</p>
+
+<br>
+
+<p>
+
+  <form name="country" action="http://www.mydomain.com/myformhandler.cgi" method="get">
+    <div align="center">
+      <select name="mydropdown">
+
+        <% @countries.each do |countries| %>
+        <option value= <%=country.name%>>
+          <%=country.name%>
+        </option>
+        <% end %>
+
+      </select>
+    </div>
+  </form>
+
+</p>
+

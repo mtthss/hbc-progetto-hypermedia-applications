@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702122100) do
+ActiveRecord::Schema.define(:version => 20130617123017) do
 
   create_table "Countries", :force => true do |t|
     t.string   "name"
@@ -120,13 +120,6 @@ ActiveRecord::Schema.define(:version => 20130702122100) do
   end
 
   add_index "products_services", ["product_id", "service_id"], :name => "index_products_services_on_product_id_and_service_id"
-
-  create_table "products_shops", :id => false, :force => true do |t|
-    t.integer "shop_id"
-    t.integer "product_id"
-  end
-
-  add_index "products_shops", ["product_id", "shop_id"], :name => "index_products_shops_on_product_id_and_shop_id"
 
   create_table "products_suggested_products", :id => false, :force => true do |t|
     t.integer "product_id"

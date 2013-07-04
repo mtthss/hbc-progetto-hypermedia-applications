@@ -31,3 +31,24 @@ ProductType.delete_all
 product_types = ProductType.create([{name: 'tables', image_url: 'tablesimage.jpg'},
                                      {name: 'chairs', image_url: 'chairsimage.jpg'}
                                     ])
+
+
+Country.delete_all
+countries = Country.create([{name: 'Australia'},
+                            {name: 'USA'},
+                            {name: 'Italy'},
+                            {name: 'Germany'},
+                            {name: 'France'},
+                            {name: 'UK'},
+                            {name: 'Spain'}
+                           ])
+
+County.delete_all
+counties = County.create([{name: 'Lombardia'},
+                          {name: 'Piemonte'},
+                          {name: 'Lazio'}
+                         ])
+
+countries[0].counties << County.where(:name=>'Lombardia')
+
+
