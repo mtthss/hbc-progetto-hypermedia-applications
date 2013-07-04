@@ -6,13 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
-products = Product.create([{name: 'Arc', type: 'tables', must_have: true,
+products = Product.create([{name: 'Arc', type_of_product: 'tables', must_have: true,
                             description: 'Fantastic table oh my god', image_url: 'imageArc.jpg',
                            datasheet: 'height 110 cm, width 100 cm'},
-                           {name: 'Less less', type: 'tables', must_have: true,
+                           {name: 'Less less', type_of_product: 'tables', must_have: true,
                             description: 'Fantastic table', image_url: 'imagelessless.jpg',
                             datasheet: 'height 166 cm, width 100 cm'},
-                            {name: 'Biotab', type: 'tables', must_have: false,
+                            {name: 'Biotab', type_of_product: 'tables', must_have: false,
                             description: 'Fantastic biotable', image_url: 'imagebiotab.jpg',
                             datasheet: 'height 120 cm, width 80 cm'}
                           ])
