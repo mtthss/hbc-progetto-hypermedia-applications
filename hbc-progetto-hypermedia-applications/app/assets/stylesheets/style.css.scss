@@ -35,11 +35,29 @@ p {
 }
 
 
-ul {img {
-     width: 100%;
+img {
+  width: 100%;
 }
 
-	margin-bottom: 1.5em;
+img.left {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+img.top {
+  margin: 5px 0 20px 0;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+
+ul {img {
+  width: 100%;
+}
+
+  margin-bottom: 1.5em;
 }
 	
 #bg {
@@ -61,8 +79,8 @@ ul {img {
 #content {
 	position: absolute;
 	top: 0px;
-	left: 70px;
-	width: 800px;
+	left: 30px;
+	width: 810px;
 	margin: 0px 0 0 265px;
 	padding: 30px;
 	background: #ffffff;
@@ -199,3 +217,26 @@ ul {img {
 	padding-top: 0;
 	border-top: 0;
 }
+
+
+
+
+
+
+div.gridList {
+  color: #d9dada;
+  font-family: Georgia, "consolas", Times, serif;
+}
+
+.gridBox {
+  width:240px;
+  height:240px;
+  border:0px none;
+  margin:50px 30px 20px 0;
+  overflow:hidden;
+  position:relative;
+  float:left;
+  background: #222222;
+}
+
+
