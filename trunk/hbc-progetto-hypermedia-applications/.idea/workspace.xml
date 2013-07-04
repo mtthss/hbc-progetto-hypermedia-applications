@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="980d6e0e-efd5-4bf8-9b2f-767570a67779" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130617122610_create_counties.rb" afterPath="$PROJECT_DIR$/db/migrate/20130617122610_create_counties.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/county.rb" afterPath="$PROJECT_DIR$/app/models/county.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shopfinders/index.html.erb" afterPath="$PROJECT_DIR$/app/views/shopfinders/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,7 +26,7 @@
     <file path="/20130610172709_create_products_suggested_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370896896733" ignored="false" />
     <file path="/20130610163527_create_designers_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895035740" ignored="false" />
     <file path="/temp.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895127138" ignored="false" />
-    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372927279843" ignored="false" />
+    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372937510468" ignored="false" />
     <file path="/20130610161725_create_customer_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471576781" ignored="false" />
     <file path="/20130610161703_create_event_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471548935" ignored="false" />
     <file path="/20130610150347_create_product_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471392244" ignored="false" />
@@ -62,7 +56,7 @@
     <file path="/show.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372873212933" ignored="false" />
     <file path="/shops_for_this_product.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372869640010" ignored="false" />
     <file path="/20130617122450_create_regions.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372870024946" ignored="false" />
-    <file path="/seeds.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372934806665" ignored="false" />
+    <file path="/seeds.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372936538322" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,19 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="county.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="county.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/county.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="21" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+            <state line="3" column="21" selection-start="93" selection-end="93" vertical-scroll-proportion="0.09189189">
               <folding />
             </state>
           </provider>
@@ -127,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="42" selection-start="3896" selection-end="3896" vertical-scroll-proportion="3.6162362">
+            <state line="118" column="42" selection-start="3896" selection-end="3896" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,8 +148,8 @@
         <option value="$PROJECT_DIR$/app/views/product_types/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/county.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130617122610_create_counties.rb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -313,13 +298,15 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="29">$PROJECT_DIR$/app/models/product.rb</PATH>
-            <PATH vcs="svn" revision="29">$PROJECT_DIR$/app/controllers/products_controller.rb</PATH>
-            <PATH vcs="svn" revision="29">$PROJECT_DIR$/app/views/products/index.html.erb</PATH>
-            <PATH vcs="svn" revision="29">$PROJECT_DIR$/log/development.log</PATH>
-            <PATH vcs="svn" revision="29">$PROJECT_DIR$/db/development.sqlite3</PATH>
-            <PATH vcs="svn" revision="29">$PROJECT_DIR$/db/migrate/20130610152416_create_products.rb</PATH>
-            <PATH vcs="svn" revision="29">$PROJECT_DIR$/config/routes.rb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/models/product.rb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/models/product_type.rb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/models/customer_image.rb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/models/event_image.rb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/views/products/index.html.erb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/views/product_types/index.html.erb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/controllers/products_controller.rb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/app/controllers/product_types_controller.rb</PATH>
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/db/migrate/20130610152416_create_products.rb</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -341,6 +328,7 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="RESTORED" />
+            <PATH vcs="svn" revision="31">$PROJECT_DIR$/public/index.html</PATH>
           </FILE-GROUP>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -384,8 +372,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="MERGED" />
-          <PATH vcs="svn" revision="29">$PROJECT_DIR$/db/schema.rb</PATH>
-          <PATH vcs="svn" revision="29">$PROJECT_DIR$/db/seeds.rb</PATH>
+          <PATH vcs="svn" revision="31">$PROJECT_DIR$/db/seeds.rb</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Not in repository" />
@@ -764,14 +751,18 @@
       <created>1372927295175</created>
       <updated>1372927295175</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014">
+      <created>1372935274107</created>
+      <updated>1372935274107</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="1612" height="772" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -781,7 +772,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09737249" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09737249" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -922,13 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/county.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="21" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/country.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -950,16 +934,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0">
+        <state line="118" column="42" selection-start="3896" selection-end="3896" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="42" selection-start="3896" selection-end="3896" vertical-scroll-proportion="3.6162362">
+        <state line="53" column="43" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.836036">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/county.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="21" selection-start="93" selection-end="93" vertical-scroll-proportion="0.09189189">
           <folding />
         </state>
       </provider>

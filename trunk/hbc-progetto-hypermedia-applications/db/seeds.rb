@@ -35,21 +35,44 @@ product_types = ProductType.create([{name: 'tables', image_url: 'tablesimage.jpg
 
 Country.delete_all
 countries = Country.create([{name: 'Australia'},
-                            {name: 'USA'},
-                            {name: 'Italy'},
-                            {name: 'Germany'},
                             {name: 'France'},
+                            {name: 'Germany'},
+                            {name: 'Italy'},
+                            {name: 'Spain'},
                             {name: 'UK'},
-                            {name: 'Spain'}
+                            {name: 'USA'}
                            ])
 
 County.delete_all
-counties = County.create([{name: 'Lombardia'},
-                          {name: 'Piemonte'},
-                          {name: 'Lazio'}
+counties = County.create([
+                          {name: 'Lombardia'},
+                          {name: 'Basilicata'},
+                          {name: 'Marche'},
+                          {name: 'Veneto'},
+                          {name: 'Lazio'},
+                          {name: 'Kent'},
+                          {name: 'Sussex'},
+                          {name: 'California'},
+                          {name: 'New York'},
+                          {name: 'Texas'},
+                          {name: 'Massachussets'}
                          ])
 
-countries[0].counties << County.where(:name=>'Lombardia')
+
+
+
+countries[4].counties << County.where(:name=>'Lombardia')
+countries[4].counties << County.where(:name=>'Basilicata')
+countries[4].counties << County.where(:name=>'Marche')
+countries[4].counties << County.where(:name=>'Veneto')
+countries[4].counties << County.where(:name=>'Lazio')
 
 product_types[0].products << Product.where(:name => "Arc")
 
+countries[6].counties << County.where(:name=>'Kent')
+countries[6].counties << County.where(:name=>'Sussex')
+
+countries[7].counties << County.where(:name=>'California')
+countries[7].counties << County.where(:name=>'New York')
+countries[7].counties << County.where(:name=>'Texas')
+countries[7].counties << County.where(:name=>'Massachussets')
