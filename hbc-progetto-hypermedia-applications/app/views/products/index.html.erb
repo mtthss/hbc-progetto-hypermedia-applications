@@ -1,10 +1,10 @@
-<h1><%= @title %> products</h1>
+<h1><%= @title %> </h1>
 
     <div class="gridList">
   <% @products.each do |product| %>
        <div class="gridBox">
        <%= product.name %>
-          <%= link_to products_path(product) do%>
+          <%= link_to product_path(product) do%>
               <%= image_tag("/products/#{product.image_url}") %>
           <% end %>
           </div>
