@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
   def show
     @event=Event.find(params[:id])
-    @images=@event.images
+    @images=@event.event_images
   end
 
   def new

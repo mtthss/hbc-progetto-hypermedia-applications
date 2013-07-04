@@ -32,6 +32,13 @@ product_types = ProductType.create([{name: 'tables', image_url: 'tablesimage.jpg
                                      {name: 'chairs', image_url: 'chairsimage.jpg'}
                                     ])
 
+Event.delete_all
+events = Event.create([{name: 'Salone del mobile 2013', location: 'Milano',
+                        description: 'Bell\'evento pieno di piglianculo', image_url: 'saloneimage.jpg'},
+                      {name: 'Expo 2015', location: 'Rho',
+                        description: 'Evento internazionale', image_url: 'saloneimage.jpg'}
+                      ])
+
 
 Country.delete_all
 countries = Country.create([{name: 'Australia'},
@@ -58,6 +65,11 @@ counties = County.create([
                           {name: 'Massachussets'}
                          ])
 
+products[0].designers << Designer.find_by_name('Dante Alighieri')
+products[0].designers << Designer.find_by_name('Giorgio Armani')
+
+products[0].events << Event.find_by_name('Salone del mobile 2013')
+products[0].events << Event.find_by_name('Expo 2015')
 
 product_types[0].products << Product.where(:name => "Arc")
 product_types[0].products << Product.where(:name => "Biotab")

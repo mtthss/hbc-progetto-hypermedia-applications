@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
     @product=Product.find(params[:id])
     @services=@product.services
     @events=@product.events
-    @images=@product.images
+    @image=@product.image_url
     @designers=@product.designers
   end
 
