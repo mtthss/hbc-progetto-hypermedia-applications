@@ -1,26 +1,28 @@
 class ProductsController < ApplicationController
   def index
     if(params[:product_type_id])
+      @product_type=ProductType.find(params[:product_type_id])
       @products=Product.where(:product_type_id=>params[:product_type_id])
-      #@title=Product_type.find(params[:product_type_id]).name
+      @title=@product_type.name
     elsif(params[:must])
       @products=Product.where(:must_have=>true)
-      @title="Must have"
+      @title="Must have products"
     elsif(params[:new])
       @products=Product.order('on_market_on DESC').limit(9)
-      @title= "New"
+      @title= "New products"
     else
       @products=Product.all
-      @title="All"
+      @title="All products"
     end
   end
 
   def show
-    @product=Product.find(params[:product_id])
+    @product=Product.find(params[:id])
     @matches=@product.suggested_products
     @events=@product.events
-    @images=@product.images
+    @image=@product.image_url
     @designers=@product.designers
+    @photogallery=@product.product_images
   end
 
   def new
