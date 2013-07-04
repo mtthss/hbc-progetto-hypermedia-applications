@@ -2,6 +2,18 @@
 
 <%= link_to 'datasheet', datasheet_product_path(@product) %>
 
+<p> Designed by
+  <% @designers.each do |designer| %>
+      <%= link_to designer.name, designer_path(designer) %>
+  <% end  %>
+</p>
+<p> Exposed in
+  <% @events.each do |event| %>
+      <%= link_to event.name, event_path(event) %>
+  <% end  %>
+</p>
+
+
 
 
 
