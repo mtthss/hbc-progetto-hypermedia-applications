@@ -3,7 +3,7 @@
 <div class="gridList">
   <% @product_types.each do |product_type| %>
       <div class="gridBox">
-        <%= product_type.name %>
+        &nbsp; <%= product_type.name %>
         <%=link_to products_path(:product_type_id => product_type.id) do%>
             <%= image_tag("/product_types/#{product_type.image_url}") %>
         <% end %>
@@ -13,6 +13,3 @@
 
 
 
-
-
-<p>Find me in app/views/product_types/index.html.erb</p>

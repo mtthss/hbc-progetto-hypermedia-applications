@@ -1,15 +1,13 @@
 <h1><%= @title %> designers</h1>
 
-<table>
+<div class="gridList">
   <% @designers.each do |designer| %>
-      <tr>
-        <td>
-          <%= designer.name %>
+      <div class="gridBox">
+          &nbsp; <%= designer.name %>
           <%= link_to designer_path(designer) do%>
               <%= image_tag("/designers/#{designer.image_url}") %>
           <% end %>
-        </td>
-      </tr>
+      </div>
   <% end  %>
-</table>
-<p>Find me in app/views/designers/index.html.erb</p>
+</div>
+
