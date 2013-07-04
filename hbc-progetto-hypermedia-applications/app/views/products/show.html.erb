@@ -1,6 +1,5 @@
-<h1><%= @product.name %> </h1>
-
-<%= link_to 'datasheet', datasheet_product_path(@product) %>
+<h1 style="text-align:left;float:left;">  <%= @product.name %>   </h1>
+<h4 style="text-align:right;float:left; margin-left: 30px">(  <%= link_to 'look at datasheet', datasheet_product_path(@product) %>  )</h4>
 
 <p> Designed by
   <% @designers.each do |designer| %>
@@ -13,6 +12,22 @@
   <% end  %>
 </p>
 
+<hr style="clear:both;"/>
+
+<%= link_to 'Where you can find this product', shops_for_this_product_product_path(@product) %>
+
+
+<div class="gridList">
+  <h4> Match this product</h4>
+  <%@matches.each do |matching_product| %>
+  <div class="gridBox">
+    <%= matching_product.name %>
+    <%= link_to product_path(matching_product) do%>
+        <%= image_tag("/products/#{matching_product.image_url}") %>
+    <% end %>
+  </div>
+  <% end  %>
+</div>
 
 
 
