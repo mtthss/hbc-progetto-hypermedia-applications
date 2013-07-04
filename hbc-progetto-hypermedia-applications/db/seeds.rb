@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+#PRODUCTS (problemi nell'assegnamento data)
 Product.delete_all
 products = Product.create([{name: 'Arc', must_have: true,
                             description: 'Fantastic table oh my god', image_url: 'imagearc.jpg',
@@ -16,8 +19,8 @@ products = Product.create([{name: 'Arc', must_have: true,
                             description: 'Fantastic biotable', image_url: 'imagebiotab.jpg',
                             datasheet: 'height 120 cm, width 80 cm'}
                           ])
-#non viene assegnata la data perchè crea problemi, da rivedere
 
+#DESIGNERS
 Designer.delete_all
 designers = Designer.create([{name: 'Dante Alighieri', bio: 'Nel mezzo del cammin di nostra vita',
                               image_url: 'fotodante.jpg',top: true},
@@ -27,11 +30,13 @@ designers = Designer.create([{name: 'Dante Alighieri', bio: 'Nel mezzo del cammi
                               image_url: 'fotoenrico.jpg',top: false}
                             ])
 
+#PRODUCT TYPES
 ProductType.delete_all
 product_types = ProductType.create([{name: 'tables', image_url: 'tablesimage.jpg'},
                                      {name: 'chairs', image_url: 'chairsimage.jpg'}
                                     ])
 
+#EVENTS
 Event.delete_all
 events = Event.create([{name: 'Salone del mobile 2013', location: 'Milano',
                         description: 'Bell\'evento pieno di piglianculo', image_url: 'saloneimage.jpg'},
@@ -39,7 +44,7 @@ events = Event.create([{name: 'Salone del mobile 2013', location: 'Milano',
                         description: 'Evento internazionale', image_url: 'saloneimage.jpg'}
                       ])
 
-
+#COUNTRIES
 Country.delete_all
 countries = Country.create([{name: 'Australia'},
                             {name: 'France'},
@@ -50,6 +55,7 @@ countries = Country.create([{name: 'Australia'},
                             {name: 'USA'}
                            ])
 
+#COUNTIES
 County.delete_all
 counties = County.create([
                           {name: 'Lombardia'},
@@ -65,24 +71,26 @@ counties = County.create([
                           {name: 'Massachussets'}
                          ])
 
+#JOIN TABLE DESIGNERS_PRODUCTS
 products[0].designers << Designer.find_by_name('Dante Alighieri')
 products[0].designers << Designer.find_by_name('Giorgio Armani')
 
+#JOIN TABLE EVENT_PRODUCTS
 products[0].events << Event.find_by_name('Salone del mobile 2013')
 products[0].events << Event.find_by_name('Expo 2015')
 
+#RELATION PRODUCT_TYPE_PRODUCTS
 product_types[0].products << Product.where(:name => "Arc")
 product_types[0].products << Product.where(:name => "Biotab")
 
+#RELATION COUNTRY_COUNTIES
 countries[3].counties << County.where(:name=>'Lombardia')
 countries[3].counties << County.where(:name=>'Basilicata')
 countries[3].counties << County.where(:name=>'Marche')
 countries[3].counties << County.where(:name=>'Veneto')
 countries[3].counties << County.where(:name=>'Lazio')
-
 countries[5].counties << County.where(:name=>'Kent')
 countries[5].counties << County.where(:name=>'Sussex')
-
 countries[6].counties << County.where(:name=>'California')
 countries[6].counties << County.where(:name=>'New York')
 countries[6].counties << County.where(:name=>'Texas')
