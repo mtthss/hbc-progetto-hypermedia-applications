@@ -75,7 +75,7 @@ counties = County.create([
 Shop.delete_all
 shops = Shop.create([
                         {address: "Milan, largo V alpini 15", email:"best.shop@mail.it",
-                         name:"HBC flagship store Milan", county: "Veneto", country: "Italy",
+                         name:"HBC flagship store Milan", county: "Lombardia", country: "Italy",
                          tel:"02/567890", shop_type:"flagship store"}
                     ])
 

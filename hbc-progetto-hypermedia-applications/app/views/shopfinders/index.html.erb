@@ -45,6 +45,17 @@
           County:
           <select name="county_drop_down" onChange="window.location.href=this.options[this.selectedIndex].value;">
 
+            <% if(@county_chosen!=nil) %>
+                <option value="" >
+                  <%= @county_chosen.name %>
+                </option>
+                <option value=<%= shopfinders_path(:country => @country_chosen.id, :county=> @county_chosen.id) %> >
+                  ----------
+                </option>
+            <% else %>
+                <option value= ""> -- Choose the County -- </option>
+            <% end %>
+
             <% @counties.each do |county| %>
                 <option value= <%= shopfinders_path(:country => @country_chosen.id, :county=> county.id) %>>
                   <%=county.name%>
@@ -75,7 +86,6 @@
 
 
 <% if(@shops!=nil) %>
-        <% integer i=1 %>
         <% @shops.each do |shop| %>
             <%= shop.name %> <br>
             <%= shop.address %>  <br>
