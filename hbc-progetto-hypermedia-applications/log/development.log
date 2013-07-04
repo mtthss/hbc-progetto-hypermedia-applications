@@ -12162,3 +12162,863 @@ ActionView::Template::Error (undefined local variable or method `country' for #<
   Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (3.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateCustomers (20130610141434)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610141434')[0m
+  [1m[35m (2.7ms)[0m  commit transaction
+Migrating to CreateEvents (20130610141924)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" date, "location" varchar(255), "description" text, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610141924')[0m
+  [1m[35m (4.2ms)[0m  commit transaction
+Migrating to CreateDesigners (20130610142731)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "designers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bio" text, "image_url" varchar(255), "top" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610142731')[0m
+  [1m[35m (114.2ms)[0m  commit transaction
+Migrating to CreateProductImages (20130610150347)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "product_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610150347')[0m
+  [1m[35m (3.5ms)[0m  commit transaction
+Migrating to CreateProducts (20130610152416)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "on_market_on" date, "product_type_id" integer, "must_have" boolean, "description" text, "image_url" varchar(255), "datasheet" text, "suggested_product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610152416')[0m
+  [1m[35m (4.5ms)[0m  commit transaction
+Migrating to CreateShops (20130610154458)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "shops" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "type" varchar(255), "address" varchar(255), "tel" varchar(255), "email" varchar(255), "country" varchar(255), "county" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610154458')[0m
+  [1m[35m (4.5ms)[0m  commit transaction
+Migrating to CreateServices (20130610154844)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610154844')[0m
+  [1m[35m (3.0ms)[0m  commit transaction
+Migrating to CreateEventImages (20130610161703)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "event_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610161703')[0m
+  [1m[35m (8.9ms)[0m  commit transaction
+Migrating to CreateCustomerImages (20130610161725)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "customer_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610161725')[0m
+  [1m[35m (5.3ms)[0m  commit transaction
+Migrating to CreateEventsProductsJoin (20130610162446)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "events_products" ("event_id" integer, "product_id" integer) 
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_events_products_on_event_id_and_product_id" ON "events_products" ("event_id", "product_id")[0m
+  [1m[35m (2.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610162446')
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateDesignersProductsJoin (20130610163527)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "designers_products" ("designer_id" integer, "product_id" integer) [0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_designers_products_on_designer_id_and_product_id" ON "designers_products" ("designer_id", "product_id")
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610163527')[0m
+  [1m[35m (4.3ms)[0m  commit transaction
+Migrating to CreateProductsServicesJoin (20130610164516)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "products_services" ("product_id" integer, "service_id" integer) 
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_products_services_on_product_id_and_service_id" ON "products_services" ("product_id", "service_id")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610164516')
+  [1m[36m (4.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductsSuggestedProductsJoin (20130610172709)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "products_suggested_products" ("product_id" integer, "suggested_product_id" integer) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610172709')
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20130612092034)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "psw" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130612092034')
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCountries (20130617122450)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "Countries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617122450')
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCounties (20130617122610)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "counties" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "country_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617122610')
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductTypes (20130617123007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "product_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617123007')
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateShopTypes (20130617123017)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "shop_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617123017')
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductsShopsJoin (20130702122100)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "products_shops" ("shop_id" integer, "product_id" integer) [0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_products_shops_on_product_id_and_shop_id" ON "products_shops" ("product_id", "shop_id")
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130702122100')[0m
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (2.7ms)[0m  DELETE FROM "products"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.8ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["datasheet", "height 110 cm, width 100 cm"], ["description", "Fantastic table oh my god"], ["image_url", "imagearc.jpg"], ["must_have", true], ["name", "Arc"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["datasheet", "height 166 cm, width 100 cm"], ["description", "Fantastic table"], ["image_url", "imagelessless.jpg"], ["must_have", true], ["name", "Less less"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["datasheet", "height 120 cm, width 80 cm"], ["description", "Fantastic biotable"], ["image_url", "imagebiotab.jpg"], ["must_have", false], ["name", "Biotab"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "designers"
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "Nel mezzo del cammin di nostra vita"], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["image_url", "fotodante.jpg"], ["name", "Dante Alighieri"], ["top", true], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["bio", "è un piglianculo"], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["image_url", "fotogiorgio.jpg"], ["name", "Giorgio Armani"], ["top", true], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "è il più scarso dei nostri designer"], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["image_url", "fotoenrico.jpg"], ["name", "Enrico Coveri"], ["top", false], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (45.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "product_types"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["image_url", "tablesimage.jpg"], ["name", "tables"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["image_url", "chairsimage.jpg"], ["name", "chairs"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mSQL (2.9ms)[0m  [1mDELETE FROM "countries"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Australia"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "France"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Germany"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Italy"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Spain"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "UK"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "USA"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mSQL (1.8ms)[0m  [1mDELETE FROM "counties"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Lombardia"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Basilicata"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Marche"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Veneto"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Lazio"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Kent"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (43.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Sussex"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "California"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "New York"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Texas"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00], ["name", "Massachussets"], ["updated_at", Thu, 04 Jul 2013 11:36:44 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Arc'
+  [1m[36m (1.0ms)[0m  [1mUPDATE "products" SET "product_type_id" = 1, "updated_at" = '2013-07-04 11:36:44.519169' WHERE "products"."id" = 1[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Biotab'
+  [1m[36m (0.2ms)[0m  [1mUPDATE "products" SET "product_type_id" = 1, "updated_at" = '2013-07-04 11:36:44.526644' WHERE "products"."id" = 3[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.9ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lombardia'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 11:36:44.535069' WHERE "counties"."id" = 1[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Basilicata'
+  [1m[36m (1.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 11:36:44.540591' WHERE "counties"."id" = 2[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Marche'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 11:36:44.547430' WHERE "counties"."id" = 3[0m
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.1ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Veneto'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 11:36:44.552896' WHERE "counties"."id" = 4[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.1ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lazio'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 11:36:44.558609' WHERE "counties"."id" = 5[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (1.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Kent'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 11:36:44.564196' WHERE "counties"."id" = 6[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Sussex'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 11:36:44.569438' WHERE "counties"."id" = 7[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (6.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateCustomers (20130610141434)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610141434')[0m
+  [1m[35m (3.4ms)[0m  commit transaction
+Migrating to CreateEvents (20130610141924)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" date, "location" varchar(255), "description" text, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610141924')[0m
+  [1m[35m (6.0ms)[0m  commit transaction
+Migrating to CreateDesigners (20130610142731)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "designers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bio" text, "image_url" varchar(255), "top" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610142731')[0m
+  [1m[35m (2.6ms)[0m  commit transaction
+Migrating to CreateProductImages (20130610150347)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "product_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610150347')[0m
+  [1m[35m (3.9ms)[0m  commit transaction
+Migrating to CreateProducts (20130610152416)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "on_market_on" date, "product_type_id" integer, "must_have" boolean, "description" text, "image_url" varchar(255), "datasheet" text, "suggested_product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610152416')[0m
+  [1m[35m (149.4ms)[0m  commit transaction
+Migrating to CreateShops (20130610154458)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "shops" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "type" varchar(255), "address" varchar(255), "tel" varchar(255), "email" varchar(255), "country" varchar(255), "county" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610154458')[0m
+  [1m[35m (3.0ms)[0m  commit transaction
+Migrating to CreateServices (20130610154844)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610154844')[0m
+  [1m[35m (3.2ms)[0m  commit transaction
+Migrating to CreateEventImages (20130610161703)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "event_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610161703')[0m
+  [1m[35m (3.3ms)[0m  commit transaction
+Migrating to CreateCustomerImages (20130610161725)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "customer_images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610161725')[0m
+  [1m[35m (4.3ms)[0m  commit transaction
+Migrating to CreateEventsProductsJoin (20130610162446)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "events_products" ("event_id" integer, "product_id" integer) 
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_events_products_on_event_id_and_product_id" ON "events_products" ("event_id", "product_id")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610162446')
+  [1m[36m (4.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateDesignersProductsJoin (20130610163527)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "designers_products" ("designer_id" integer, "product_id" integer) [0m
+  [1m[35m (0.5ms)[0m  CREATE INDEX "index_designers_products_on_designer_id_and_product_id" ON "designers_products" ("designer_id", "product_id")
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610163527')[0m
+  [1m[35m (3.2ms)[0m  commit transaction
+Migrating to CreateProductsServicesJoin (20130610164516)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "products_services" ("product_id" integer, "service_id" integer) 
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_products_services_on_product_id_and_service_id" ON "products_services" ("product_id", "service_id")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610164516')
+  [1m[36m (10.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductsSuggestedProductsJoin (20130610172709)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "products_suggested_products" ("product_id" integer, "suggested_product_id" integer) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610172709')
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20130612092034)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "psw" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130612092034')
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCountries (20130617122450)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "Countries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617122450')
+  [1m[36m (29.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCounties (20130617122610)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "counties" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "country_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617122610')
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductTypes (20130617123007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "product_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "image_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617123007')
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateShopTypes (20130617123017)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "shop_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130617123017')
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductsShopsJoin (20130702122100)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "products_shops" ("shop_id" integer, "product_id" integer) [0m
+  [1m[35m (2.0ms)[0m  CREATE INDEX "index_products_shops_on_product_id_and_shop_id" ON "products_shops" ("product_id", "shop_id")
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130702122100')[0m
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (6.3ms)[0m  DELETE FROM "products"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (21.1ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["datasheet", "height 110 cm, width 100 cm"], ["description", "Fantastic table oh my god"], ["image_url", "imagearc.jpg"], ["must_have", true], ["name", "Arc"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["datasheet", "height 166 cm, width 100 cm"], ["description", "Fantastic table"], ["image_url", "imagelessless.jpg"], ["must_have", true], ["name", "Less less"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["datasheet", "height 120 cm, width 80 cm"], ["description", "Fantastic biotable"], ["image_url", "imagebiotab.jpg"], ["must_have", false], ["name", "Biotab"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "designers"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "Nel mezzo del cammin di nostra vita"], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["image_url", "fotodante.jpg"], ["name", "Dante Alighieri"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["bio", "è un piglianculo"], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["image_url", "fotogiorgio.jpg"], ["name", "Giorgio Armani"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "è il più scarso dei nostri designer"], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["image_url", "fotoenrico.jpg"], ["name", "Enrico Coveri"], ["top", false], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "product_types"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["image_url", "tablesimage.jpg"], ["name", "tables"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["image_url", "chairsimage.jpg"], ["name", "chairs"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "countries"[0m
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Australia"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "France"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Germany"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Italy"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Spain"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "UK"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "USA"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "counties"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Lombardia"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Basilicata"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Marche"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Veneto"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Lazio"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Kent"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Sussex"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "California"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "New York"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (39.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Texas"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00], ["name", "Massachussets"], ["updated_at", Thu, 04 Jul 2013 12:43:13 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.9ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Arc'
+  [1m[36m (0.8ms)[0m  [1mUPDATE "products" SET "product_type_id" = 1, "updated_at" = '2013-07-04 12:43:13.752606' WHERE "products"."id" = 1[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Biotab'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "products" SET "product_type_id" = 1, "updated_at" = '2013-07-04 12:43:13.762147' WHERE "products"."id" = 3[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.3ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lombardia'
+  [1m[36m (1.2ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 12:43:13.773031' WHERE "counties"."id" = 1[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Basilicata'
+  [1m[36m (0.7ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 12:43:13.781038' WHERE "counties"."id" = 2[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.3ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Marche'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 12:43:13.788896' WHERE "counties"."id" = 3[0m
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Veneto'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 12:43:13.795213' WHERE "counties"."id" = 4[0m
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lazio'
+  [1m[36m (0.7ms)[0m  [1mUPDATE "counties" SET "country_id" = 5, "updated_at" = '2013-07-04 12:43:13.802067' WHERE "counties"."id" = 5[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Kent'
+  [1m[36m (0.4ms)[0m  [1mUPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 12:43:13.810688' WHERE "counties"."id" = 6[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Sussex'
+  [1m[36m (0.8ms)[0m  [1mUPDATE "counties" SET "country_id" = 7, "updated_at" = '2013-07-04 12:43:13.817971' WHERE "counties"."id" = 7[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (196.0ms)[0m  DELETE FROM "products"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.5ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["datasheet", "height 110 cm, width 100 cm"], ["description", "Fantastic table oh my god"], ["image_url", "imagearc.jpg"], ["must_have", true], ["name", "Arc"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["datasheet", "height 166 cm, width 100 cm"], ["description", "Fantastic table"], ["image_url", "imagelessless.jpg"], ["must_have", true], ["name", "Less less"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["datasheet", "height 120 cm, width 80 cm"], ["description", "Fantastic biotable"], ["image_url", "imagebiotab.jpg"], ["must_have", false], ["name", "Biotab"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.1ms)[0m  DELETE FROM "designers"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "Nel mezzo del cammin di nostra vita"], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["image_url", "fotodante.jpg"], ["name", "Dante Alighieri"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["bio", "è un piglianculo"], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["image_url", "fotogiorgio.jpg"], ["name", "Giorgio Armani"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "è il più scarso dei nostri designer"], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["image_url", "fotoenrico.jpg"], ["name", "Enrico Coveri"], ["top", false], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (17.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (3.7ms)[0m  DELETE FROM "product_types"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["image_url", "tablesimage.jpg"], ["name", "tables"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["image_url", "chairsimage.jpg"], ["name", "chairs"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "countries"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Australia"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "France"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Germany"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Italy"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Spain"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "UK"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "USA"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "counties"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Lombardia"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Basilicata"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Marche"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Veneto"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Lazio"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Kent"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Sussex"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "California"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "New York"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Texas"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00], ["name", "Massachussets"], ["updated_at", Thu, 04 Jul 2013 12:46:16 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Arc'
+  [1m[36m (1.8ms)[0m  [1mUPDATE "products" SET "product_type_id" = 3, "updated_at" = '2013-07-04 12:46:16.781585' WHERE "products"."id" = 4[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Biotab'
+  [1m[36m (0.4ms)[0m  [1mUPDATE "products" SET "product_type_id" = 3, "updated_at" = '2013-07-04 12:46:16.791153' WHERE "products"."id" = 6[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.4ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lombardia'
+  [1m[36m (0.8ms)[0m  [1mUPDATE "counties" SET "country_id" = 12, "updated_at" = '2013-07-04 12:46:16.801230' WHERE "counties"."id" = 12[0m
+  [1m[35m (2.6ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (7.9ms)[0m  DELETE FROM "products"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["datasheet", "height 110 cm, width 100 cm"], ["description", "Fantastic table oh my god"], ["image_url", "imagearc.jpg"], ["must_have", true], ["name", "Arc"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["datasheet", "height 166 cm, width 100 cm"], ["description", "Fantastic table"], ["image_url", "imagelessless.jpg"], ["must_have", true], ["name", "Less less"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["datasheet", "height 120 cm, width 80 cm"], ["description", "Fantastic biotable"], ["image_url", "imagebiotab.jpg"], ["must_have", false], ["name", "Biotab"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "designers"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "Nel mezzo del cammin di nostra vita"], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["image_url", "fotodante.jpg"], ["name", "Dante Alighieri"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["bio", "è un piglianculo"], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["image_url", "fotogiorgio.jpg"], ["name", "Giorgio Armani"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "è il più scarso dei nostri designer"], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["image_url", "fotoenrico.jpg"], ["name", "Enrico Coveri"], ["top", false], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "product_types"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["image_url", "tablesimage.jpg"], ["name", "tables"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["image_url", "chairsimage.jpg"], ["name", "chairs"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mSQL (3.1ms)[0m  [1mDELETE FROM "countries"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Australia"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "France"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Germany"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Italy"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Spain"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "UK"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "USA"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "counties"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Lombardia"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Basilicata"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Marche"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Veneto"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Lazio"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Kent"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Sussex"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "California"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "New York"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Texas"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00], ["name", "Massachussets"], ["updated_at", Thu, 04 Jul 2013 12:46:31 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Arc'
+  [1m[36m (0.4ms)[0m  [1mUPDATE "products" SET "product_type_id" = 5, "updated_at" = '2013-07-04 12:46:31.549533' WHERE "products"."id" = 7[0m
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Biotab'
+  [1m[36m (1.4ms)[0m  [1mUPDATE "products" SET "product_type_id" = 5, "updated_at" = '2013-07-04 12:46:31.557625' WHERE "products"."id" = 9[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lombardia'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 19, "updated_at" = '2013-07-04 12:46:31.565551' WHERE "counties"."id" = 23[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Basilicata'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 19, "updated_at" = '2013-07-04 12:46:31.571503' WHERE "counties"."id" = 24[0m
+  [1m[35m (2.5ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (71.4ms)[0m  DELETE FROM "products"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.3ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["datasheet", "height 110 cm, width 100 cm"], ["description", "Fantastic table oh my god"], ["image_url", "imagearc.jpg"], ["must_have", true], ["name", "Arc"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["datasheet", "height 166 cm, width 100 cm"], ["description", "Fantastic table"], ["image_url", "imagelessless.jpg"], ["must_have", true], ["name", "Less less"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["datasheet", "height 120 cm, width 80 cm"], ["description", "Fantastic biotable"], ["image_url", "imagebiotab.jpg"], ["must_have", false], ["name", "Biotab"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM "designers"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "Nel mezzo del cammin di nostra vita"], ["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["image_url", "fotodante.jpg"], ["name", "Dante Alighieri"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["bio", "è un piglianculo"], ["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["image_url", "fotogiorgio.jpg"], ["name", "Giorgio Armani"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "è il più scarso dei nostri designer"], ["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["image_url", "fotoenrico.jpg"], ["name", "Enrico Coveri"], ["top", false], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "product_types"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["image_url", "tablesimage.jpg"], ["name", "tables"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["image_url", "chairsimage.jpg"], ["name", "chairs"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mSQL (3.9ms)[0m  [1mDELETE FROM "countries"[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Australia"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "France"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Germany"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Italy"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Spain"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "UK"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "USA"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM "counties"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Lombardia"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Basilicata"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Marche"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00], ["name", "Veneto"], ["updated_at", Thu, 04 Jul 2013 12:46:44 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00], ["name", "Lazio"], ["updated_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00], ["name", "Kent"], ["updated_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00], ["name", "Sussex"], ["updated_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00], ["name", "California"], ["updated_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00], ["name", "New York"], ["updated_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00], ["name", "Texas"], ["updated_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00], ["name", "Massachussets"], ["updated_at", Thu, 04 Jul 2013 12:46:45 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Arc'
+  [1m[36m (0.4ms)[0m  [1mUPDATE "products" SET "product_type_id" = 7, "updated_at" = '2013-07-04 12:46:45.113859' WHERE "products"."id" = 10[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Biotab'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "products" SET "product_type_id" = 7, "updated_at" = '2013-07-04 12:46:45.123947' WHERE "products"."id" = 12[0m
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lombardia'
+  [1m[36m (1.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 26, "updated_at" = '2013-07-04 12:46:45.134477' WHERE "counties"."id" = 34[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Basilicata'
+  [1m[36m (0.4ms)[0m  [1mUPDATE "counties" SET "country_id" = 26, "updated_at" = '2013-07-04 12:46:45.142280' WHERE "counties"."id" = 35[0m
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.0ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Kent'
+  [1m[36m (0.5ms)[0m  [1mUPDATE "counties" SET "country_id" = 28, "updated_at" = '2013-07-04 12:46:45.148834' WHERE "counties"."id" = 39[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (163.0ms)[0m  DELETE FROM "products"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00], ["datasheet", "height 110 cm, width 100 cm"], ["description", "Fantastic table oh my god"], ["image_url", "imagearc.jpg"], ["must_have", true], ["name", "Arc"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00], ["datasheet", "height 166 cm, width 100 cm"], ["description", "Fantastic table"], ["image_url", "imagelessless.jpg"], ["must_have", true], ["name", "Less less"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("created_at", "datasheet", "description", "image_url", "must_have", "name", "on_market_on", "product_type_id", "suggested_product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00], ["datasheet", "height 120 cm, width 80 cm"], ["description", "Fantastic biotable"], ["image_url", "imagebiotab.jpg"], ["must_have", false], ["name", "Biotab"], ["on_market_on", nil], ["product_type_id", nil], ["suggested_product_id", nil], ["updated_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "designers"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "Nel mezzo del cammin di nostra vita"], ["created_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00], ["image_url", "fotodante.jpg"], ["name", "Dante Alighieri"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["bio", "è un piglianculo"], ["created_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00], ["image_url", "fotogiorgio.jpg"], ["name", "Giorgio Armani"], ["top", true], ["updated_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "designers" ("bio", "created_at", "image_url", "name", "top", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["bio", "è il più scarso dei nostri designer"], ["created_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00], ["image_url", "fotoenrico.jpg"], ["name", "Enrico Coveri"], ["top", false], ["updated_at", Thu, 04 Jul 2013 12:47:10 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "product_types"
+  [1m[36m (1.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["image_url", "tablesimage.jpg"], ["name", "tables"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "product_types" ("created_at", "image_url", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["image_url", "chairsimage.jpg"], ["name", "chairs"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "countries"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Australia"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "France"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Germany"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Italy"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Spain"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "UK"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "USA"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "counties"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Lombardia"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Basilicata"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Marche"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Veneto"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Lazio"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Kent"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Sussex"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "California"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "New York"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Texas"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "counties" ("country_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["country_id", nil], ["created_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00], ["name", "Massachussets"], ["updated_at", Thu, 04 Jul 2013 12:47:11 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Arc'
+  [1m[36m (0.8ms)[0m  [1mUPDATE "products" SET "product_type_id" = 9, "updated_at" = '2013-07-04 12:47:11.187608' WHERE "products"."id" = 13[0m
+  [1m[35m (5.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."name" = 'Biotab'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "products" SET "product_type_id" = 9, "updated_at" = '2013-07-04 12:47:11.198664' WHERE "products"."id" = 15[0m
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.1ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Lombardia'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 33, "updated_at" = '2013-07-04 12:47:11.206466' WHERE "counties"."id" = 45[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (1.0ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Basilicata'
+  [1m[36m (0.3ms)[0m  [1mUPDATE "counties" SET "country_id" = 33, "updated_at" = '2013-07-04 12:47:11.214309' WHERE "counties"."id" = 46[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCounty Load (0.2ms)[0m  SELECT "counties".* FROM "counties" WHERE "counties"."name" = 'Kent'
+  [1m[36m (0.2ms)[0m  [1mUPDATE "counties" SET "country_id" = 35, "updated_at" = '2013-07-04 12:47:11.219338' WHERE "counties"."id" = 50[0m
+  [1m[35m (1.9ms)[0m  commit transaction

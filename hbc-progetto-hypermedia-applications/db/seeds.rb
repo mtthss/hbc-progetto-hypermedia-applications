@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
 products = Product.create([{name: 'Arc', must_have: true,
-                            description: 'Fantastic table oh my god', image_url: 'imageArc.jpg',
+                            description: 'Fantastic table oh my god', image_url: 'imagearc.jpg',
                            datasheet: 'height 110 cm, width 100 cm'},
                            {name: 'Less less', must_have: true,
                             description: 'Fantastic table', image_url: 'imagelessless.jpg',
@@ -59,20 +59,19 @@ counties = County.create([
                          ])
 
 
-
-
-countries[4].counties << County.where(:name=>'Lombardia')
-countries[4].counties << County.where(:name=>'Basilicata')
-countries[4].counties << County.where(:name=>'Marche')
-countries[4].counties << County.where(:name=>'Veneto')
-countries[4].counties << County.where(:name=>'Lazio')
-
 product_types[0].products << Product.where(:name => "Arc")
+product_types[0].products << Product.where(:name => "Biotab")
 
-countries[6].counties << County.where(:name=>'Kent')
-countries[6].counties << County.where(:name=>'Sussex')
+countries[3].counties << County.where(:name=>'Lombardia')
+countries[3].counties << County.where(:name=>'Basilicata')
+countries[3].counties << County.where(:name=>'Marche')
+countries[3].counties << County.where(:name=>'Veneto')
+countries[3].counties << County.where(:name=>'Lazio')
 
-countries[7].counties << County.where(:name=>'California')
-countries[7].counties << County.where(:name=>'New York')
-countries[7].counties << County.where(:name=>'Texas')
-countries[7].counties << County.where(:name=>'Massachussets')
+countries[5].counties << County.where(:name=>'Kent')
+countries[5].counties << County.where(:name=>'Sussex')
+
+countries[6].counties << County.where(:name=>'California')
+countries[6].counties << County.where(:name=>'New York')
+countries[6].counties << County.where(:name=>'Texas')
+countries[6].counties << County.where(:name=>'Massachussets')
