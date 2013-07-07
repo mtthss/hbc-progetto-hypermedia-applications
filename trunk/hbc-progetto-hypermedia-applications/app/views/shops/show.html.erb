@@ -1,2 +1,30 @@
-<h1>Shops#show</h1>
-<p>Find me in app/views/shops/show.html.erb</p>
+<h1> <%=@shop.name%> </h1>
+<h5> <%=@shop.shop_type%> </h5>
+<br>
+
+<h3> Contacts: </h3>
+
+<div>
+<%= @shop.address %> <br>
+<%= @shop.country %>, <%= @shop.county %> <br>
+<%= @shop.email %>, <%= @shop.tel %>
+</div>
+
+<br>
+
+<h3> Maps: </h3>
+<div>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+src="https://maps.google.it/
+maps?f=q&amp;source=s_q&amp;hl=it&amp;
+
+geocode=&amp;
+q=<%= @shop.address %>&amp;
+aq=&amp;sll=45.428611,9.122629&amp;sspn=0.010165,0.026157&amp;ie=UTF8&amp;
+
+hq=&amp;
+hnear=<%= @shop.address %>, <%= @shop.county%> &amp;
+t=m&amp;z=14&amp;ll=45.471968,9.166257&amp;output=embed">
+
+</iframe>
+</div>
