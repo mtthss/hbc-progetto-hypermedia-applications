@@ -89,7 +89,7 @@ HbcProject::Application.routes.draw do
       end
     end
 
-
+     resources :shops, :only => [:show, :new, :create]
 
 
     match 'company' => 'company#show', :via => :get

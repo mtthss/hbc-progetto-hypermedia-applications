@@ -24,7 +24,7 @@ products = Product.create([{name: 'Arc', must_have: true,
 Designer.delete_all
 designers = Designer.create([{name: 'Dante Alighieri', bio: 'Nel mezzo del cammin di nostra vita',
                               image_url: 'fotodante.jpg',top: true},
-                             {name: 'Giorgio Armani', bio: 'è un piglianculo',
+                             {name: 'Giorgio Armani', bio: 'il più famoso stilista italiano',
                               image_url: 'fotogiorgio.jpg',top: true},
                              {name: "Enrico Coveri", bio: 'è il più scarso dei nostri designer',
                               image_url: 'fotoenrico.jpg',top: false}
@@ -38,10 +38,10 @@ product_types = ProductType.create([{name: 'tables', image_url: 'tablesimage.jpg
 
 #EVENTS
 Event.delete_all
-events = Event.create([{name: 'Salone del mobile 2013', location: 'Milano',
-                        description: 'Bell\'evento pieno di piglianculo', image_url: 'saloneimage.jpg'},
+events = Event.create([{name: 'Salone del mobile 2013', location: 'The new Milan Fair Rho Pero is one of the largest fairground world-wide with 8 large pavilions for indoor exhibitions and 60,000 squared meters for outdoor exhibitions. The Milan Fair is one of the most important in the international trade fair sectors.The new fairground of Milan in Rho Pero has a distance of 15 km to Milan city center. It is connected by the motorways A4 Turin-Milan-Venice, A8/A9 Milan-Airport Malpensa, Varese/Como as well as by the West tangential. For visitors and exhibitors are more than 14.000 parking lots with modern park system at disposal. The red underground line 1 has been extended up to the fair stop Rho. Thus the new fairground can be attained easily from the Milan city center by public transport.',
+                        description: '"The Milan International Furniture Fair (Italian: Salone Internazionale del Mobile di Milano) is a furniture fair held annually in Milan. It is the largest trade fair of its kind in the world. The show showcases the latest in furniture and design from countries around the world. It is considered a leading venue for the display of new products by designers of furniture, lighting and other home furnishings. The show, also known as "Salone", "Milano Salone" and "Milan Design Week," is held every year, usually in April, in the FieraMilano complex in the Milan metropolitan area town of Rho.', image_url: 'salone.jpg'},
                       {name: 'Expo 2015', location: 'Rho',
-                        description: 'Evento internazionale', image_url: 'saloneimage.jpg'}
+                        description: 'Evento internazionale', image_url: 'expo.jpg'}
                       ])
 
 #COUNTRIES
@@ -74,10 +74,22 @@ counties = County.create([
 #SHOPS
 Shop.delete_all
 shops = Shop.create([
-                        {address: "Milan, largo V alpini 15", email:"best.shop@mail.it",
-                         name:"HBC flagship store Milan", county: "Lombardia", country: "Italy",
+                        {address: "Largo Quinto Alpini,15, Milano", email:"best.shop@mail.it",
+                         name:"HBC flagship store Milano", county: "Lombardia", country: "Italy",
                          tel:"02/567890", shop_type:"flagship store"}
                     ])
+
+#EVENT IMAGES
+EventImage.delete_all
+event_images = EventImage.create([
+                        {image_url: "salone1.jpg", event_id: 0},
+                        {image_url: "salone2.jpg", event_id: 0},
+                        {image_url: "salone3.jpg", event_id: 0},
+                        {image_url: "salone4.jpg", event_id: 0},
+                        {image_url: "salone5.jpg", event_id: 0}
+                    ])
+
+
 
 #JOIN TABLE DESIGNERS_PRODUCTS
 products[0].designers << Designer.find_by_name('Dante Alighieri')
@@ -90,7 +102,6 @@ products[0].events << Event.find_by_name('Expo 2015')
 #JOIN TABLE PRODUCTS_SUGGESTED_PRODUCTS
 products[0].suggested_products << Product.find_by_name('Biotab')
 products[0].suggested_products << Product.find_by_name('Less less')
-
 
 
 #RELATION PRODUCT_TYPE_PRODUCTS
@@ -109,3 +120,6 @@ countries[6].counties << County.where(:name=>'California')
 countries[6].counties << County.where(:name=>'New York')
 countries[6].counties << County.where(:name=>'Texas')
 countries[6].counties << County.where(:name=>'Massachussets')
+
+#RELATION EVENT_IMAGES
+events[0].event_images <<  EventImage.where(:event_id=>0)

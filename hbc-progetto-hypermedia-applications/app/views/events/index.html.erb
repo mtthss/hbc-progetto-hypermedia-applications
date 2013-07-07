@@ -1,9 +1,9 @@
 <h1>All events</h1>
 
 <div class="gridList">
-  <% @events.each do |events| %>
+  <% @events.each do |event| %>
       <div class="gridBox">
-        <%= event.name %>
+        &nbsp; <%= event.name %>
         <%= link_to event_path(event) do%>
             <%= image_tag("/events/#{event.image_url}") %>
         <% end %>
@@ -11,5 +11,3 @@
   <% end  %>
 </div>
 
-
-<p>Find me in app/views/events/index.html.erb</p>

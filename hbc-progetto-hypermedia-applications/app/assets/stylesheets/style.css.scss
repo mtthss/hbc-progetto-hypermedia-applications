@@ -48,6 +48,11 @@ img.top {
   margin: 5px 0 20px 0;
 }
 
+img.flex{
+  max-width: 100%;
+  max-height: 100%;
+}
+
 p {
   margin-bottom: 1.5em;
 }
@@ -79,8 +84,8 @@ ul {img {
 #content {
 	position: absolute;
 	top: 0px;
-	left: 30px;
-	width: 810px;
+	left: 0px;
+	width: 840px;
 	margin: 0px 0 0 265px;
 	padding: 30px;
 	background: #ffffff;
@@ -228,14 +233,25 @@ div.gridList {
   font-family: Georgia, "consolas", Times, serif;
 }
 
-.gridBox {
-  width:240px;
-  height:240px;
+
+.gridBox{
+  width:350px;
+  height:220px;
   border:0px none;
-  margin:50px 30px 20px 0;
+  margin:50px 70px 20px 0;
   overflow:hidden;
   position:relative;
   float:left;
+  background: #222222;
+
+}
+
+div.mainEventImg {
+  width:590px;
+  height:380px;
+  border:0px none;
+  margin:50px 30px 20px 0;
+  float:center;
   background: #222222;
 }
 
