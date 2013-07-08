@@ -1,3 +1,8 @@
+<div class= "structuralLinks">
+  <h4><%= link_to 'Description', product_path(@product) %>  &nbsp;  <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; Datasheet</h4>
+</div>
+
+
 <h1>Datasheets of <%= @product.name %></h1>
 
 <%= image_tag("/products/datasheets/#{@product.tech_image_url}") %>

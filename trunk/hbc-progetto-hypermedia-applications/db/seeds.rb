@@ -79,6 +79,17 @@ shops = Shop.create([
                          tel:"02/567890", shop_type:"flagship store"}
                     ])
 
+#PRODUCT IMAGES
+ProductImage.delete_all
+product_images = ProductImage.create([
+                            {image_url: "imagearc2.jpg", product_id: 0},
+                            {image_url: "imagearc3.jpg", product_id: 0},
+                            {image_url: "imagearc4.jpg", product_id: 0},
+                            {image_url: "imagearc5.jpg", product_id: 0}
+                                     ])
+
+
+
 #EVENT IMAGES
 EventImage.delete_all
 event_images = EventImage.create([
@@ -120,6 +131,9 @@ countries[6].counties << County.where(:name=>'California')
 countries[6].counties << County.where(:name=>'New York')
 countries[6].counties << County.where(:name=>'Texas')
 countries[6].counties << County.where(:name=>'Massachussets')
+
+#RELATION PRODUCT_IMAGES
+products[0].product_images << ProductImage.where(:product_id=>0)
 
 #RELATION EVENT_IMAGES
 events[0].event_images <<  EventImage.where(:event_id=>0)
