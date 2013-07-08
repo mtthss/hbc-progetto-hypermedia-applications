@@ -52,4 +52,10 @@ class ProductsController < ApplicationController
     @shops=@product.shops
   end
 
+  def photogallery
+    @product=Product.find(params[:id])
+    @images=@product.product_images
+  end
+
+
 end
