@@ -1,7 +1,19 @@
 <h1><%= @designer.name %> </h1>
 
-<p><%= @designer.bio %></p>
-
+<div class="mainEventImg">
 <%= image_tag("/designers/#{@designer.image_url}") %>
+</div>
 
+<br>
+
+<div>
+<h3> Description </h3>
+<%= @designer.bio %>
+</div>
+
+<br>
+
+<div>
+<h3> Creations </h3>
 <%= link_to "Look at #{@designer.name}'s products", products_designer_path(@designer) %>
+</div>

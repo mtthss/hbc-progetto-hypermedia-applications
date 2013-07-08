@@ -21,7 +21,7 @@ class DesignersController < ApplicationController
   end
 
   def products
-    @designer=Designer.find(params[:designer_id])
+    @designer=Designer.find(params[:id])
     @products=@designer.products.order('name ASC')
   end
 end
