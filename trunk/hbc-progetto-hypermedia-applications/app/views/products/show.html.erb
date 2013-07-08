@@ -1,24 +1,50 @@
-<h1 style="text-align:left;float:left;">  <%= @product.name %>   </h1>
-<h4 style="text-align:right;float:left; margin-left: 30px">(  <%= link_to 'look at datasheet', datasheet_product_path(@product) %>  )</h4>
 
-<p> Designed by
-  <% @designers.each do |designer| %>
-      <%= link_to designer.name, designer_path(designer) %>
-  <% end  %>
-</p>
-<p> Exposed in
-  <% @events.each do |event| %>
-      <%= link_to event.name, event_path(event) %>
-  <% end  %>
-</p>
+<div class= "structuralLinks">
+  <h4>Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+</div>
+
+<br>
+
+<div class="ProductHeader">
+
+    <h1>  <%= @product.name %>   </h1>
+
+    <h6> Designed by
+      <% @designers.each do |designer| %>
+          <%= link_to designer.name, designer_path(designer) %>
+      <% end  %> <br>
+      Exposed in
+      <% @events.each do |event| %>
+          <%= link_to event.name, event_path(event) %>
+      <% end  %> <br>
+      <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
+    </h6>
+
+</div>
+
+<div class="mainEventImg">
+<%= image_tag("/products/#{@product.image_url}") %>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+    <h3> Description: </h3>
+    <%= @product.description %>
+</div>
+
+<br>
+<br>
 
 <hr style="clear:both;"/>
 
-<%= link_to 'Where you can find this product', shops_for_this_product_product_path(@product) %>
-
 
 <div class="gridList">
-  <h4> Match this product</h4>
+  <h3> Match this product</h3>
   <%@matches.each do |matching_product| %>
   <div class="gridBox">
     <%= matching_product.name %>
