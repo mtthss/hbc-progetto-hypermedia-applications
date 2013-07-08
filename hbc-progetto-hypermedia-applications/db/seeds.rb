@@ -22,12 +22,14 @@ products = Product.create([{name: 'Arc', must_have: true,
 
 #DESIGNERS
 Designer.delete_all
-designers = Designer.create([{name: 'Dante Alighieri', bio: 'Nel mezzo del cammin di nostra vita',
-                              image_url: 'fotodante.jpg',top: true},
-                             {name: 'Giorgio Armani', bio: 'il più famoso stilista italiano',
-                              image_url: 'fotogiorgio.jpg',top: true},
-                             {name: "Enrico Coveri", bio: 'è il più scarso dei nostri designer',
-                              image_url: 'fotoenrico.jpg',top: false}
+designers = Designer.create([{name: 'Enrico Coveri', bio: 'Enrico Coveri was born in Florence, Italy in 1952. He studied at the Accadema delle Belle Arti in Florence. In 1973, he began working as freelance designer, creating knitwear and sportswear lines for three collections, Toché, Gentry and Tycos making his mark by being one of the first designers to use soft pastel shades. He moved to Paris in 1978 to work at the Espace Cardin, the vast design institute set up by Pierre Cardin. Shortly after that, he returned to Italy and established his own company in 1979. Each season the company produced a ready-to-wear women\'s line and several less expensive boutique collections for men, women, teenagers, and children, as well as a vast array of subsidiary Coveri accessory products such as shoes, bags, hats, scarves, and gloves. Enrico exceptionally collaborated this year with HBC for a special line of design furniture',
+                              image_url: 'fotoenrico.jpg',top: false},
+			     {name: 'Marc Sadler', bio: 'Marc Sadler was born in Austria. He is a French citizen and at present lives in Milan. He graduated from the Ecole Nationale Supérieure des Arts Décoratifs (Paris) in 1968, at the end of the first industrial design course (it had the well-chosen definition of esthétique industrielle), a branch of learning that was already regarded as a separated branch of learning as to architecture. Devoted from the start to the experimentation with plastic materials (subject of his degree thesis and of his personal curiosity) since the 70ies he brought to perfection the very first ski-boot in thermoplastic material, subsequently industrialized by the Italian firm Caber.The way was opened towards a long and fruitful collaboration with Caber (afterwards known as Lotto), that led him to the patenting of the ski-boot with symmetric shell, the most successful ski-boot for several years all over the world. This represented the origin of his specialization as a ?designer for sport sector, that led him to the cooperation with the most important multinational sport Companies in the United States, Asia, Japan and Europe.His professional path allowed him to mature a varied experience regarding both materials and manufacturing processes. The source from sports field, where research and experimentation on new materials and working technologies are more widely diffused, allowed him to export ideas and knowledge towards fields in which design (with a classical meaning) is deep-rooted for a long time.Stateless in a broad sense (he lived and practiced his job in France, United States, Asia and Italy), toady he is (probably) temporarily settled in Milan. He constantly cooperates with very important firms in the fields of home furnishing, big and small household appliances, lighting, and of more technically advanced products as well, in addition to his collaborations in the field of sport.',
+                              image_url: 'fotosadler.jpg',top: true},
+			     {name: 'Margherita Bonetti', bio: 'Margherita (Meggy) Bonetti is a young italian designer, who is attending her Bachelor in Design at the Naba Academy in Milan. In spite of her young age she has obtained impressive results and won many important prizes, Createur de l\'Annee (Paris), Compasso d\'Oro ADI (Milano), Design Plus (Frankfurt), Auszeichnung fur Gutes Design (Hannover).',
+                              image_url: 'fotomeggy.jpg',top: false},
+			     {name: 'Valentina Giulini', bio: 'Valentina Giulini is a young italian designer. She achieved a Bachelor in Design at the Naba Academy in Milan and a Master of Arts in Graphic Branding and Identity at the London College of Communication. She has worked for many major companies in Italy and in London. HBC has required her collaboration for a collection of chairs of fashionable design',
+                              image_url: 'fotovale.jpg',top: false}
                             ])
 
 #PRODUCT TYPES
@@ -103,8 +105,8 @@ event_images = EventImage.create([
 
 
 #JOIN TABLE DESIGNERS_PRODUCTS
-products[0].designers << Designer.find_by_name('Dante Alighieri')
-products[0].designers << Designer.find_by_name('Giorgio Armani')
+products[0].designers << Designer.find_by_name('Enrico Coveri')
+products[0].designers << Designer.find_by_name('Marc Sadler')
 
 #JOIN TABLE EVENT_PRODUCTS
 products[0].events << Event.find_by_name('Salone del mobile 2013')
