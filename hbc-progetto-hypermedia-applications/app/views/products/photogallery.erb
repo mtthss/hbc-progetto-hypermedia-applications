@@ -2,3 +2,11 @@
   <h4><%= link_to 'Description', product_path(@product) %>  &nbsp; Photo-gallery &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
 </div>
 
+<div class="gridList">
+  <% @images.each do |image| %>
+      <div class="gridBox" class="flex">
+        <%= image_tag("/products/#{image.image_url}") %>
+      </div>
+  <% end  %>
+</div>
+
