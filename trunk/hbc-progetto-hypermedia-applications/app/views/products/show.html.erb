@@ -1,8 +1,7 @@
 
 <div class= "structuralLinks">
-  <h4>Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+<h4>Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
 </div>
-
 <br>
 
 <div class="ProductHeader">
@@ -42,7 +41,6 @@
 
 <hr style="clear:both;"/>
 
-
 <div class="gridList">
   <h3> Match this product</h3>
   <%@matches.each do |matching_product| %>
@@ -52,7 +50,7 @@
         <%= image_tag("/products/#{matching_product.image_url}") %>
     <% end %>
   </div>
-  <% end  %>
+  <% end %>
 </div>
 
 

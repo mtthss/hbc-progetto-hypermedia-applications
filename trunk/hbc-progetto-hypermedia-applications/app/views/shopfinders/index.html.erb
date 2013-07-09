@@ -86,9 +86,11 @@
 
 
 <% if(@shops!=nil) %>
+        <br>
+        <hr style="clear:both;"/>
+        <br>
         <% @shops.each do |shop| %>
         <%= link_to shop.name, shop_path(shop.id) %> <br>
             <%= shop.address %>  <br>
         <% end %>
-
 <% end %>
