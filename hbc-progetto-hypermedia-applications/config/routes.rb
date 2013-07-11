@@ -79,7 +79,7 @@ HbcProject::Application.routes.draw do
      resources :products, :only => [:index, :show, :new, :create] do
        member do
          get 'datasheet'
-	 get 'photogallery'
+	       get 'photogallery'
          get 'shops_for_this_product'
        end
      end

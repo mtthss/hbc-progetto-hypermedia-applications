@@ -18,6 +18,22 @@ class ProductsController < ApplicationController
 
   def show
     @product=Product.find(params[:id])
+    if(params[:designer_id])
+      @designer=Designer.find(params[:designer_id])
+      @products=@designer.products
+    end
+
+    if((@products.index(@product)+1)<@products.size)
+      @next=@products.fetch(@products.index(@product)+1)
+    else
+      @next=@products.fetch(0)
+    end
+    if(@products.index(@product)-1>=0)
+      @prev=@products.take(@products.index(@product)-1)
+    else
+      @prev=@products.last
+    end
+
     @matches=@product.suggested_products
     @events=@product.events
     @image=@product.image_url

@@ -4,7 +4,7 @@
   <% @products.each do |product| %>
       <div class="gridBox">
         <%= product.name %>
-        <%= link_to product_path(product) do%>
+        <%= link_to product_path(product,:designer_id=>@designer) do%>
             <%= image_tag("/products/#{product.image_url}") %>
         <% end %>
       </div>
