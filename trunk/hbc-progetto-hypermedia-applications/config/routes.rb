@@ -58,6 +58,8 @@ HbcProject::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
+    resources :admin, :only => [:index]
+
      resources :designers, :only => [:index, :show, :new, :create] do
        member do
          get 'products'
@@ -92,11 +94,13 @@ HbcProject::Application.routes.draw do
 
      resources :shops, :only => [:show, :new, :create]
 
-
+    match 'login_admin' => 'admin#login', :via => :get
+    match 'logout_admin' => 'admin#logout', :via => :get
+    match 'attempt_login' => 'admin#attempt_login', :via => :post
     match 'company' => 'company#show', :via => :get
     match 'contacts' => 'contacts#show', :via => :get
     match 'all_customers' => 'all_customers#show', :via => :get
+    match 'admin' => 'admin#index', :via => :get, :as => :admins
     match 'home' => 'home#index', :via => :get
     root :to => 'home#index'
-
 end

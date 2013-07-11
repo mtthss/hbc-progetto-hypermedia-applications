@@ -1,0 +1,12 @@
+<div class="flash_notice">
+<% if !flash[:notice].blank?%>
+    <%= flash[:notice] %>
+<% end %>
+</div>
+</br>
+<h1> <%= session[:username] %> homepage</h1>
+
+<p>As administrator of the site you can add new object to the database. When you have finished
+remember to log out!</p>
+
+<%= link_to "logout", :action => 'logout' %>
