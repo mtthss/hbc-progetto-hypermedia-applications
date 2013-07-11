@@ -1,10 +1,11 @@
 
 <div class= "structuralLinks">
+
   <h4>
   <%if(@designer!= nil) %>
       <%= link_to "next", product_path(@next,:designer_id=>@designer.id) %>
       <%= link_to "prev", product_path(@prev,:designer_id=>@designer.id) %>
-  <%else%>
+  <%elsif(@products!= nil)%>
       <%= link_to "next", product_path(@next,:title=>@title) %>
       <%= link_to "prev", product_path(@prev,:title=>@title) %>
   <%end%>
@@ -79,5 +80,4 @@
   </div>
 
 </div>
-
 
