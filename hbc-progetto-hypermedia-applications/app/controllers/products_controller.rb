@@ -34,6 +34,7 @@ class ProductsController < ApplicationController
       @prev=@products.last
     end
 
+    @title=params[:title]
     @matches=@product.suggested_products
     @events=@product.events
     @image=@product.image_url
