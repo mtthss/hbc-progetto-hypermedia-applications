@@ -1,13 +1,16 @@
 
 <div class= "structuralLinks">
-<h4>Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+<h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
 </div>
+
 <br>
-
 <div class="ProductHeader">
+<hr style="clear:both;"/>
+<br>
+    <h1>  <%= @product.name %>   </h1> 
 
-    <h1>  <%= @product.name %>   </h1>
-
+	<br>
+	
     <h6> Designed by
       <% @designers.each do |designer| %>
           <%= link_to designer.name, designer_path(designer) %>
@@ -17,6 +20,8 @@
           <%= link_to event.name, event_path(event) %>
       <% end  %> <br>
       <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
+	<br>
+<br>
     </h6>
 
 </div>
