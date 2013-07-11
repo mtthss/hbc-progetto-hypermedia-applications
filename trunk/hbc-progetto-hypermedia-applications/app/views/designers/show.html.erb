@@ -17,3 +17,17 @@
 <h3> Creations </h3>
 <%= link_to "Look at #{@designer.name}'s products", products_designer_path(@designer) %>
 </div>
+
+<div id="backLink">
+
+  <div>
+    <%= link_to :back do%>
+        <%= image_tag("/back.png") %>
+    <% end %>
+  </div>
+
+  <div>
+    Back
+  </div>
+
+</div>

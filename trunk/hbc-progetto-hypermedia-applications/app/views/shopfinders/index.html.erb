@@ -90,7 +90,7 @@
         <hr style="clear:both;"/>
         <br>
         <% @shops.each do |shop| %>
-        <%= link_to shop.name, shop_path(shop.id) %> <br>
+        <%= link_to shop.name, shop_path(shop.id, :shopfinder=>true) %> <br>
             <%= shop.address %>  <br>
         <% end %>
 <% end %>
