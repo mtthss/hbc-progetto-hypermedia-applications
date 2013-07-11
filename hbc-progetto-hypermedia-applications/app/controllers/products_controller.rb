@@ -18,23 +18,30 @@ class ProductsController < ApplicationController
 
   def show
     @product=Product.find(params[:id])
+    @title=params[:title]
     if(params[:designer_id])
       @designer=Designer.find(params[:designer_id])
       @products=@designer.products
     end
+    if(@title=="Must have products")
+      @products=Product.where(:must_have=>true)
+    elsif(@title=="New products")
+      @products=Product.order('on_market_on DESC').limit(9)
+    end
 
-    if((@products.index(@product)+1)<@products.size)
-      @next=@products.fetch(@products.index(@product)+1)
+
+    if((@products.index(@product))+1<@products.size)
+      @next=@products.fetch((@products.index(@product))+1)
     else
       @next=@products.fetch(0)
     end
-    if(@products.index(@product)-1>=0)
+    if((@products.index(@product)-1)>=0)
       @prev=@products.take(@products.index(@product)-1)
     else
       @prev=@products.last
     end
 
-    @title=params[:title]
+
     @matches=@product.suggested_products
     @events=@product.events
     @image=@product.image_url

@@ -1,6 +1,14 @@
 
 <div class= "structuralLinks">
-  <%= link_to "next", product_path(@next,:designer_id=>@designer.id) %>
+  <h4>
+  <%if(@designer!= nil) %>
+      <%= link_to "next", product_path(@next,:designer_id=>@designer.id) %>
+      <%= link_to "prev", product_path(@prev,:designer_id=>@designer.id) %>
+  <%else%>
+      <%= link_to "next", product_path(@next,:title=>@title) %>
+      <%= link_to "prev", product_path(@prev,:title=>@title) %>
+  <%end%>
+  </h4>
 <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
 </div>
 
@@ -21,7 +29,7 @@
       <% end  %> <br>
       <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
 	<br>
-<br>
+    <br>
     </h6>
 
 </div>
