@@ -109,6 +109,8 @@ event_images = EventImage.create([
 
 #JOIN TABLE DESIGNERS_PRODUCTS
 products[0].designers << Designer.find_by_name('Enrico Coveri')
+products[1].designers << Designer.find_by_name('Enrico Coveri')
+products[2].designers << Designer.find_by_name('Enrico Coveri')
 products[0].designers << Designer.find_by_name('Marc Sadler')
 
 #JOIN TABLE EVENT_PRODUCTS
