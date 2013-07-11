@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
 
+  before_filter :confirm_logged_in, :only => [:new, :create]
+
   def index
     @events=Event.all
   end
@@ -10,6 +12,7 @@ class EventsController < ApplicationController
   end
 
   def new
+    render layout: "admin_layout"
     @event=Event.new
   end
 

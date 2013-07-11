@@ -33,7 +33,7 @@
             <%= link_to 'Customers', all_customers_path %>
           </li>
           <li class="last">
-            <a href="#">Log Admin</a>
+            <%= link_to 'Log admin', {:controller => 'admin', :action => 'login'} %>
           </li>
         </ul>
         <br class="clear" />

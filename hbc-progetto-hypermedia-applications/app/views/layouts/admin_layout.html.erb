@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>HBC website</title>
+  <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+</head>
+<body>
+<div id="bg">
+  <div id="outer">
+    <div id="header">
+      <div id="logo">
+        <%= link_to image_tag("/Immagine2.png", :border=>0), admins_path %>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="sidebar">
+
+        <ul id="container">
+          <li>
+            <%= link_to 'create a PRODUCT', new_product_path %>
+          </li>
+          <li>
+            <%= link_to 'create a TYPE OF PRODUCT', new_product_type_path %>
+          </li>
+          <li>
+            <%= link_to 'create a DESIGNER', new_designer_path %>
+          </li>
+          <li>
+            <%= link_to 'create an EVENT', new_event_path %>
+          </li>
+          <li>
+            <%= link_to 'create a SHOP', new_shop_path %>
+          </li>
+        </ul>
+
+      </div>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

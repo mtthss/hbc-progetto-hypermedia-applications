@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  before_filter :confirm_logged_in, :only => [:new, :create]
+
   def index
     if(params[:product_type_id])
       @product_type=ProductType.find(params[:product_type_id])
@@ -52,16 +55,31 @@ class ProductsController < ApplicationController
 
   def new
     @product=Product.new
+    @product_types = ProductType.order('name ASC')
+    render layout: "admin_layout"
   end
 
   def create
-    #image_io = params[:console][:image_url]
-    #File.open(Rails.root.join('public','consoles', image_io.original_filename), 'wb') do |file|
-    #  file.write(image_io.read)
-    #end
-    #params[:console][:image_url] = image_io.original_filename
-    #Console.create(params[:console])
-    #redirect_to admins_path
+    image_io = params[:product][:image_url]
+    File.open(Rails.root.join('public','products', image_io.original_filename), 'wb') do |file|
+    file.write(image_io.read)
+    end
+    params[:product][:image_url] = image_io.original_filename
+
+    image_io = params[:product][:tech_image_url]
+    File.open(Rails.root.join('public','products/datasheets', image_io.original_filename), 'wb') do |file|
+      file.write(image_io.read)
+    end
+    params[:product][:tech_image_url] = image_io.original_filename
+
+    @product=Product.new(params[:product])
+    if @product.save
+    flash[:notice]= "Product created successfully!"
+    redirect_to admins_path
+    else
+    flash[:notice]= "Error in product creation. Check out that all the fields are fill in correctly"
+    render 'new'
+    end
   end
 
   def datasheet

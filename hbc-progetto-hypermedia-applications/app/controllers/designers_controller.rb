@@ -1,4 +1,7 @@
 class DesignersController < ApplicationController
+
+  before_filter :confirm_logged_in, :only => [:new, :create]
+
   def index
     if(params[:top])
       @designers=Designer.where(:top=>true)
@@ -14,6 +17,7 @@ class DesignersController < ApplicationController
   end
 
   def new
+    render layout: "admin_layout"
     @designer=Designer.new
   end
 
