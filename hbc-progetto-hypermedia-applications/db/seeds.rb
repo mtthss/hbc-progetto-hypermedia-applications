@@ -78,7 +78,10 @@ Shop.delete_all
 shops = Shop.create([
                         {address: "Largo Quinto Alpini,15, Milano", email:"best.shop@mail.it",
                          name:"HBC flagship store Milano", county: "Lombardia", country: "Italy",
-                         tel:"02/567890", shop_type:"flagship store"}
+                         tel:"02/567890", shop_type:"flagship store"}   ,
+                        {address: "via Baldinucci, 78, Milano", email:"hbc.shop@mail.it",
+                         name:"HBC design store", county: "Lombardia", country: "Italy",
+                         tel:"02/4567890", shop_type:"flagship store"}
                     ])
 
 #PRODUCT IMAGES
@@ -115,6 +118,10 @@ products[0].events << Event.find_by_name('Expo 2015')
 #JOIN TABLE PRODUCTS_SUGGESTED_PRODUCTS
 products[0].suggested_products << Product.find_by_name('Biotab')
 products[0].suggested_products << Product.find_by_name('Less less')
+
+#JOIN TABLE PRODUCTS_SHOPS
+products[0].shops << Shop.all
+products[1].shops << Shop.all
 
 
 #RELATION PRODUCT_TYPE_PRODUCTS
