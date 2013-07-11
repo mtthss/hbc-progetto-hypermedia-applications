@@ -6,13 +6,13 @@ class ProductsController < ApplicationController
       @title=@product_type.name
     elsif(params[:must])
       @products=Product.where(:must_have=>true)
-      @title="Must have products"
+      @title="Must-have"
     elsif(params[:new])
       @products=Product.order('on_market_on DESC').limit(9)
-      @title= "New products"
+      @title= "New"
     else
       @products=Product.all
-      @title="All products"
+      @title="All"
     end
   end
 
@@ -23,22 +23,23 @@ class ProductsController < ApplicationController
       @designer=Designer.find(params[:designer_id])
       @products=@designer.products
     end
-    if(@title=="Must have products")
+    if(@title=="Must-have")
       @products=Product.where(:must_have=>true)
-    elsif(@title=="New products")
+    elsif(@title=="New")
       @products=Product.order('on_market_on DESC').limit(9)
     end
 
-
-    if((@products.index(@product))+1<@products.size)
-      @next=@products.fetch((@products.index(@product))+1)
-    else
-      @next=@products.fetch(0)
-    end
-    if((@products.index(@product)-1)>=0)
-      @prev=@products.take(@products.index(@product)-1)
-    else
-      @prev=@products.last
+    if(@products!=nil)
+      if((@products.index(@product))+1<@products.size)
+        @next=@products.fetch((@products.index(@product))+1)
+      else
+        @next=@products.fetch(0)
+      end
+      if((@products.index(@product)-1)>=0)
+        @prev=@products.take(@products.index(@product)-1)
+      else
+        @prev=@products.last
+      end
     end
 
 

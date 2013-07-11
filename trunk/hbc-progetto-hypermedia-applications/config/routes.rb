@@ -98,4 +98,5 @@ HbcProject::Application.routes.draw do
     match 'all_customers' => 'all_customers#show', :via => :get
     match 'home' => 'home#index', :via => :get
     root :to => 'home#index'
+
 end
