@@ -45,7 +45,6 @@ class ProductsController < ApplicationController
       end
     end
 
-
     @matches=@product.suggested_products
     @events=@product.events
     @image=@product.image_url
@@ -56,10 +55,16 @@ class ProductsController < ApplicationController
   def new
     @product=Product.new
     @product_types = ProductType.order('name ASC')
+    @designers=Designer.order('name ASC')
     render layout: "admin_layout"
   end
 
   def create
+    params[:product][:designer_ids].delete("")
+    designer_ids = params[:product][:designer_ids]
+    designers = Designer.find(designer_ids)
+    params[:product].delete(:designer_ids)
+
     image_io = params[:product][:image_url]
     File.open(Rails.root.join('public','products', image_io.original_filename), 'wb') do |file|
     file.write(image_io.read)
@@ -72,8 +77,10 @@ class ProductsController < ApplicationController
     end
     params[:product][:tech_image_url] = image_io.original_filename
 
-    @product=Product.new(params[:product])
-    if @product.save
+    product=Product.new(params[:product])
+
+    if product.save
+      product.designers << designers
     flash[:notice]= "Product created successfully!"
     redirect_to admins_path
     else

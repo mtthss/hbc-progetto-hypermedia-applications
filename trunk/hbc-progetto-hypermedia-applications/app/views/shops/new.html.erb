@@ -1,2 +1,57 @@
-<h1>Shops#new</h1>
-<p>Find me in app/views/shops/new.html.erb</p>
+<div class="flash_notice">
+  <% if !flash[:notice].blank?%>
+      <%= flash[:notice] %>
+  <% end %>
+</div>
+
+<h1>Creation of a new designer</h1>
+
+</br></br>
+
+<table summary="shop form field">
+  <%= form_for @shop do |f| %>
+
+      <tr>
+        <th> <%= f.label :name %>  </th>
+        <td>  <%= f.text_field :name %>  </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :shop_type %>  </th>
+        <td>  <%= f.text_field :shop_type %>  </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :address %>  </th>
+        <td>  <%= f.text_field :address %>  </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :tel %>  </th>
+        <td>  <%= f.text_field :tel %>  </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :email %>  </th>
+        <td>  <%= f.text_field :email %>  </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :shop_id %>  </th>
+        <td>  <%= collection_select :shop, :country, @countries, :id, :name %> </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :shop_id %>  </th>
+        <td>  <%= collection_select :shop, :county  , @counties, :id, :name %> </td>
+      </tr>
+
+
+      <tr>
+        <th> </br>  </th>
+        <td>   </td>
+      </tr>
+      <tr>
+        <th>  <%= f.submit %> </th>
+        <td>   </td>
+      </tr>
+      </table>
+  <% end %>
+
+
+  <%= link_to "logout", :controller => 'admin',:action => 'logout' %>
+

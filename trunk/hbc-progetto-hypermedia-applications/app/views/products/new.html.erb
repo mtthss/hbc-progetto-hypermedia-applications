@@ -19,12 +19,20 @@
         <th>  <%= f.label :on_market_on %> </th>
         <td>  <%= f.date_select :on_market_on %> </td>
       </tr>
+
+      <tr>
+        <th> <%= f.label :product_id, 'Designers' %> </th>
+        <td> <%= collection_select :product, :designer_ids, @designers, :id, :name,
+            { :selected => @product.designer_ids },
+            { :multiple => true, :name => 'product[designer_ids][]' } -%> </td>
+      </tr>
+
       <tr>
         <th>  <%= f.label :must_have %> </th>
         <td>  <%= f.check_box(:must_have) %> </td>
       </tr>
       <tr>
-        <th> <%= f.label :product_type_id, 'Product type' %>  </th>
+        <th> <%= f.label :product_type_id %>  </th>
         <td>  <%= collection_select :product, :product_type_id, @product_types, :id, :name %> </td>
       </tr>
       <tr>
@@ -42,6 +50,10 @@
       <tr>
         <th> <%= f.label :tech_image_url, 'Technical image' %>  </th>
         <td> <%= f.file_field :tech_image_url %>  </td>
+      </tr>
+      <tr>
+        <th> </br>  </th>
+        <td>   </td>
       </tr>
       <tr>
         <th>  <%= f.submit %> </th>

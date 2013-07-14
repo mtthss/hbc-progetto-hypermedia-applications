@@ -1,2 +1,55 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="flash_notice">
+  <% if !flash[:notice].blank?%>
+      <%= flash[:notice] %>
+  <% end %>
+</div>
+
+<h1>Creation of a new event</h1>
+
+</br></br>
+
+<table summary="Event form field">
+  <%= form_for @event do |f| %>
+
+      <tr>
+        <th> <%= f.label :name %>  </th>
+        <td>  <%= f.text_field :name %>  </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :location %>  </th>
+        <td>  <%= f.text_field :location %>  </td>
+      </tr>
+      <tr>
+        <th>  <%= f.label :date %> </th>
+        <td>  <%= f.date_select :date %> </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :description %>  </th>
+        <td>  <%= f.text_area :description, :size => "80x5" %> </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :image_url, 'Image' %>  </th>
+        <td>  <%= f.file_field :image_url %> </td>
+      </tr>
+      <% i=1 %>
+      <% 5.times do %>
+          <tr>
+            <th> <%= f.label :image_url, 'Image '+i.to_s %>  </th>
+            <td>  <%= f.file_field :image_url %> </td>
+          </tr>
+          <% i=i+1 %>
+      <% end %>
+
+      <tr>
+        <th> </br>  </th>
+        <td>   </td>
+      </tr>
+      <tr>
+        <th>  <%= f.submit %> </th>
+        <td>   </td>
+      </tr>
+      </table>
+  <% end %>
+
+
+  <%= link_to "logout", :controller => 'admin',:action => 'logout' %>
