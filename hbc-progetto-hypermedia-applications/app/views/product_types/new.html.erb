@@ -1,2 +1,33 @@
-<h1>ProductTypes#new</h1>
-<p>Find me in app/views/product_types/new.html.erb</p>
+<div class="flash_notice">
+  <% if !flash[:notice].blank?%>
+      <%= flash[:notice] %>
+  <% end %>
+</div>
+
+<h1>Creation of a new product type</h1>
+
+</br></br>
+
+<table summary="Product type form field">
+  <%= form_for @product_type do |f| %>
+      <tr>
+        <th> <%= f.label :name %>  </th>
+        <td>  <%= f.text_field :name %>  </td>
+      </tr>
+      <tr>
+        <th> <%= f.label :image_url, 'Image' %>  </th>
+        <td>  <%= f.file_field :image_url %> </td>
+      </tr>
+      <tr>
+        <th> </br>  </th>
+        <td>   </td>
+      </tr>
+      <tr>
+        <th>  <%= f.submit %> </th>
+        <td>   </td>
+      </tr>
+      </table>
+  <% end %>
+
+
+  <%= link_to "logout", :controller => 'admin',:action => 'logout' %>

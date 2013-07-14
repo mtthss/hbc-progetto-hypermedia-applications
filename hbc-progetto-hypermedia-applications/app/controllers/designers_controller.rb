@@ -17,11 +17,27 @@ class DesignersController < ApplicationController
   end
 
   def new
-    render layout: "admin_layout"
     @designer=Designer.new
+    render layout: "admin_layout"
   end
 
   def create
+    image_io = params[:designer][:image_url]
+    File.open(Rails.root.join('public','designers', image_io.original_filename), 'wb') do |file|
+      file.write(image_io.read)
+    end
+    params[:product][:image_url] = image_io.original_filename
+
+    designer=Designer.new(params[:designer])
+
+    if designer.save
+      flash[:notice]= "Designer created successfully!"
+      redirect_to admins_path
+    else
+      flash[:notice]= "Error in designer creation. Check out that all the fields are fill in correctly"
+      render 'new'
+    end
+
   end
 
   def products

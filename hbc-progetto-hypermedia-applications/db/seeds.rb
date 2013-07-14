@@ -84,6 +84,7 @@ shops = Shop.create([
                          tel:"02/4567890", shop_type:"flagship store"}
                     ])
 
+
 #PRODUCT IMAGES
 ProductImage.delete_all
 product_images = ProductImage.create([
