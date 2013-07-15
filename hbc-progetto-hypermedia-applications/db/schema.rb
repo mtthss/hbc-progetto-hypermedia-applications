@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711140206) do
+ActiveRecord::Schema.define(:version => 20130715214520) do
 
   create_table "Countries", :force => true do |t|
     t.string   "name"
@@ -87,6 +87,13 @@ ActiveRecord::Schema.define(:version => 20130711140206) do
 
   add_index "events_products", ["event_id", "product_id"], :name => "index_events_products_on_event_id_and_product_id"
 
+  create_table "partners", :force => true do |t|
+    t.string   "name"
+    t.string   "website"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "product_images", :force => true do |t|
     t.integer  "product_id"
     t.string   "image_url"
@@ -110,6 +117,7 @@ ActiveRecord::Schema.define(:version => 20130711140206) do
     t.string   "image_url"
     t.string   "tech_image_url"
     t.text     "datasheet"
+    t.integer  "partner_id"
     t.integer  "suggested_product_id"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
@@ -137,12 +145,6 @@ ActiveRecord::Schema.define(:version => 20130711140206) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "shop_types", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "shops", :force => true do |t|

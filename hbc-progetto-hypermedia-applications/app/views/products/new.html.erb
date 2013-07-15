@@ -65,6 +65,12 @@
         <th> <%= f.label :tech_image_url, 'Technical image' %>  </th>
         <td> <%= f.file_field :tech_image_url %>  </td>
       </tr>
+
+      <tr>
+        <th> <%= f.label :partner %>  </th>
+        <td>  <%= collection_select :product, :partner, @partners, :id, :name %> </td>
+      </tr>
+
       <tr>
         <th> </br>  </th>
         <td>   </td>
