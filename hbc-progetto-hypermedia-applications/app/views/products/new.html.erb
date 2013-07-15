@@ -28,6 +28,20 @@
       </tr>
 
       <tr>
+        <th> <%= f.label :product_id, 'Shops' %> </th>
+        <td> <%= collection_select :product, :shop_ids, @shops, :id, :name,
+                                   { :selected => @product.shop_ids },
+                                   { :multiple => true, :name => 'product[shop_ids][]' } -%> </td>
+      </tr>
+
+      <tr>
+        <th> <%= f.label :product_id, 'Suggested products' %> </th>
+        <td> <%= collection_select :product, :suggested_product_ids, @products, :id, :name,
+                                   { :selected => @product.suggested_product_ids },
+                                   { :multiple => true, :name => 'product[suggested_product_ids][]' } -%> </td>
+      </tr>
+
+      <tr>
         <th>  <%= f.label :must_have %> </th>
         <td>  <%= f.check_box(:must_have) %> </td>
       </tr>

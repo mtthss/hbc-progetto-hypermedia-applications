@@ -27,17 +27,8 @@ class EventsController < ApplicationController
     event=Event.new(params[:event])
 
     if event.save
-      #5.times do
-        #image_io = params[:event][:image_url]
-        #File.open(Rails.root.join('public','events', image_io.original_filename), 'wb') do |file|
-          #file.write(image_io.read)
-          #end
-          #@event_image=EventImage.new
-          #@event_image.image_url='public/events'+ image_io.original_filename
-        #@event_image.id=event.id
-        #end
       flash[:notice]= "Event created successfully!"
-      redirect_to admins_path
+      redirect_to controller: 'event_images', action: 'index', event_id: event.id
     else
       flash[:notice]= "Error in event creation. Check out that all the fields are fill in correctly"
       render 'new'

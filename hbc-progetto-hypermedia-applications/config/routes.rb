@@ -1,6 +1,18 @@
 HbcProject::Application.routes.draw do
 
 
+  get "product_images/index"
+
+  get "product_images/new"
+
+  get "product_images/create"
+
+  get "event_images/index"
+
+  post "event_images/new"
+
+  get "event_images/create"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

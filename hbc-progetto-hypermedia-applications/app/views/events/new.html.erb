@@ -31,15 +31,6 @@
         <th> <%= f.label :image_url, 'Image' %>  </th>
         <td>  <%= f.file_field :image_url %> </td>
       </tr>
-      <% i=1 %>
-      <% 5.times do %>
-          <tr>
-            <th> <%= f.label :image_url, 'Image '+i.to_s %>  </th>
-            <td>  <%= f.file_field :image_url %> </td>
-          </tr>
-          <% i=i+1 %>
-      <% end %>
-
       <tr>
         <th> </br>  </th>
         <td>   </td>
