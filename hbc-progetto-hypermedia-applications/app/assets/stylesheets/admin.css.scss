@@ -1,0 +1,38 @@
+ul#container2{
+  display: block;
+  height: 400px;
+  margin: 0;
+  padding: 40px 0px 20px 0px;
+  width: 225px;
+  font-family: Arial, sans-serif;
+}
+ul#container2 li {
+  background-color:transparent;
+  display: block;
+  height: 50px;
+  line-height: 60px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+ul#container2 li#container_without_sublist:hover {
+  -moz-animation-name: custom_effect;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: normal;
+  -moz-animation-delay: 0;
+  -moz-animation-play-state: running;
+  -moz-animation-fill-mode: forwards;
+
+  -webkit-animation-name: custom_effect;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: 0;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+
+  /*background:rgba(190, 220, 255, 0.8);*/
+  height: 50px;
+}

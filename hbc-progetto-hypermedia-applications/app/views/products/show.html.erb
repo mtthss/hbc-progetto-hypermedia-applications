@@ -1,83 +1,77 @@
-
-<div class= "structuralLinks">
-
-  <h4>
-  <%if(@designer!= nil) %>
-      <%= link_to "next", product_path(@next,:designer_id=>@designer.id) %>
-      <%= link_to "prev", product_path(@prev,:designer_id=>@designer.id) %>
-  <%elsif(@products!= nil)%>
-      <%= link_to "next", product_path(@next,:title=>@title) %>
-      <%= link_to "prev", product_path(@prev,:title=>@title) %>
-  <%end%>
-  </h4>
-<h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+<div class="structuralLinks" xmlns="http://www.w3.org/1999/html">
+  <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
 </div>
 
-<br>
-<div class="ProductHeader">
-<hr style="clear:both;"/>
-<br>
-    <h1>  <%= @product.name %>   </h1> 
-
-	<br>
-    <h6> Designed by
-      <% @designers.each do |designer| %>
-          <%= link_to designer.name, designer_path(designer) %>
-      <% end  %> <br>
-      Exposed in
-      <% @events.each do |event| %>
-          <%= link_to event.name, event_path(event) %>
-      <% end  %> <br>
-      <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
-	<br>
-    <br>
-    </h6>
-
-</div>
-
-<div class="mainEventImg">
-<%= image_tag("/products/#{@product.image_url}") %>
-</div>
-
-<br>
-<br>
-<br>
-<br>
 <br>
 
 <div>
-    <h3> Description: </h3>
-    <%= @product.description %>
+    <hr style="clear:both;"/>
+    <br>
+    <div class="ProductHeader">
+        <h1>  <%= @product.name %>
+          <span>
+            <%if(@designer!= nil) %>
+                (
+                <%= link_to "prev", product_path(@prev,:designer_id=>@designer.id) %>
+                -
+                <%= link_to "next", product_path(@next,:designer_id=>@designer.id) %>
+                )
+            <%elsif(@products!= nil)%>
+                (
+                <%= link_to "prev", product_path(@prev,:title=>@title) %>
+                -
+                <%= link_to "next", product_path(@next,:title=>@title) %>
+                )
+            <%end%>
+          </span>
+        </h1>
+
+
+        <h6> Designed by
+          <% @designers.each do |designer| %>
+              <%= link_to designer.name, designer_path(designer) %>
+          <% end  %> <br>
+          Exposed in
+          <% @events.each do |event| %>
+              <%= link_to event.name, event_path(event) %>
+          <% end  %> <br>
+          <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
+          <br>
+          <br>
+        </h6>
+    </div>
+
+    <div class="mainProductImg">
+    <%= image_tag("/products/#{@product.image_url}") %>
+    </div>
 </div>
 
 <br>
 <br>
+<br>
 
-<hr style="clear:both;"/>
-
-<div class="gridList">
-  <h3> Match this product</h3>
-  <%@matches.each do |matching_product| %>
-  <div class="gridBox">
-    <%= matching_product.name %>
-    <%= link_to product_path(matching_product) do%>
-        <%= image_tag("/products/#{matching_product.image_url}") %>
-    <% end %>
-  </div>
-  <% end %>
+<div class="box1">
+  <br>
+  <hr style="clear:both;"/>
+  <h3> Description </h3>
+  <%= @product.description %>
 </div>
 
-<div id="backLinkProduct">
+<br>
 
-  <div>
-    <%= link_to :back do%>
-        <%= image_tag("/back.png") %>
-    <% end %>
-  </div>
-
-  <div>
-    Back
-  </div>
-
+<div class="box2">
+  <hr style="clear:both;"/>
+    <div class="gridList">
+      <h3> Match this product</h3>
+      <%@matches.each do |matching_product| %>
+      <div class="gridBox">
+        <%= matching_product.name %>
+        <%= link_to product_path(matching_product) do%>
+            <%= image_tag("/products/#{matching_product.image_url}") %>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
 </div>
+
 
