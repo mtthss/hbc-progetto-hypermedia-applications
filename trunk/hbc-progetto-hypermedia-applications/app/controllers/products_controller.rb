@@ -56,6 +56,8 @@ class ProductsController < ApplicationController
     @product=Product.new
     @product_types = ProductType.order('name ASC')
     @designers=Designer.order('name ASC')
+    @shops=Shop.order('name ASC')
+    @products=Product.order('name ASC')
     render layout: "admin_layout"
   end
 
@@ -64,6 +66,16 @@ class ProductsController < ApplicationController
     designer_ids = params[:product][:designer_ids]
     designers = Designer.find(designer_ids)
     params[:product].delete(:designer_ids)
+
+    params[:product][:shop_ids].delete("")
+    shop_ids = params[:product][:shop_ids]
+    shops = Shop.find(shop_ids)
+    params[:product].delete(:shop_ids)
+
+    params[:product][:suggested_product_ids].delete("")
+    suggested_product_ids = params[:product][:suggested_product_ids]
+    suggested_products = Product.find(suggested_product_ids)
+    params[:product].delete(:suggested_product_ids)
 
     image_io = params[:product][:image_url]
     File.open(Rails.root.join('public','products', image_io.original_filename), 'wb') do |file|
@@ -81,8 +93,10 @@ class ProductsController < ApplicationController
 
     if product.save
       product.designers << designers
+      product.shops << shops
+      product.suggested_products << suggested_products
     flash[:notice]= "Product created successfully!"
-    redirect_to admins_path
+      redirect_to controller: 'product_images', action: 'index', product_id: product.id
     else
     flash[:notice]= "Error in product creation. Check out that all the fields are fill in correctly"
     render 'new'
