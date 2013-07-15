@@ -61,6 +61,16 @@
   <hr style="clear:both;"/>
   <h3> Description </h3>
   <%= @product.description %>
+  <br>
+  <br>
+  <br>
+  <hr style="clear:both;"/>
+  <div>
+    <h3> Services</h3>
+    <%@services.each do |service| %>
+        <%= link_to service.name, service_path(service)%>
+    <%end%>
+  </div>
 </div>
 
 <br>
@@ -77,7 +87,7 @@
         <% end %>
       </div>
       <% end %>
+      <br>
+      <br>
     </div>
 </div>
-
-

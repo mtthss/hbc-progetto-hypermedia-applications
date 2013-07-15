@@ -1,16 +1,14 @@
 class ServicesController < ApplicationController
-
-  #controller not implemented because is not required for the scenarios
-
   def index
+    @services=Service.all
   end
 
   def show
+    @service=Service.find(params[:id])
   end
 
-  def new
-  end
-
-  def create
+  def associated_products
+    @service=Service.find(params[:id])
+    @products=@service.products
   end
 end
