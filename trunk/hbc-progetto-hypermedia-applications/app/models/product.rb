@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
 
   belongs_to :product_type
+  belongs_to :partner
   has_and_belongs_to_many :designers
   has_and_belongs_to_many :services
   has_and_belongs_to_many :events
@@ -12,6 +13,6 @@ class Product < ActiveRecord::Base
                           :join_table => "products_suggested_products"
 
 
-  attr_accessible :description, :must_have, :name, :on_market_on, :suggested_product_id, :datasheet,
+  attr_accessible :description, :must_have, :name, :on_market_on, :suggested_product_id, :datasheet, :partnership,
                   :product_type_id, :image_url, :tech_image_url
 end

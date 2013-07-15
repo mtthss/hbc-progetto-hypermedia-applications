@@ -49,6 +49,7 @@ class ProductsController < ApplicationController
     @events=@product.events
     @image=@product.image_url
     @designers=@product.designers
+    @partner=@product.partner
     @photogallery=@product.product_images
   end
 
@@ -58,6 +59,7 @@ class ProductsController < ApplicationController
     @designers=Designer.order('name ASC')
     @shops=Shop.order('name ASC')
     @products=Product.order('name ASC')
+    @partners=Partner.order('name ASC')
     render layout: "admin_layout"
   end
 

@@ -35,7 +35,13 @@
           <% @events.each do |event| %>
               <%= link_to event.name, event_path(event) %>
           <% end  %> <br>
+          <% if @partner !=nil %>
+          In partnership with
+              <%= link_to @partner.name, @partner.website %>
+              <% end %>
+          <br><br> <br><br>
           <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
+
           <br>
           <br>
         </h6>

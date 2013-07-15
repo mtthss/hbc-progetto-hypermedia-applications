@@ -10,6 +10,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :image_url
       t.string :tech_image_url
       t.text :datasheet
+      t.integer :partner_id
       t.integer :suggested_product_id
       t.timestamps
     end

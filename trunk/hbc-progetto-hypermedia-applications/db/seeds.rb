@@ -85,6 +85,14 @@ shops = Shop.create([
                     ])
 
 
+#PARTNERS
+Partner.delete_all
+partners = Partner.create([
+                                         {name: 'Dada', website: 'http://www.dadaweb.it'},
+                                         {name: 'Scavolini', website: 'http://www.scavolini.com'},
+                                         {name: 'Calligaris', website: 'http://www.calligaris.it'}
+                                     ])
+
 #PRODUCT IMAGES
 ProductImage.delete_all
 product_images = ProductImage.create([
@@ -132,6 +140,9 @@ products[1].shops << Shop.all
 #RELATION PRODUCT_TYPE_PRODUCTS
 product_types[0].products << Product.where(:name => "Arc")
 product_types[0].products << Product.where(:name => "Biotab")
+
+#RELATION PARTNER_PRODUCTS
+partners[0].products << Product.where(:name => "Arc")
 
 #RELATION COUNTRY_COUNTIES
 countries[3].counties << County.where(:name=>'Lombardia')
