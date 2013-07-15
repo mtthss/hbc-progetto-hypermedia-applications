@@ -1,3 +1,13 @@
 
-<h1>Services</h1>
-<p>This fragment of the site has not yet been implemented (because it is not used in the scenarios)</p>
+<h1>All services</h1>
+
+<br>
+<br>
+
+<div>
+  <% @services.each do |service| %>
+        <%= link_to service.name, service_path(service)%>
+  <% end %>
+  <br>
+  <br>
+</div>

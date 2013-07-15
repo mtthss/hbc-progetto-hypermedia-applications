@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
         @next=@products.fetch(0)
       end
       if((@products.index(@product)-1)>=0)
-        @prev=@products.take(@products.index(@product)-1)
+        @prev=@products.fetch(@products.index(@product)-1)
       else
         @prev=@products.last
       end
@@ -51,6 +51,7 @@ class ProductsController < ApplicationController
     @designers=@product.designers
     @partner=@product.partner
     @photogallery=@product.product_images
+    @services=@product.services
   end
 
   def new
@@ -125,6 +126,5 @@ class ProductsController < ApplicationController
     @product=Product.find(params[:id])
     @images=@product.product_images
   end
-
 
 end

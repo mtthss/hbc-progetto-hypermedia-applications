@@ -108,7 +108,13 @@ HbcProject::Application.routes.draw do
       end
     end
 
-     resources :shops, :only => [:show, :new, :create]
+  resources :shops, :only => [:show, :new, :create]
+
+  resources :services, :only => [:index, :show] do
+    member do
+      get 'associated_products'
+    end
+  end
 
     match 'login_admin' => 'admin#login', :via => :get
     match 'logout_admin' => 'admin#logout', :via => :get

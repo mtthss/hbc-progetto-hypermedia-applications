@@ -46,6 +46,12 @@ events = Event.create([{name: 'Salone del mobile 2013', location: 'The new Milan
                         description: 'Evento internazionale', image_url: 'expo.jpg'}
                       ])
 
+#SERVICES
+Service.delete_all
+services = Service.create([{name: 'Personalization',
+                        description: 'Scegli quello che vuoi'}
+                      ])
+
 #COUNTRIES
 Country.delete_all
 countries = Country.create([{name: 'Australia'},
@@ -127,6 +133,10 @@ products[0].designers << Designer.find_by_name('Marc Sadler')
 #JOIN TABLE EVENT_PRODUCTS
 products[0].events << Event.find_by_name('Salone del mobile 2013')
 products[0].events << Event.find_by_name('Expo 2015')
+
+#JOIN TABLE SERVICE_PRODUCTS
+products[0].services << Service.all
+
 
 #JOIN TABLE PRODUCTS_SUGGESTED_PRODUCTS
 products[0].suggested_products << Product.find_by_name('Biotab')

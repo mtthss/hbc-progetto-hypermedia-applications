@@ -1,2 +1,8 @@
-<h1>Services#show</h1>
-<p>Find me in app/views/services/show.html.erb</p>
+<h1><%=@service.name%></h1>
+
+<br>
+<%=@service.description%>
+<br>
+<br>
+
+<%= link_to 'look at all products that offer this service', associated_products_service_path(@service)%>

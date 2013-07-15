@@ -6,24 +6,25 @@
 <%= image_tag("/events/#{@event.image_url}") %>
 </div>
 
+
 <br>
 
 <div>
+<hr style="clear:both;"/>
 <h3 class="tit"> Description </h3>
 <p> <%= @event.description %> </p>
 </div>
 
 <div>
+<hr style="clear:both;"/>
 <h3 class="tit"> Location </h3>
 <p> <%= @event.location %> </p>
 </div>
 
-<div>
-  <h3> Exposed products </h3>
-  <%= link_to "Look at #{@event.name} exposed products", exposed_products_event_path(@event) %>
-</div>
+
 
 <div>
+<hr style="clear:both;"/>
 <h3 class="tit"> Photo-gallery </h3>
   <div class="gridList">
     <% @images.each do |image| %>
@@ -34,6 +35,13 @@
   </div>
 </div>
 
+<br>
+
+<div>
+  <hr style="clear:both;"/>
+  <h3> Exposed products </h3>
+  <%= link_to "Look at #{@event.name} exposed products", exposed_products_event_path(@event) %>
+</div>
 
 <div id="backLink">
 
