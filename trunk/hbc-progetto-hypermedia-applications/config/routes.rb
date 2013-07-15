@@ -3,15 +3,15 @@ HbcProject::Application.routes.draw do
 
   get "product_images/index"
 
-  get "product_images/new"
+  post "product_images/new"
 
-  get "product_images/create"
+  post "product_images/create"
 
   get "event_images/index"
 
   post "event_images/new"
 
-  get "event_images/create"
+  post "event_images/create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -69,6 +69,10 @@ HbcProject::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+    resource :product_images
+
+    resources :event_images
 
     resources :admin, :only => [:index]
 

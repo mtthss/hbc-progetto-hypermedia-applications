@@ -78,17 +78,20 @@ class ProductsController < ApplicationController
     params[:product].delete(:suggested_product_ids)
 
     image_io = params[:product][:image_url]
-    File.open(Rails.root.join('public','products', image_io.original_filename), 'wb') do |file|
-    file.write(image_io.read)
+    unless image_io==nil
+      File.open(Rails.root.join('public','products', image_io.original_filename), 'wb') do |file|
+        file.write(image_io.read)
+      end
+      params[:product][:image_url] = image_io.original_filename
     end
-    params[:product][:image_url] = image_io.original_filename
 
     image_io = params[:product][:tech_image_url]
-    File.open(Rails.root.join('public','products/datasheets', image_io.original_filename), 'wb') do |file|
-      file.write(image_io.read)
+    unless image_io==nil
+      File.open(Rails.root.join('public','products/datasheets', image_io.original_filename), 'wb') do |file|
+        file.write(image_io.read)
+      end
+      params[:product][:tech_image_url] = image_io.original_filename
     end
-    params[:product][:tech_image_url] = image_io.original_filename
-
     product=Product.new(params[:product])
 
     if product.save

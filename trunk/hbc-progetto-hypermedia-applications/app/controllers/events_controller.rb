@@ -19,11 +19,12 @@ class EventsController < ApplicationController
   def create
 
     image_io = params[:event][:image_url]
-    File.open(Rails.root.join('public','events', image_io.original_filename), 'wb') do |file|
-      file.write(image_io.read)
+    unless image_io==nil
+      File.open(Rails.root.join('public','events', image_io.original_filename), 'wb') do |file|
+        file.write(image_io.read)
+      end
+      params[:event][:image_url] = image_io.original_filename
     end
-    params[:event][:image_url] = image_io.original_filename
-
     event=Event.new(params[:event])
 
     if event.save
