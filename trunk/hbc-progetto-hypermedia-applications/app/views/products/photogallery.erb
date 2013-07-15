@@ -1,12 +1,18 @@
-<div class= "structuralLinks">
-  <h4><%= link_to 'Description', product_path(@product) %>  &nbsp; Photo-gallery &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+<div class="structuralLinks" xmlns="http://www.w3.org/1999/html">
+  <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
 </div>
 
-<div class="gridList">
-  <% @images.each do |image| %>
-      <div class="gridBox" class="flex">
-        <%= image_tag("/products/#{image.image_url}") %>
-      </div>
-  <% end  %>
-</div>
+<br>
 
+<div>
+  <hr style="clear:both;"/>
+  <br>
+
+    <div class="gridList">
+      <% @images.each do |image| %>
+          <div class="gridBox" class="flex">
+            <%= image_tag("/products/#{image.image_url}") %>
+          </div>
+      <% end  %>
+    </div>
+</div>

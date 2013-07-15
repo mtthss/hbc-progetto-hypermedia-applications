@@ -1,9 +1,38 @@
-<div class= "structuralLinks">
-  <h4><%= link_to 'Description', product_path(@product) %>  &nbsp;  <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; Datasheet</h4>
+<div class="structuralLinks" xmlns="http://www.w3.org/1999/html">
+  <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product) %>  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp;Datasheet</h4>
 </div>
 
+<br>
 
-<h1>Datasheets of <%= @product.name %></h1>
+<div>
+    <hr style="clear:both;"/>
+    <br>
+    <div class="ProductHeader">
+      <h1> Datasheet of <%= @product.name %>   </h1>
 
-<%= image_tag("/products/datasheets/#{@product.tech_image_url}") %>
+      <br>
+      <h6> Designed by
+        <% @designers.each do |designer| %>
+            <%= link_to designer.name, designer_path(designer) %>
+        <% end  %> <br>
+        Exposed in
+        <% @events.each do |event| %>
+            <%= link_to event.name, event_path(event) %>
+        <% end  %> <br>
+        <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
+        <br>
+        <br>
+      </h6>
+
+    </div>
+
+    <div class="mainProductImg">
+      <%= image_tag("/products/datasheets/#{@product.tech_image_url}") %>
+    </div>
+</div>
+<br><br>
+
+<%= @product.datasheet%>
+
+
 

@@ -19,6 +19,11 @@
 </div>
 
 <div>
+  <h3> Exposed products </h3>
+  <%= link_to "Look at #{@event.name} exposed products", exposed_products_event_path(@event) %>
+</div>
+
+<div>
 <h3 class="tit"> Photo-gallery </h3>
   <div class="gridList">
     <% @images.each do |image| %>
