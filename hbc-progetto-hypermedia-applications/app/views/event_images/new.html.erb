@@ -1,0 +1,17 @@
+<table summary="Photogallery event form">
+  <%= form_for @event_image do |f| %>
+    <tr>
+      <th> <%= f.label :image_url, 'Image photogallery' %>  </th>
+      <td>  <%= f.file_field :image_url %> </td>
+    </tr>
+      <%= f.hidden_field :event_id, :value => @event_id %>
+      <tr>
+        <th> </br>  </th>
+        <td>   </td>
+      </tr>
+      <tr>
+        <th>  <%= f.submit%> </th>
+        <td>   </td>
+      </tr>
+<% end %>
+</table>

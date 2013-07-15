@@ -1,0 +1,10 @@
+<div class="flash_notice">
+  <% if !flash[:notice].blank?%>
+      <%= flash[:notice] %>
+  <% end %>
+</div>
+</br></br>
+<p>You want to add new picture to the photogallery of <%= @product_name %> ? </p>
+
+<%= button_to "YES", action: 'new', product_id: @product_id  %>
+<%= button_to "NO", {controller: 'admin', action: 'index'}, {:method => :get} %>

@@ -1,6 +1,6 @@
 class ShopsController < ApplicationController
 
-  before_filter :confirm_logged_in
+  before_filter :confirm_logged_in, :only => [:new, :create]
 
   def show
     @shop=Shop.find(params[:id])
