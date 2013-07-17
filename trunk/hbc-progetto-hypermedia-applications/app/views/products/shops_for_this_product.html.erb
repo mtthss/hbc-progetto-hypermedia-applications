@@ -2,7 +2,7 @@
 <br><br>
 
 <% @shops.each do |shop| %>
-    <%= link_to shop.name, shop_path(shop.id) %> <br>
+    <%= link_to shop.name, shop_path(shop.id) %> (<%= shop.shop_type %>) <br>
     <%= shop.address %>  <br>
     <br>
 <% end %>
