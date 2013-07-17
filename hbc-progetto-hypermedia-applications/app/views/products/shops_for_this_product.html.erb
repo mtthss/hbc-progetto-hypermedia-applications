@@ -11,11 +11,31 @@
 
 <div id="backLink">
 
+<% if(@title!=nil) %>
   <div id="imageBack">
-    <%= link_to :back do%>
+    <%= link_to product_path(@product, :title=>@title) do%>
         <%= image_tag("/back.png") %>
     <% end %>
   </div>
+<% elsif(@designer_id!=nil) %>
+  <div id="imageBack">
+      <%= link_to product_path(@product, :designer_id=>@designer_id) do%>
+         <%= image_tag("/back.png") %>
+      <% end %>
+  </div>
+<% elsif(@product_type_id!=nil) %>
+  <div id="imageBack">
+    <%= link_to product_path(@product, :product_type_id=>@product_type_id) do%>
+        <%= image_tag("/back.png") %>
+    <% end %>
+  </div>
+<% else %>
+   <div id="imageBack">
+     <%= link_to product_path(@product) do%>
+         <%= image_tag("/back.png") %>
+     <% end %>
+   </div>
+<% end %>
 
   <div id="textBack">
     Back to "<%=@product.name%>" product

@@ -89,8 +89,16 @@
         <br>
         <hr style="clear:both;"/>
         <br>
+        <% i=1 %>
         <% @shops.each do |shop| %>
-        <%= link_to shop.name, shop_path(shop.id, :shopfinder=>true) %> <br>
+        <%= i %>) <%= link_to shop.name, shop_path(shop.id, :shopfinder=>true) %> (<%=shop.shop_type%>) <br>
             <%= shop.address %>  <br>
+        <% i=i+1 %>
+        <br>
         <% end %>
+
+   <% if(@shops.length==0) %>
+        <br>
+        We are sorry there are no shops in this area
+   <% end %>
 <% end %>

@@ -54,6 +54,8 @@
               <%= link_to 'Find this product', shops_for_this_product_product_path(@product, :designer_id=>@designer.id) %>
           <% elsif(@product_type_id!=nil) %>
               <%= link_to 'Find this product', shops_for_this_product_product_path(@product, :product_type_id=>@product_type_id) %>
+          <% else %>
+              <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
           <% end %>
 
         </h6>
