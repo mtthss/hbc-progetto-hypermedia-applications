@@ -10,3 +10,28 @@
       </div>
   <% end  %>
 </div>
+
+
+
+
+<div id="backLink">
+
+  <div id="imageBack">
+    <% if(@backLink=="Top") %>
+        <%= link_to designer_path(@designer, :top=>true) do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div align="center">
+          Back to "<%= @designer.name%>"
+        </div>
+    <% else %>
+        <%= link_to designer_path(@designer) do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div align="center">
+          Back to "<%= @designer.name%>"
+        </div>
+    <% end %>
+  </div>

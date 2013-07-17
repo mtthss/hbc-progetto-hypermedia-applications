@@ -15,7 +15,12 @@
 
 <div>
 <h3> Creations </h3>
+<% if(@backLink=="Top") %>
+<%= link_to "Look at #{@designer.name}'s products", products_designer_path(@designer, :top=>true) %>
+<% else %>
 <%= link_to "Look at #{@designer.name}'s products", products_designer_path(@designer) %>
+<% end %>
+
 </div>
 
 
