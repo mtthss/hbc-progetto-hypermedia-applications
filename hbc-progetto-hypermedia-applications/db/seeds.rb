@@ -51,9 +51,22 @@ In addition to a large number of shelves, drawers and clothes hanging tubes, ins
 
                               {name: 'Dream', must_have: true, :on_market_on => DateTime.new(2006, 6, 14),
                                description: 'Large-size seats for handy and comfortable use. A very versatile system made up of plain, linear shapes. The cushions set causally on top overlap the continuous profile of the backrest to create different seat configurations. The seats project from the
-overall shape of the load bearing structures, protecting the base and emphasizing the comfort of the large seat surfaces.', image_url: 'divani/angolopiatto.jpg',
-                               datasheet: 'available colors: white, blue, green'}
+overall shape of the load bearing structures, protecting the base and emphasizing the comfort of the large seat surfaces.', image_url: 'divani/divanobianco4.jpg',
+                               datasheet: 'available colors: white, blue, green',tech_image_url:"divanotecnico.jpg"} ,
 
+                              {name: 'Life', must_have: true, :on_market_on => DateTime.new(2012, 7, 19),
+                              description: 'How can our room come alive? Color is the key. Whit this colorful living system, with linear shape your room will shine and your home will have again new life.', image_url: 'divani/living.jpg',
+                              datasheet: 'available colors: white, blue, green'} ,
+
+                              {name: 'Destiny', must_have: false, :on_market_on => DateTime.new(2005, 7, 19),
+                               description: 'Large-size seats for handy and comfortable use. A very versatile system made up of plain, linear shapes. The cushions set causally on top overlap the continuous profile of the backrest to create different seat configurations. The seats project from the
+overall shape of the load bearing structures, protecting the base and emphasizing the comfort of the large seat surfaces.', image_url: 'divani/divanotorino-1.jpg',
+                               datasheet: 'available colors: white, blue, green',tech_image_url:"divanotecnico.jpg"} ,
+
+                              {name: 'Naba', must_have: false, :on_market_on => DateTime.new(2005, 7, 19),
+                               description: 'Large-size seats for handy and comfortable use. A very versatile system made up of plain, linear shapes. The cushions set causally on top overlap the continuous profile of the backrest to create different seat configurations. The seats project from the
+overall shape of the load bearing structures, protecting the base and emphasizing the comfort of the large seat surfaces.', image_url: 'divani/baltimora1.jpg',
+                               datasheet: 'available colors: white, blue, green',tech_image_url:"divanotecnico.jpg"}
                           ])
 
 #DESIGNERS
@@ -165,9 +178,12 @@ product_images = ProductImage.create([
                                          {image_url: "imagearc3.jpg", product_id: 0},
                                          {image_url: "imagearc4.jpg", product_id: 0},
                                          {image_url: "imagearc5.jpg", product_id: 0},
-                                         {image_url: "armadi/strisce.jpg", product_id: 6},
-                                         {image_url: "armadi/strisce2.jpg", product_id: 6},
-                                         {image_url: "armadi/strisce3.jpg", product_id: 6}
+                                         {image_url: "armadi/strisce.jpg", product_id: 7},
+                                         {image_url: "armadi/strisce2.jpg", product_id: 7},
+                                         {image_url: "armadi/strisce3.jpg", product_id: 7},
+                                         {image_url: "divani/divano bianco.jpg", product_id: 10},
+                                         {image_url: "divani/divanobianco3.jpg", product_id: 10},
+                                         {image_url: "divani/divanobianco4.jpg", product_id: 10}
                                      ])
 
 
@@ -187,14 +203,44 @@ Admin.delete_all
 admin = Admin.create([{name: 'Matteo', psw: 'Foccoli'}])
 
 #JOIN TABLE DESIGNERS_PRODUCTS
-products[0].designers << Designer.find_by_name('Enrico Coveri')
+products[6].designers << Designer.find_by_name('Enrico Coveri')
 products[1].designers << Designer.find_by_name('Enrico Coveri')
 products[2].designers << Designer.find_by_name('Enrico Coveri')
 products[0].designers << Designer.find_by_name('Marc Sadler')
+products[3].designers << Designer.find_by_name('Marc Sadler')
+products[5].designers << Designer.find_by_name('Marc Sadler')
+products[8].designers << Designer.find_by_name('Marc Sadler')
+products[7].designers << Designer.find_by_name('Marc Sadler')
+products[10].designers << Designer.find_by_name('Valentina Giulini')
+products[4].designers << Designer.find_by_name('Valentina Giulini')
+products[7].designers << Designer.find_by_name('Valentina Giulini')
+products[11].designers << Designer.find_by_name('Valentina Giulini')
+products[4].designers << Designer.find_by_name('Margherita Bonetti')
+products[3].designers << Designer.find_by_name('Margherita Bonetti')
+products[12].designers << Designer.find_by_name('Margherita Bonetti')
+products[9].designers << Designer.find_by_name('Margherita Bonetti')
+products[6].designers << Designer.find_by_name('Margherita Bonetti')
+
 
 #JOIN TABLE EVENT_PRODUCTS
 products[0].events << Event.find_by_name('Salone del mobile 2013')
 products[0].events << Event.find_by_name('Expo 2015')
+products[1].events << Event.find_by_name('Salone del mobile 2013')
+products[2].events << Event.find_by_name('Salone del mobile 2013')
+products[3].events << Event.find_by_name('Salone del mobile 2013')
+products[4].events << Event.find_by_name('Salone del mobile 2013')
+products[4].events << Event.find_by_name('Expo 2015')
+products[5].events << Event.find_by_name('Salone del mobile 2013')
+products[6].events << Event.find_by_name('Salone del mobile 2013')
+products[6].events << Event.find_by_name('Expo 2015')
+products[7].events << Event.find_by_name('Salone del mobile 2013')
+products[8].events << Event.find_by_name('Salone del mobile 2013')
+products[8].events << Event.find_by_name('Expo 2015')
+products[9].events << Event.find_by_name('Salone del mobile 2013')
+products[10].events << Event.find_by_name('Salone del mobile 2013')
+products[10].events << Event.find_by_name('Expo 2015')
+products[11].events << Event.find_by_name('Salone del mobile 2013')
+products[12].events << Event.find_by_name('Salone del mobile 2013')
 
 #JOIN TABLE SERVICE_PRODUCTS
 products[0].services << Service.all
@@ -203,15 +249,35 @@ products[0].services << Service.all
 #JOIN TABLE PRODUCTS_SUGGESTED_PRODUCTS
 products[0].suggested_products << Product.find_by_name('Biotab')
 products[0].suggested_products << Product.find_by_name('Less less')
+products[9].suggested_products << Product.find_by_name('Life')
+products[9].suggested_products << Product.find_by_name('Arc')
+products[10].suggested_products << Product.find_by_name('Biotab')
+products[11].suggested_products << Product.find_by_name('Life')
+products[11].suggested_products << Product.find_by_name('Destiny')
+products[12].suggested_products << Product.find_by_name('Arc')
 
 #JOIN TABLE PRODUCTS_SHOPS
 products[0].shops << Shop.all
 products[1].shops << Shop.all
+products[2].shops << Shop.all
+products[3].shops << Shop.all
+products[4].shops << Shop.all
+products[5].shops << Shop.all
+products[6].shops << Shop.all
+products[7].shops << Shop.all
+products[8].shops << Shop.all
+products[9].shops << Shop.all
+products[10].shops << Shop.all
+products[11].shops << Shop.all
+products[12].shops << Shop.all
 
 
 #RELATION PRODUCT_TYPE_PRODUCTS
 
 product_types[0].products << Product.where(:name => "Dream")
+product_types[0].products << Product.where(:name => "Life")
+product_types[0].products << Product.where(:name => "Destiny")
+product_types[0].products << Product.where(:name => "Naba")
 product_types[1].products << Product.where(:name => "Arc")
 product_types[1].products << Product.where(:name => "Biotab")
 product_types[1].products << Product.where(:name => "Less less")
