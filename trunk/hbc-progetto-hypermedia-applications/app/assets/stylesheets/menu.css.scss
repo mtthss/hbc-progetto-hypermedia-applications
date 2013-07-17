@@ -4,7 +4,7 @@ ul#container {
     margin: 0;
     padding: 60px;
     width: 180px;
-  font-family: Arial, sans-serif;
+  font-family: Trebuchet, sans-serif;
 }
 
 ul#containeradmin {
@@ -13,7 +13,11 @@ ul#containeradmin {
   margin: 0;
   padding: 60px;
   width: 210px;
-  font-family: Arial, sans-serif;
+  font-family: Trebuchet, sans-serif;
+}
+
+ul#container li#container_products{
+  height: 180px;
 }
 
 ul#container li {
@@ -24,8 +28,8 @@ ul#container li {
     margin-bottom: 15px;
     overflow: hidden;
 }
-ul#container li:hover {
-    -moz-animation-name: custom_effect;
+ul#container li:hover{
+/*    -moz-animation-name: custom_effect;
     -moz-animation-duration: 0.4s;
     -moz-animation-timing-function: ease;
     -moz-animation-iteration-count: 1;
@@ -46,8 +50,10 @@ ul#container li:hover {
     /*background:rgba(190, 220, 255, 0.8);*/
     height: 180px;
 }
+
+
 ul#container li#container_without_sublist:hover {
-  -moz-animation-name: custom_effect;
+/*  -moz-animation-name: custom_effect;
   -moz-animation-duration: 0.4s;
   -moz-animation-timing-function: ease;
   -moz-animation-iteration-count: 1;
@@ -69,8 +75,13 @@ ul#container li#container_without_sublist:hover {
   height: 50px;
 }
 
-ul#container li#container_designers:hover {
-  -moz-animation-name: custom_effect;
+
+ul#container li#container_designers{
+  height: 100px;
+}
+
+ul#container li#container_designers {
+/*-moz-animation-name: custom_effect;
   -moz-animation-duration: 0.4s;
   -moz-animation-timing-function: ease;
   -moz-animation-iteration-count: 1;
@@ -89,7 +100,7 @@ ul#container li#container_designers:hover {
   -webkit-animation-fill-mode: forwards;
 
   /*background:rgba(190, 220, 255, 0.8);*/
-  height: 120px;
+  height: 100px;
 }
 
 ul#container a {
@@ -108,11 +119,13 @@ ul#container a {
     text-shadow: 0 1px 1px #FFFFFF;
     vertical-align: middle;
 
-    -moz-transition: all 0.1s 0.4s;
+
+
+  /*-moz-transition: all 0.1s 0.4s;
     -ms-transition: all 0.1s 0.4s;
     -o-transition: all 0.1s 0.4s;
     -webkit-transition: all 0.1s 0.4s;
-    transition: all 0.1s 0.4s;
+    transition: all 0.1s 0.4s; */
 }
 ul#container a:hover {
     text-decoration: underline;

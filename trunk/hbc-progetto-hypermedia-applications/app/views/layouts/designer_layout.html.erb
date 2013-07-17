@@ -17,7 +17,7 @@
   <%= javascript_include_tag "application" %>
 </head>
 <body>
- <div id="bg">
+<div id="bg">
   <div id="outer">
     <div id="header">
       <div id="logo">
@@ -52,10 +52,10 @@
             <%= link_to 'PRODUCTS', product_types_path %>
             <%= link_to 'Must have', products_path(:must=>true) %>
             <%= link_to 'What\'s new', products_path(:new=>true) %>
-            <%= link_to 'All products', products_path %>
+            <%= link_to 'All product', products_path %>
 
           </li>
-          <li id=container_without_sublist>
+          <li id=container_designers>
             <%= link_to 'DESIGNERS', designers_path %>
             <%= link_to 'Top designers', designers_path(:top=>true) %>
           </li>
@@ -78,6 +78,6 @@
 
   </div>
 
- </div>
+</div>
 </body>
 </html>
