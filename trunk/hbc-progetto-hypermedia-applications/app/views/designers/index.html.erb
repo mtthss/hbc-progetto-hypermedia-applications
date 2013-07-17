@@ -5,9 +5,15 @@
   <% @designers.each do |designer| %>
       <div class="gridBox">
           &nbsp; <%= designer.name %>
-          <%= link_to designer_path(designer) do%>
-              <%= image_tag("/designers/#{designer.image_url}") %>
-          <% end %>
+        <% if(@title=="Top") %>
+            <%= link_to designer_path(designer, :top=>true) do%>
+                <%= image_tag("/designers/#{designer.image_url}") %>
+            <% end %>
+        <% else %>
+            <%= link_to designer_path(designer) do%>
+                <%= image_tag("/designers/#{designer.image_url}") %>
+            <% end %>
+        <% end %>
       </div>
   <% end  %>
 </div>

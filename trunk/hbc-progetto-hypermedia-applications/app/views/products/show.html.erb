@@ -46,8 +46,14 @@
               <%= link_to @partner.name, @partner.website %>
               <% end %>
           <br><br> <br><br>
-          <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
-
+          <% if(@title!=nil) %>
+              <%= link_to 'Find this product', shops_for_this_product_product_path(@product, :title=>@title) %>
+          <% elsif(@designer!=nil) %>
+              <%= link_to 'Find this product', shops_for_this_product_product_path(@product, :designer_id=>@designer.id) %>
+          <% elsif(@product_type_id!=nil) %>
+              <%= link_to 'Find this product', shops_for_this_product_product_path(@product, :product_type_id=>@product_type_id) %>
+          <% end %>
+          <br>
           <br>
           <br>
         </h6>

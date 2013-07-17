@@ -18,16 +18,27 @@
 <%= link_to "Look at #{@designer.name}'s products", products_designer_path(@designer) %>
 </div>
 
+
 <div id="backLink">
 
   <div id="imageBack">
-    <%= link_to :back do%>
-        <%= image_tag("/back.png") %>
+    <% if(@backLink=="Top") %>
+        <%= link_to designers_path(:top=>true) do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div align="center">
+          Top-designer's list
+        </div>
+    <% else %>
+        <%= link_to designers_path do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div align="center">
+          All designer's list
+        </div>
     <% end %>
-  </div>
 
-  <div id="textBack">
-    Back
-  </div>
 
-</div>
+    </div>

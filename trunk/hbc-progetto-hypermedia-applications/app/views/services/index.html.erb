@@ -6,7 +6,7 @@
 
 <div>
   <% @services.each do |service| %>
-        <%= link_to service.name, service_path(service)%>
+        <%= link_to service.name, service_path(service, :list=>true)%>
   <% end %>
   <br>
   <br>

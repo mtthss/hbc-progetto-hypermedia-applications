@@ -6,3 +6,35 @@
 <br>
 
 <%= link_to 'look at all products that offer this service', associated_products_service_path(@service)%>
+
+
+
+
+
+<div id="backLink">
+<% if(@list!=nil) %>
+
+  <div id="imageBack">
+    <%= link_to services_path do%>
+        <%= image_tag("/back.png") %>
+    <% end %>
+  </div>
+
+  <div id="textBack">
+    Back to service list
+  </div>
+
+<% else %>
+
+      <div id="imageBack">
+        <%= link_to :back do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+      </div>
+
+      <div id="textBack">
+        Back to product
+      </div>
+
+<% end %>
+</div>
