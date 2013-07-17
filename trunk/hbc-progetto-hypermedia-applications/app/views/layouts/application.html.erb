@@ -50,14 +50,14 @@
         <ul id="container">
           <li id=container_without_sublist>
             <%= link_to 'PRODUCTS', product_types_path %>
-            <%= link_to 'Must have', products_path(:must=>true) %>
-            <%= link_to 'What\'s new', products_path(:new=>true) %>
-            <%= link_to 'All products', products_path %>
+            &nbsp;<%= link_to 'Must have', products_path(:must=>true) %>
+            &nbsp;<%= link_to 'What\'s new', products_path(:new=>true) %>
+            &nbsp;<%= link_to 'All products', products_path %>
 
           </li>
           <li id=container_without_sublist>
             <%= link_to 'DESIGNERS', designers_path %>
-            <%= link_to 'Top designers', designers_path(:top=>true) %>
+            &nbsp;<%= link_to 'Top designers', designers_path(:top=>true) %>
           </li>
           <li id=container_without_sublist>
             <%= link_to 'SERVICES', services_path %>
