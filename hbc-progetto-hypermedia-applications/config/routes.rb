@@ -76,6 +76,8 @@ HbcProject::Application.routes.draw do
 
     resources :admin, :only => [:index]
 
+  resource :customers, :only => [:index]
+
      resources :designers, :only => [:index, :show, :new, :create] do
        member do
          get 'products'
@@ -121,7 +123,7 @@ HbcProject::Application.routes.draw do
     match 'attempt_login' => 'admin#attempt_login', :via => :post
     match 'company' => 'company#show', :via => :get
     match 'contacts' => 'contacts#show', :via => :get
-    match 'all_customers' => 'all_customers#show', :via => :get
+  match 'customers' => 'customers#index', :via => :get
     match 'admin' => 'admin#index', :via => :get, :as => :admins
     match 'home' => 'home#index', :via => :get
     root :to => 'home#index'

@@ -268,6 +268,19 @@ div.gridList {
 
 }
 
+.customerGridBox{
+  width:300px;
+  height:180px;
+  border:0px none;
+  margin:10px 20px 10px 10px;
+  overflow:hidden;
+  position:absolute;
+  float:left;
+  color: #d9dada;
+  background: #fefefe;
+
+}
+
 div.mainEventImg {
   width:590px;
   height:380px;
@@ -302,6 +315,11 @@ div.box1{
 }
 div.box2{
   width: 360px;
+  border:20px none;
+  float:right;
+}
+div.box3{
+  width: 450px;
   border:20px none;
   float:right;
 }

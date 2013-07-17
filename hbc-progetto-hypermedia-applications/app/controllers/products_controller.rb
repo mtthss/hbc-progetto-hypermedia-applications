@@ -111,6 +111,10 @@ class ProductsController < ApplicationController
 
   def datasheet
     @product=Product.find(params[:id])
+    @title=params[:title]
+    if(params[:designer_id])
+      @designer=Designer.find(params[:designer_id])
+    end
     @services=@product.services
     @events=@product.events
     @tech_image=@product.tech_image_url
@@ -124,7 +128,14 @@ class ProductsController < ApplicationController
 
   def photogallery
     @product=Product.find(params[:id])
+    @title=params[:title]
+    if(params[:designer_id])
+      @designer=Designer.find(params[:designer_id])
+    end
     @images=@product.product_images
+    @designers=@product.designers
+    @services=@product.services
+    @events=@product.events
   end
 
 end

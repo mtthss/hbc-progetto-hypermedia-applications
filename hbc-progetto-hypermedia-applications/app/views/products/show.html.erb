@@ -1,5 +1,11 @@
 <div class="structuralLinks" xmlns="http://www.w3.org/1999/html">
-  <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+  <%if(@designer!= nil) %>
+    <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product,:designer_id=>@designer.id) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product,:designer_id=>@designer.id) %></h4>
+  <%elsif(@title=="Must-have"||@title=="New")%>
+    <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product,:title=>@title) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product,:title=>@title) %></h4>
+  <%else%>
+      <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+  <%end%>
 </div>
 
 <br>
@@ -63,14 +69,6 @@
   <%= @product.description %>
   <br>
   <br>
-  <br>
-  <hr style="clear:both;"/>
-  <div>
-    <h3> Services</h3>
-    <%@services.each do |service| %>
-        <%= link_to service.name, service_path(service)%>
-    <%end%>
-  </div>
 </div>
 
 <br>
