@@ -3,6 +3,8 @@
       <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product,:designer_id=>@designer.id) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product,:designer_id=>@designer.id) %></h4>
   <%elsif(@title=="Must-have"||@title=="New")%>
       <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product,:title=>@title) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product,:title=>@title) %></h4>
+  <%elsif(@product_type_id!=nil)%>
+      <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product,:product_type_id=>@product_type_id)%> &nbsp; Photo-gallery &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product, :product_type_id=>@product_type_id) %></h4>
   <%else%>
       <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
   <%end%>

@@ -118,6 +118,9 @@ class ProductsController < ApplicationController
     if(params[:designer_id])
       @designer=Designer.find(params[:designer_id])
     end
+    if(params[:product_type_id])
+      @product_type_id=params[:product_type_id]
+    end
     @services=@product.services
     @events=@product.events
     @tech_image=@product.tech_image_url
@@ -134,6 +137,9 @@ class ProductsController < ApplicationController
     @title=params[:title]
     if(params[:designer_id])
       @designer=Designer.find(params[:designer_id])
+    end
+    if(params[:product_type_id])
+      @product_type_id=params[:product_type_id]
     end
     @images=@product.product_images
     @designers=@product.designers
