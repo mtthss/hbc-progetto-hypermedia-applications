@@ -31,6 +31,9 @@ class ProductsController < ApplicationController
     elsif(@title=="New")
       @products=Product.order('on_market_on DESC').limit(9)
     end
+    if(params[:product_type_id])
+      @product_type_id=params[:product_type_id]
+    end
 
     if(@products!=nil)
       if((@products.index(@product))+1<@products.size)
