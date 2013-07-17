@@ -6,7 +6,7 @@
     <div class="gridList">
       <% @products.each do |product| %>
           <div class="gridBox">
-            <%= product.name %>
+            &nbsp; <%= product.name %>
             <%= link_to :action=>'show',:id=>product.id,:title=>@title do%>
                 <%= image_tag("/products/#{product.image_url}") %>
             <% end %>
@@ -19,7 +19,7 @@
     <div class="gridList">
       <% @products.each do |product| %>
           <div class="gridBox">
-            <%= product.name %>
+            &nbsp; <%= product.name %>
             <%= link_to :action=>'show',:id=>product.id,:product_type_id=>@product_type.id do%>
                 <%= image_tag("/products/#{product.image_url}") %>
             <% end %>

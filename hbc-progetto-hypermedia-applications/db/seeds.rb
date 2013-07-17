@@ -70,11 +70,11 @@ designers = Designer.create([{name: 'Enrico Coveri', bio: 'Enrico Coveri was bor
 
 #PRODUCT TYPES
 ProductType.delete_all
-product_types = ProductType.create([{name: 'Tables', image_url: 'tablesimage.jpg'},
+product_types = ProductType.create([{name: 'Living-Room', image_url: 'baltimora1.jpg'},
+                                    {name: 'Tables', image_url: 'tablesimage.jpg'},
                                     {name: 'Chairs', image_url: 'chairsimage.jpg'},
                                     {name: 'Beds', image_url: 'ferro2.jpg'},
                                     {name: 'Wardrobe', image_url: 'strisce.jpg'},
-                                    {name: 'Sofa', image_url: 'baltimora1.jpg'},
                                     {name: 'Kitchen', image_url: 'mattonella.jpg'},
                                     {name: 'Office', image_url: 'ufficio4.jpg'}
                                    ])
@@ -125,11 +125,11 @@ counties = County.create([
 #SHOPS
 Shop.delete_all
 shops = Shop.create([
-                        {address: "Largo Quinto Alpini,15, Milano", email:"best.shop@mail.it",
+                        {address: "Via Baldinucci,78, Milano", email:"best.shop@mail.it",
                          name:"HBC flagship store Milano", county: "Lombardia", country: "Italy",
                          tel:"02/567890", shop_type:"flagship store"}   ,
-                        {address: "via Baldinucci, 78, Milano", email:"hbc.shop@mail.it",
-                         name:"HBC design store", county: "Lombardia", country: "Italy",
+                        {address: "Largo V Alpini, 15, Milano", email:"hbc.shop@mail.it",
+                         name:"HBC Show-Room", county: "Lombardia", country: "Italy",
                          tel:"02/4567890", shop_type:"flagship store"} ,
                         {address: "via Davanzati, 78, Milano", email:"hbc.shop@mail.it",
                          name:"Only Design", county: "Lombardia", country: "Italy",
@@ -210,12 +210,14 @@ products[1].shops << Shop.all
 
 
 #RELATION PRODUCT_TYPE_PRODUCTS
-product_types[0].products << Product.where(:name => "Arc")
-product_types[0].products << Product.where(:name => "Biotab")
-product_types[0].products << Product.where(:name => "Less less")
-product_types[2].products << Product.where(:name => "Viola")
-product_types[2].products << Product.where(:name => "Wave")
-product_types[3].products << Product.where(:name => "Jolly")
+
+product_types[0].products << Product.where(:name => "Dream")
+product_types[1].products << Product.where(:name => "Arc")
+product_types[1].products << Product.where(:name => "Biotab")
+product_types[1].products << Product.where(:name => "Less less")
+product_types[3].products << Product.where(:name => "Viola")
+product_types[3].products << Product.where(:name => "Wave")
+product_types[4].products << Product.where(:name => "Jolly")
 product_types[3].products << Product.where(:name => "Moma")
 product_types[6].products << Product.where(:name => "Hope")
 product_types[6].products << Product.where(:name => "Low")
