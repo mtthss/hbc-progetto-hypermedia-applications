@@ -21,23 +21,23 @@ The Less table becomes even less, not only thanks to its minimal cleancut lines 
 on a sliding frame which allows the table top to slide leaving the legs at the table ends, thus maximizing the usability of the open table.', image_url: 'imagebiotab.jpg',
                             datasheet: 'height 120 cm<br> width 150 cm<br>available colors: wood, black'} ,
                             {name: 'Viola', must_have: true, :on_market_on => DateTime.new(2012, 8, 12),
-                            description: 'A bed in total wood which stands out for its clear lines and discreet presence. The curved headboard, designed to make rest more comfortable, gives substance to the design highlighting its shape at the same time. Viola is offered in the classic HBC essences: dark and grey oak, wengé or American walnut and the innovative open grain finish in the HBC range colours which underline the beauty of the materials.', image_url: 'imagebiotab.jpg',
+                            description: 'A bed in total wood which stands out for its clear lines and discreet presence. The curved headboard, designed to make rest more comfortable, gives substance to the design highlighting its shape at the same time. Viola is offered in the classic HBC essences: dark and grey oak, wengé or American walnut and the innovative open grain finish in the HBC range colours which underline the beauty of the materials.', image_url: 'letti/legno.jpg',
                             datasheet: 'height 80cm<br> width 210cm<br>length 220cm<br>available colors: wood, white'},
                             {name: 'Wave', must_have: false, :on_market_on => DateTime.new(2011, 7, 12),
-                             description: 'Taut lines are a sign of modern elegance: the low headboard version of the Wave range also incorporates the functionality of the moving cushion support. Precision of volumes, surfaces and functional accuracy of each detail: two support elements in chrome-plated steel set directly on the floor hide a practical cylinder that enables the bed to slide easily.', image_url: 'imagebiotab.jpg',
+                             description: 'Taut lines are a sign of modern elegance: the low headboard version of the Wave range also incorporates the functionality of the moving cushion support. Precision of volumes, surfaces and functional accuracy of each detail: two support elements in chrome-plated steel set directly on the floor hide a practical cylinder that enables the bed to slide easily.', image_url: 'letti/legno sottile.jpg',
                              datasheet: 'height 80cm<br> width 210cm<br>length 220cm<br>available colors: wood, white'}  ,
 {name: 'Jolly', must_have: true, :on_market_on => DateTime.new(2012, 9, 12),
     description: 'pacious and functional, this wardrobe, from the English taste, is equipped with every comfort.
-In addition to a large number of shelves, drawers and clothes hanging tubes, inside the wardrobe there are the tie rack, the pants holder and the adjustable mirror', image_url: 'imagebiotab.jpg',
+In addition to a large number of shelves, drawers and clothes hanging tubes, inside the wardrobe there are the tie rack, the pants holder and the adjustable mirror', image_url: 'armadi/legno.jpg',
     datasheet: 'height 200cm<br> width 240cm<br>depth 90cm<br>available colors: wood'}    ,
 {name: 'Moma', must_have: false, :on_market_on => DateTime.new(2011, 9, 11),
- description: 'This is magnificent example of a wardrobe with a splendid central strip. The focus here is on the harmonious central plaques with a background in zebrano wood and a rosette skilfully made of little sheets of various different quality woods, each one mounted by hand. The structure is solid wood with sliding doors, the interior of the wardrobe is made of wood with a natural (unstained) polished finish, to give a sense of luminosity. Internal illumination that lights up automatically when the doors are slid open is available on request.', image_url: 'imagebiotab.jpg',
+ description: 'This is magnificent example of a wardrobe with a splendid central strip. The focus here is on the harmonious central plaques with a background in zebrano wood and a rosette skilfully made of little sheets of various different quality woods, each one mounted by hand. The structure is solid wood with sliding doors, the interior of the wardrobe is made of wood with a natural (unstained) polished finish, to give a sense of luminosity. Internal illumination that lights up automatically when the doors are slid open is available on request.', image_url: 'armadi/strisce2.jpg',
  datasheet: 'height 200cm<br> width 240cm<br>depth 90cm<br>available colors: white, black'} ,
 {name: 'Hope', must_have: true, :on_market_on => DateTime.new(2007, 9, 4),
- description: 'Liveability, design, colour, flexibility, ergonomics and the well-pondered use of raw materials, products built following the principles of materials which are separable for recycling. Quality and fast, innovative services. These are the key words Manerba puts into practice to face radical change which evolving technology and society now require. With the mission to create transformable work areas and living areas and with an eye to the feelings of working women, always more attentive in re-creating welcoming, warm and well-kept environments. ', image_url: 'imagebiotab.jpg',
+ description: 'Liveability, design, colour, flexibility, ergonomics and the well-pondered use of raw materials, products built following the principles of materials which are separable for recycling. Quality and fast, innovative services. These are the key words Manerba puts into practice to face radical change which evolving technology and society now require. With the mission to create transformable work areas and living areas and with an eye to the feelings of working women, always more attentive in re-creating welcoming, warm and well-kept environments. ', image_url: 'ufficio/ufficio6.jpg',
  datasheet: 'available colors: grey oak wood veneer, ziricote wood veneer'},
 {name: 'Low', must_have: true, :on_market_on => DateTime.new(2013, 6, 14),
- description: 'Liveability, design, colour, flexibility, ergonomics and the well-pondered use of raw materials, products built following the principles of materials which are separable for recycling. Quality and fast, innovative services. These are the key words Manerba puts into practice to face radical change which evolving technology and society now require. With the mission to create transformable work areas and living areas and with an eye to the feelings of working women, always more attentive in re-creating welcoming, warm and well-kept environments. ', image_url: 'imagebiotab.jpg',
+ description: 'Liveability, design, colour, flexibility, ergonomics and the well-pondered use of raw materials, products built following the principles of materials which are separable for recycling. Quality and fast, innovative services. These are the key words Manerba puts into practice to face radical change which evolving technology and society now require. With the mission to create transformable work areas and living areas and with an eye to the feelings of working women, always more attentive in re-creating welcoming, warm and well-kept environments. ', image_url: 'ufficio/ufficio4.jpg',
  datasheet: 'available colors: grey oak wood veneer, ziricote wood veneer'}
                           ])
 
@@ -55,13 +55,13 @@ designers = Designer.create([{name: 'Enrico Coveri', bio: 'Enrico Coveri was bor
 
 #PRODUCT TYPES
 ProductType.delete_all
-product_types = ProductType.create([{name: 'tables', image_url: 'tablesimage.jpg'},
-                                     {name: 'chairs', image_url: 'chairsimage.jpg'},
-                                     {name: 'beds', image_url: 'chairsimage.jpg'},
-                                     {name: 'wardrobe', image_url: 'chairsimage.jpg'},
-                                     {name: 'sofa', image_url: 'chairsimage.jpg'},
-                                     {name: 'chicken', image_url: 'chairsimage.jpg'},
-                                     {name: 'office', image_url: 'chairsimage.jpg'}
+product_types = ProductType.create([{name: 'Tables', image_url: 'tablesimage.jpg'},
+                                     {name: 'Chairs', image_url: 'chairsimage.jpg'},
+                                     {name: 'Beds', image_url: 'ferro2.jpg'},
+                                     {name: 'Wardrobe', image_url: 'strisce.jpg'},
+                                     {name: 'Sofa', image_url: 'baltimora1.jpg'},
+                                     {name: 'Kitchen', image_url: 'mattonella.jpg'},
+                                     {name: 'Office', image_url: 'ufficio4.jpg'}
                                     ])
 
 #EVENTS
@@ -131,7 +131,8 @@ product_images = ProductImage.create([
                             {image_url: "imagearc2.jpg", product_id: 0},
                             {image_url: "imagearc3.jpg", product_id: 0},
                             {image_url: "imagearc4.jpg", product_id: 0},
-                            {image_url: "imagearc5.jpg", product_id: 0}
+                            {image_url: "imagearc5.jpg", product_id: 0},
+                            {image_url: ".jpg", product_id: 0}
                                      ])
 
 
@@ -176,6 +177,15 @@ products[1].shops << Shop.all
 #RELATION PRODUCT_TYPE_PRODUCTS
 product_types[0].products << Product.where(:name => "Arc")
 product_types[0].products << Product.where(:name => "Biotab")
+product_types[0].products << Product.where(:name => "Less less")
+product_types[2].products << Product.where(:name => "Viola")
+product_types[2].products << Product.where(:name => "Wave")
+product_types[3].products << Product.where(:name => "Jolly")
+product_types[3].products << Product.where(:name => "Moma")
+product_types[6].products << Product.where(:name => "Hope")
+product_types[6].products << Product.where(:name => "Low")
+
+
 
 #RELATION PARTNER_PRODUCTS
 partners[0].products << Product.where(:name => "Arc")
