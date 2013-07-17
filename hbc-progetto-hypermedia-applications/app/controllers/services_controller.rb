@@ -5,6 +5,9 @@ class ServicesController < ApplicationController
 
   def show
     @service=Service.find(params[:id])
+    if(params[:list])
+      @list="All"
+    end
   end
 
   def associated_products

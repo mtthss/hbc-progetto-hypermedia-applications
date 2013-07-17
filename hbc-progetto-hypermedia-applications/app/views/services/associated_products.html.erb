@@ -1,4 +1,4 @@
-<h1>Products that offer <%=@service.name%></h1>
+<h1><%=@service.name%>: products</h1>
 <br>
 <br>
 <div class="gridList">
@@ -10,4 +10,21 @@
         <% end %>
       </div>
   <% end  %>
+</div>
+
+
+
+
+<div id="backLink">
+
+  <div id="imageBack">
+    <%= link_to service_path(@service, :list=>true) do%>
+        <%= image_tag("/back.png") %>
+    <% end %>
+  </div>
+
+  <div id="textBack">
+    Back to "<%=@service.name%>"
+  </div>
+
 </div>

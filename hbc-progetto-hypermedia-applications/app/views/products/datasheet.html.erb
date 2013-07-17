@@ -55,3 +55,57 @@
 </div>
 
 
+
+
+<!-- BACK LINKS-->
+
+<div id="backLinkProduct">
+  <div id="imageBack">
+    <% if(@title=="All") %>
+
+        <%= link_to "/products" do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div id="textBack">
+          Back to <%=@title%> products
+        </div>
+    <% elsif(@title=="Must-have") %>
+
+        <%= link_to "/products?must=true" do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div id="textBack">
+          Back to <%=@title%> products
+        </div>
+    <% elsif(@title=="New") %>
+
+        <%= link_to "/products?new=true" do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div id="textBack">
+          Back to <%=@title%> products
+        </div>
+    <% elsif(@designer!= nil) %>
+
+        <%= link_to products_designer_path(@designer) do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div id="textBack">
+          Back to <%=@designer.name%>'s products
+        </div>
+    <% elsif(@product_type_id!=nil) %>
+
+        <%= link_to products_path(:product_type_id=>@product_type_id) do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div id="textBack">
+          Back to current product type
+        </div>
+    <% end %>
+
+    </div>

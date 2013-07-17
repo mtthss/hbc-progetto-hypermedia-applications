@@ -14,6 +14,11 @@ class DesignersController < ApplicationController
 
   def show
     @designer=Designer.find(params[:id])
+    if(params[:top])
+      @backLink="Top"
+    else
+      @backLink=""
+    end
   end
 
   def new
