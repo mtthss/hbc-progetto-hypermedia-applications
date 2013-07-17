@@ -249,12 +249,23 @@ products[0].services << Service.all
 #JOIN TABLE PRODUCTS_SUGGESTED_PRODUCTS
 products[0].suggested_products << Product.find_by_name('Biotab')
 products[0].suggested_products << Product.find_by_name('Less less')
+products[1].suggested_products << Product.find_by_name('Life')
+products[2].suggested_products << Product.find_by_name('Moma')
+products[3].suggested_products << Product.find_by_name('Naba')
+products[4].suggested_products << Product.find_by_name('Biotab')
+products[2].suggested_products << Product.find_by_name('Wave')
+products[7].suggested_products << Product.find_by_name('Low')
+products[5].suggested_products << Product.find_by_name('Biotab')
+products[6].suggested_products << Product.find_by_name('Arc')
+products[7].suggested_products << Product.find_by_name('Life')
+products[8].suggested_products << Product.find_by_name('Less less')
 products[9].suggested_products << Product.find_by_name('Life')
 products[9].suggested_products << Product.find_by_name('Arc')
-products[10].suggested_products << Product.find_by_name('Biotab')
+products[10].suggested_products << Product.find_by_name('Low')
 products[11].suggested_products << Product.find_by_name('Life')
-products[11].suggested_products << Product.find_by_name('Destiny')
+products[11].suggested_products << Product.find_by_name('Less less')
 products[12].suggested_products << Product.find_by_name('Arc')
+products[12].suggested_products << Product.find_by_name('Life')
 
 #JOIN TABLE PRODUCTS_SHOPS
 products[0].shops << Shop.all
