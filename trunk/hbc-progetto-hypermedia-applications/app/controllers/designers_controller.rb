@@ -48,5 +48,10 @@ class DesignersController < ApplicationController
   def products
     @designer=Designer.find(params[:id])
     @products=@designer.products.order('name ASC')
+    if(params[:top])
+      @backLink="Top"
+    else
+      @backLink=""
+    end
   end
 end
