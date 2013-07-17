@@ -130,6 +130,13 @@ class ProductsController < ApplicationController
   def shops_for_this_product
     @product=Product.find(params[:id])
     @shops=@product.shops
+    if(params[:title])
+      @title=params[:title]
+    elsif(params[:designer_id])
+      @designer_id=params[:title]
+    elsif(params[:product_type_id])
+      @product_type_id=params[:product_type_id]
+    end
   end
 
   def photogallery

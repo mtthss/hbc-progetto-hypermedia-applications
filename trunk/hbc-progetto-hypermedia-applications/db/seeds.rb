@@ -125,28 +125,12 @@ counties = County.create([
 #SHOPS
 Shop.delete_all
 shops = Shop.create([
-                        {address: "Largo Quinto Alpini,15, Milano", email:"best.shop@mail.it",
+                        {address: "Via Baldinucci,78, Milano", email:"best.shop@mail.it",
                          name:"HBC flagship store Milano", county: "Lombardia", country: "Italy",
                          tel:"02/567890", shop_type:"flagship store"}   ,
                         {address: "via Baldinucci, 78, Milano", email:"hbc.shop@mail.it",
                          name:"HBC design store", county: "Lombardia", country: "Italy",
-                         tel:"02/4567890", shop_type:"flagship store"} ,
-                        {address: "via Davanzati, 78, Milano", email:"hbc.shop@mail.it",
-                        name:"Only Design", county: "Lombardia", country: "Italy",
-                        tel:"02/4567890", shop_type:"flagship store"},
-                        {address: "5th Avenue, New York", email:"hbc.shop@mail.it",
-                         name:"Home Sweet Home", county: "New York", country: "Usa",
-                         tel:"02/4567890", shop_type:"flagship store"},
-                        {address: "4th Street, New York", email:"hbc.shop@mail.it",
-                        name:"Home Sweet Home", county: "New York", country: "Usa",
-                        tel:"02/4567890", shop_type:"flagship store"},
-                        {address: "Wall Street, New York", email:"hbc.shop@mail.it",
-                         name:"Home Sweet Home", county: "New York", country: "Usa",
-                         tel:"02/4567890", shop_type:"flagship store"},
-                        {address: "989, Chang Le Road, The Center, 19 Piano 200031 Shanghai - CINA", email:"hbc.shop@mail.it",
-                         name:"Home Sweet Home", county: "New York", country: "Usa",
                          tel:"02/4567890", shop_type:"flagship store"}
-
                     ])
 
 
