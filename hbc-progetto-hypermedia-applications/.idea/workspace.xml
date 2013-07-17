@@ -2,10 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="980d6e0e-efd5-4bf8-9b2f-767570a67779" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/divani/angolopiatto.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/arredo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/baldacchino.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/divani/baltimora1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/bullet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/images/calligaris.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/tooltips/calligaris.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/cuck.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/images/dada.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/tooltips/dada.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/divani" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/divani/divanotorino-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/ferro.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/ferro2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/ferro3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/isola.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/legno sottile.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/legno sottile2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi/legno.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/legno.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi/legno2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/legno2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/lettolibreria.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/lettolibreria2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/linea.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/mattonella.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/michel.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/moderna.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/oldfashion.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi/quadri.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi/quadri2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/images/scavolini.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/tooltips/scavolinilogo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/cucine/soffio.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi/strisce.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi/strisce2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/armadi/strisce3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/tooltips" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/toscano.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/letti/toscano2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/triangle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio/ufficio9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/ufficio" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/images/whatsnew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/data1/tooltips/whatsnew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/engine1/wowslider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/show.html.erb" afterPath="$PROJECT_DIR$/app/views/events/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/designers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/designers/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/designers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/designers/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shops/show.html.erb" afterPath="$PROJECT_DIR$/app/views/shops/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hbc-project.iws" />
@@ -28,7 +100,7 @@
     <file path="/20130610172709_create_products_suggested_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370896896733" ignored="false" />
     <file path="/20130610163527_create_designers_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895035740" ignored="false" />
     <file path="/temp.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895127138" ignored="false" />
-    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1374015124349" ignored="false" />
+    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1374020260319" ignored="false" />
     <file path="/20130610161725_create_customer_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471576781" ignored="false" />
     <file path="/20130610161703_create_event_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471548935" ignored="false" />
     <file path="/20130610150347_create_product_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471392244" ignored="false" />
@@ -50,12 +122,12 @@
     <file path="/20130617123007_create_product_types.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372770934559" ignored="false" />
     <file path="/20130610154458_create_shops.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372870258859" ignored="false" />
     <file path="/shopfinders_controller.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372874664131" ignored="false" />
-    <file path="/index.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1373918606698" ignored="false" />
+    <file path="/index.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1374017695401" ignored="false" />
     <file path="/20130610142731_create_designers.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372775957962" ignored="false" />
     <file path="/application.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1373996565737" ignored="false" />
-    <file path="/style.css.scss" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1373846276425" ignored="false" />
+    <file path="/style.css.scss" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1374017902080" ignored="false" />
     <file path="/menu.css.scss" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372864459054" ignored="false" />
-    <file path="/show.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1373927692307" ignored="false" />
+    <file path="/show.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1374018533819" ignored="false" />
     <file path="/shops_for_this_product.html.erb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1373559131677" ignored="false" />
     <file path="/20130617122450_create_regions.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1372870024946" ignored="false" />
     <file path="/seeds.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1373928189325" ignored="false" />
@@ -88,6 +160,82 @@
   <component name="FavoritesManager">
     <favorites_list name="hbc-project" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="33" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="9" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.03195489">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="7" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/designers/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="19" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/designers/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="4" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shopfinders/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shops/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="19" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="24" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -99,28 +247,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/product_images/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/shops_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/event_images_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/product_images_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130610152416_create_products.rb" />
         <option value="$PROJECT_DIR$/app/models/partner.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/views/products/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/product_types/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/lightbox.css" />
         <option value="$PROJECT_DIR$/app/views/products/photogallery.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/designers/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/designers/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/shops/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1599" />
-    <option name="height" value="766" />
+    <option name="x" value="6" />
+    <option name="width" value="1589" />
+    <option name="height" value="755" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -195,90 +344,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product_types" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hbc-progetto-hypermedia-applications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -302,6 +367,135 @@
       <recent name="$PROJECT_DIR$/public/designers" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/layouts/application.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/customers/index.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/admin/login.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/products/photogallery.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/products/datasheet.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/contacts/show.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/controllers/customers_controller.rb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/db/schema.rb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/db/development.sqlite3</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/db/seeds.rb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/config/routes.rb</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/customers/new.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/customers/show.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/customers/create.html.erb</PATH>
+            <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/models/customer_image.rb</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+          <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/views/products/show.html.erb</PATH>
+          <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/assets/stylesheets/style.css.scss</PATH>
+          <PATH vcs="svn" revision="67">$PROJECT_DIR$/app/controllers/products_controller.rb</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Rails.Production: hbc-project">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -721,28 +915,32 @@
       <created>1373929587103</created>
       <updated>1373929587103</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032">
+      <created>1374015342145</created>
+      <updated>1374015342145</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1599" height="766" extended-state="0" />
+    <frame x="6" y="0" width="1589" height="755" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3254717" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20571057" sideWeight="0.9191291" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21257292" sideWeight="0.9198113" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08087092" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08018868" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32173914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32605305" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -809,44 +1007,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="2" selection-start="944" selection-end="944" vertical-scroll-proportion="0.93004113" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/partner.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="90" selection-end="90" vertical-scroll-proportion="0.10493827" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="114" selection-start="616" selection-end="616" vertical-scroll-proportion="0.52469134" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="65" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.74130434" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="87" selection-start="9988" selection-end="9988" vertical-scroll-proportion="3.2346723" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="41" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.26621923" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130610152416_create_products.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="27" selection-start="337" selection-end="337" vertical-scroll-proportion="0.41975307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="29" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.79012346" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/product_types/index.html.erb">
@@ -857,11 +1020,6 @@
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lightbox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="18" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="278" selection-end="279" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/event_images_controller.rb">
@@ -887,6 +1045,62 @@
     <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="24" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="33" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="7" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/designers/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/designers/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shopfinders/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shops/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="19" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="9" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.03195489">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

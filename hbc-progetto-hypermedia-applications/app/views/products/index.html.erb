@@ -1,14 +1,48 @@
-<h1><%= @title %> </h1>
-<br>
-<div class="gridList">
-  <% @products.each do |product| %>
-       <div class="gridBox">
-       <%= product.name %>
-          <%= link_to :action=>'show',:id=>product.id,:title=>@title do%>
-              <%= image_tag("/products/#{product.image_url}") %>
-          <% end %>
-          </div>
-  <% end  %>
-</div>
 
+<h1><%= @title %> </h1>
+
+<br>
+<% if(@product_type==nil) %>
+    <div class="gridList">
+      <% @products.each do |product| %>
+          <div class="gridBox">
+            <%= product.name %>
+            <%= link_to :action=>'show',:id=>product.id,:title=>@title do%>
+                <%= image_tag("/products/#{product.image_url}") %>
+            <% end %>
+          </div>
+      <% end  %>
+    </div>
+
+<% else %>
+
+    <div class="gridList">
+      <% @products.each do |product| %>
+          <div class="gridBox">
+            <%= product.name %>
+            <%= link_to :action=>'show',:id=>product.id,:product_type_id=>@product_type.id do%>
+                <%= image_tag("/products/#{product.image_url}") %>
+            <% end %>
+          </div>
+      <% end  %>
+    </div>
+
+
+
+    <div id="backLink">
+
+
+      <div id="imageBack">
+        <%= link_to product_types_path(@designer, :product_type_id=>@product_type.id) do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+      </div>
+
+      <div id="textBack">
+        Back to product-types
+      </div>
+
+    </div>
+
+<% end %>
 
