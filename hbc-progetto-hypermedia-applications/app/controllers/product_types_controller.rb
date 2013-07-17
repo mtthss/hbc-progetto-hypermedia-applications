@@ -4,6 +4,7 @@ class ProductTypesController < ApplicationController
 
   def index
     @product_types=ProductType.all
+    render layout: 'product_layout'
   end
 
   def new

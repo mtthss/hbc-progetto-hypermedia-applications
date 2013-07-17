@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
       @products=Product.all
       @title="All"
     end
+    render layout: 'product_layout'
   end
 
   def show

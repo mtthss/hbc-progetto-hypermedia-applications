@@ -10,6 +10,7 @@ class DesignersController < ApplicationController
       @designers=Designer.all
       @title="All"
     end
+    render layout: 'designer_layout'
   end
 
   def show
