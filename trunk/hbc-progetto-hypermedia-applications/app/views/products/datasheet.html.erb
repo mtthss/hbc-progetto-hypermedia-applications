@@ -1,6 +1,12 @@
 <div class="structuralLinks" xmlns="http://www.w3.org/1999/html">
-  <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product) %>  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp;Datasheet</h4>
-</div>
+  <%if(@designer!= nil) %>
+    <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product,:designer_id=>@designer.id) %>  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product,:designer_id=>@designer.id) %> &nbsp;Datasheet</h4>
+  <%elsif(@title=="Must-have"||@title=="New")%>
+    <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product,:title=>@title) %>  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product,:title=>@title) %> &nbsp;Datasheet</h4>
+  <%else%>
+      <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product) %>  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp;Datasheet</h4>
+  <%end%>
+      </div>
 
 <br>
 
@@ -32,7 +38,20 @@
 </div>
 <br><br>
 
+<div class="box1">
+<hr style="clear:both;"/>
+  <h3> Technical info</h3>
 <%= @product.datasheet%>
 
+</div>
+
+<div class="box2">
+<hr style="clear:both;"/>
+  <h3> Services</h3>
+  <br>
+  <%@services.each do |service| %>
+      <%= link_to service.name, service_path(service)%>
+  <%end%>
+</div>
 
 

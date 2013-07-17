@@ -1,5 +1,11 @@
 <div class="structuralLinks" xmlns="http://www.w3.org/1999/html">
-  <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+  <%if(@designer!= nil) %>
+      <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product,:designer_id=>@designer.id) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product,:designer_id=>@designer.id) %></h4>
+  <%elsif(@title=="Must-have"||@title=="New")%>
+      <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product,:title=>@title) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product,:title=>@title) %></h4>
+  <%else%>
+      <h4 style="position:absolute; right:50px;"><%= link_to 'Description', product_path(@product) %>  &nbsp; Photo-gallery  &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
+  <%end%>
 </div>
 
 <br>
@@ -7,6 +13,21 @@
 <div>
   <hr style="clear:both;"/>
   <br>
+  <h1> Photogallery of <%= @product.name %>   </h1>
+
+  <br>
+  <h6> Designed by
+    <% @designers.each do |designer| %>
+        <%= link_to designer.name, designer_path(designer) %>
+    <% end  %> <br>
+    Exposed in
+    <% @events.each do |event| %>
+        <%= link_to event.name, event_path(event) %>
+    <% end  %> <br>
+    <%= link_to 'Find this product', shops_for_this_product_product_path(@product) %>
+    <br>
+    <br>
+  </h6>
 
     <div class="gridList">
       <% @images.each do |image| %>
