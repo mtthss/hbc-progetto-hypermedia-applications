@@ -262,6 +262,7 @@ products[12].events << Event.find_by_name('Salone del mobile')
 
 #JOIN TABLE SERVICE_PRODUCTS
 products[0].services << Service.all
+products[9].services << Service.all
 
 
 #JOIN TABLE PRODUCTS_SUGGESTED_PRODUCTS
