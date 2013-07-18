@@ -35,11 +35,11 @@ on a sliding frame which allows the table top to slide leaving the legs at the t
                               {name: 'Jolly', must_have: true, :on_market_on => DateTime.new(2012, 9, 12),
                                description: 'pacious and functional, this wardrobe, from the English taste, is equipped with every comfort.
 In addition to a large number of shelves, drawers and clothes hanging tubes, inside the wardrobe there are the tie rack, the pants holder and the adjustable mirror', image_url: 'armadi/legno.jpg',
-                               datasheet: 'height 200cm<br> width 240cm<br>depth 90cm<br>available colors: wood',tech_image_url: 'disegnotecnicoarmadio.jpg'},
+                               datasheet: 'height 200cm width 240cm  depth 90cm  available colors: wood',tech_image_url: 'disegnotecnicoarmadio.jpg'},
 
                               {name: 'Moma', must_have: false, :on_market_on => DateTime.new(2011, 9, 11),
                                description: 'This is magnificent example of a wardrobe with a splendid central strip. The focus here is on the harmonious central plaques with a background in zebrano wood and a rosette skilfully made of little sheets of various different quality woods, each one mounted by hand. The structure is solid wood with sliding doors, the interior of the wardrobe is made of wood with a natural (unstained) polished finish, to give a sense of luminosity. Internal illumination that lights up automatically when the doors are slid open is available on request.', image_url: 'armadi/strisce3.jpg',
-                               datasheet: 'height 200cm<br> width 240cm<br>depth 90cm<br>available colors: white, black',tech_image_url: 'disegnotecnicoarmadio.jpg'},
+                               datasheet: 'height 200cm  width 240cm  depth 90cm  available colors: white, black',tech_image_url: 'disegnotecnicoarmadio.jpg'},
 
                               {name: 'Hope', must_have: true, :on_market_on => DateTime.new(2007, 9, 4),
                                description: 'Liveability, design, colour, flexibility, ergonomics and the well-pondered use of raw materials, products built following the principles of materials which are separable for recycling. Quality and fast, innovative services. These are the key words Manerba puts into practice to face radical change which evolving technology and society now require. With the mission to create transformable work areas and living areas and with an eye to the feelings of working women, always more attentive in re-creating welcoming, warm and well-kept environments. ', image_url: 'ufficio/ufficio6.jpg',
@@ -262,6 +262,14 @@ products[12].events << Event.find_by_name('Salone del mobile')
 
 #JOIN TABLE SERVICE_PRODUCTS
 products[0].services << Service.all
+products[1].services << Service.all
+products[2].services << Service.all
+products[3].services << Service.all
+products[4].services << Service.all
+products[5].services << Service.all
+products[6].services << Service.all
+products[7].services << Service.all
+products[8].services << Service.all
 products[9].services << Service.all
 
 

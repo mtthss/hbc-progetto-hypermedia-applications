@@ -4,7 +4,7 @@
     <list default="true" readonly="true" id="980d6e0e-efd5-4bf8-9b2f-767570a67779" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin.css.scss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hbc-project.iws" />
@@ -27,7 +27,7 @@
     <file path="/20130610172709_create_products_suggested_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370896896733" ignored="false" />
     <file path="/20130610163527_create_designers_products_join.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895035740" ignored="false" />
     <file path="/temp.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1370895127138" ignored="false" />
-    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1374109201649" ignored="false" />
+    <file path="/Dummy.txt" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1374110171268" ignored="false" />
     <file path="/20130610161725_create_customer_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471576781" ignored="false" />
     <file path="/20130610161703_create_event_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471548935" ignored="false" />
     <file path="/20130610150347_create_product_images.rb" changelist="980d6e0e-efd5-4bf8-9b2f-767570a67779" time="1371471392244" ignored="false" />
@@ -91,10 +91,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/customers/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="102" selection-start="135" selection-end="135" vertical-scroll-proportion="0.21356784">
+            <state line="21" column="30" selection-start="514" selection-end="514" vertical-scroll-proportion="-13.730769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seeds.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="128" selection-start="6114" selection-end="6114" vertical-scroll-proportion="0.6040609">
               <folding />
             </state>
           </provider>
@@ -163,14 +172,14 @@
         <option value="$PROJECT_DIR$/db/migrate/20130610154844_create_services.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
         <option value="$PROJECT_DIR$/app/views/services/index.html.erb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/customers/index.html.erb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="634" />
+    <option name="width" value="768" />
+    <option name="height" value="1232" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -381,10 +390,11 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="90">$PROJECT_DIR$/app/controllers/events_controller.rb</PATH>
-            <PATH vcs="svn" revision="90">$PROJECT_DIR$/app/views/designers/show.html.erb</PATH>
-            <PATH vcs="svn" revision="90">$PROJECT_DIR$/app/views/events/index.html.erb</PATH>
-            <PATH vcs="svn" revision="90">$PROJECT_DIR$/app/views/events/show.html.erb</PATH>
+            <PATH vcs="svn" revision="100">$PROJECT_DIR$/app/controllers/designers_controller.rb</PATH>
+            <PATH vcs="svn" revision="100">$PROJECT_DIR$/app/controllers/products_controller.rb</PATH>
+            <PATH vcs="svn" revision="100">$PROJECT_DIR$/app/views/designers/show.html.erb</PATH>
+            <PATH vcs="svn" revision="100">$PROJECT_DIR$/app/views/products/show.html.erb</PATH>
+            <PATH vcs="svn" revision="100">$PROJECT_DIR$/db/seeds.rb</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -449,6 +459,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="MERGED" />
+          <PATH vcs="svn" revision="100">$PROJECT_DIR$/db/development.sqlite3</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Not in repository" />
@@ -935,11 +946,15 @@
       <created>1374109265103</created>
       <updated>1374109265103</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041">
+      <created>1374110194102</created>
+      <updated>1374110194102</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="634" extended-state="6" />
+    <frame x="0" y="0" width="768" height="1232" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32539684" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -947,12 +962,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26363635" sideWeight="0.92621356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30193907" sideWeight="0.96585804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07378641" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.034141958" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1082,13 +1097,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="17791" selection-end="17791" vertical-scroll-proportion="2.2506082">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/services/personalization.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1124,7 +1132,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/customers/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="102" selection-start="135" selection-end="135" vertical-scroll-proportion="0.21356784">
+        <state line="21" column="30" selection-start="514" selection-end="514" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="128" selection-start="6114" selection-end="6114" vertical-scroll-proportion="0.6040609">
           <folding />
         </state>
       </provider>
