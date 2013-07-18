@@ -143,8 +143,18 @@
         <% end %>
         </div>
         <div id="textBack">
-          Back to current product type
+          Back to "<%= @product_type.name %>"
         </div>
+    <% elsif(@event!=nil) %>
+        
+        <%= link_to exposed_products_event_path(@event) do%>
+            <%= image_tag("/back.png") %>
+        <% end %>
+        </div>
+        <div id="textBack">
+          Back to products of the event
+        </div>
+        
     <% end %>
 
     </div>
