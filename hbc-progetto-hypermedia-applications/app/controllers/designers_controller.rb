@@ -39,7 +39,7 @@ class DesignersController < ApplicationController
     File.open(Rails.root.join('public','designers', image_io.original_filename), 'wb') do |file|
       file.write(image_io.read)
     end
-    params[:product][:image_url] = image_io.original_filename
+    params[:designer][:image_url] = image_io.original_filename
 
     designer=Designer.new(params[:designer])
 

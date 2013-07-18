@@ -13,14 +13,13 @@ class ProductTypesController < ApplicationController
   end
 
   def create
-    product_type=ProductType.new(params[:product_type])
 
-    image_io = params[:product][:image_url]
+    image_io = params[:product_type][:image_url]
     File.open(Rails.root.join('public','product_types', image_io.original_filename), 'wb') do |file|
       file.write(image_io.read)
     end
-    params[:product][:image_url] = image_io.original_filename
-
+    params[:product_type][:image_url] = image_io.original_filename
+    product_type=ProductType.new(params[:product_type])
     if product_type.save
       flash[:notice]= "Product type created successfully!"
       redirect_to admins_path

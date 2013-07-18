@@ -13,6 +13,6 @@ class Product < ActiveRecord::Base
                           :join_table => "products_suggested_products"
 
 
-  attr_accessible :description, :must_have, :name, :on_market_on, :suggested_product_id, :datasheet, :partnership,
+  attr_accessible :description, :must_have, :name, :on_market_on, :suggested_product_id, :datasheet, :partner_id,
                   :product_type_id, :image_url, :tech_image_url
 end
