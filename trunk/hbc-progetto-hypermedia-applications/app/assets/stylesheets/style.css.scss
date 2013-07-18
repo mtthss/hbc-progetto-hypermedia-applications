@@ -342,6 +342,7 @@ div.flash_notice {
   color: #000000;
 }
 
+/* start of tag for bottom of the home page*/
 div.partner1{
   position: absolute;
   bottom:0px;
@@ -363,11 +364,13 @@ div.partner3{
    height:100px;
    width:270px;
  }
-
-div.textabove{
+div.textabovepartners {
   position:absolute;
   bottom:80px;
 }
+/* start of tag for bottom of the home page*/
+
+/*start of tag for services page*/
 div.serviceGridBox{
   width:350px;
   height:253px;
@@ -379,3 +382,4 @@ div.serviceGridBox{
   color: #d9dada;
   background: #fefefe;
 }
+/*end of tag for services page*/
