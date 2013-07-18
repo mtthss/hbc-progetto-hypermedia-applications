@@ -82,7 +82,7 @@ ul {img {
   height:600px;
   margin: 0 auto;
 }
-
+/*start of the tags for back link*/
 #backLink {
   position: absolute;
   top: 28px;
@@ -113,13 +113,9 @@ ul {img {
   width: 20px;
   height: 20px;
 }
+/*end of the tags for back link*/
 
-#button1 {
-	position: absolute;
-	top: 100px;
-	right: 35px;
-	}
-
+/*tag for the content of the panel that lies between the two sidebars of landmarks*/
 #content {
 	position: absolute;
 	top: 0px;
@@ -134,8 +130,6 @@ ul {img {
 	color: whitesmoke;
 
 box-shadow:-13px -13px 25px 0px rgba(100, 126, 126, 0.40);
-
-
 }
 
 #header {
@@ -185,7 +179,7 @@ box-shadow:-13px -13px 25px 0px rgba(100, 126, 126, 0.40);
 	padding: 10px 0 10px 0;
 	border-top: dashed 1px #bfbfbf;
 }
-
+/*tag for the panel having links that lie at the top of the page (i.e. home, company etc..)*/
 #nav {
 	position: absolute;
 	left: 300px;
@@ -331,18 +325,25 @@ div.box2{
   border:20px none;
   float:right;
 }
-div.box3{
+div.boxlogocustomer {
   width: 300px;
   border:20px none;
   float:right;
 }
 
+div.boxservice {
+  width: 300px;
+  border:20px none;
+  float:right;
+}
+
+/*tag for the flash hash*/
 div.flash_notice {
   background: #cbfff0;
   color: #000000;
 }
 
-/* start of tag for bottom of the home page*/
+/* start of tags for bottom of the home page*/
 div.partner1{
   position: absolute;
   bottom:0px;
@@ -368,9 +369,9 @@ div.textabovepartners {
   position:absolute;
   bottom:80px;
 }
-/* start of tag for bottom of the home page*/
+/* start of tags for bottom of the home page*/
 
-/*start of tag for services page*/
+/*start of tags for services page*/
 div.serviceGridBox{
   width:350px;
   height:253px;
@@ -382,4 +383,4 @@ div.serviceGridBox{
   color: #d9dada;
   background: #fefefe;
 }
-/*end of tag for services page*/
+/*end of tags for services page*/
