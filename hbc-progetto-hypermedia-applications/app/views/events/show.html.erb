@@ -56,9 +56,14 @@
     <%= image_tag("/back.png") %>
   <% end %>
   </div>
-
+  <% if(@from!=nil) %>
   <div id="textBack">
-    Back to event list
+    Back to all event list
   </div>
+  <% else %>
+  <div id="textBack">
+    Back to product
+  </div>
+  <% end %>
 
 </div>

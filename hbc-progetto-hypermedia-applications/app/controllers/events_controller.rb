@@ -9,6 +9,9 @@ class EventsController < ApplicationController
   def show
     @event=Event.find(params[:id])
     @images=@event.event_images
+    if(params[:from])
+      @from=params[:from]
+    end
   end
 
   def new
