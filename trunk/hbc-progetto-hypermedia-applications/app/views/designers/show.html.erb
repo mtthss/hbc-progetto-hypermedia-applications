@@ -35,6 +35,36 @@
         <div align="center">
           Top-designer's list
         </div>
+    <% elsif(@product) %>
+
+
+           <% if(@product_type!=nil) %>
+           <%= link_to product_path(@product, :product_type_id=>@product_type.id) do%>
+               <%= image_tag("/back.png") %>
+           <% end %>
+           </div>
+           <div align="center">
+              Back to "<%= @product.name %>"
+           </div>
+           <% elsif(@title!=nil) %>
+            <%= link_to product_path(@product, :title=>@title) do%>
+                <%= image_tag("/back.png") %>
+            <% end %>
+            </div>
+            <div align="center">
+              Back to "<%= @product.name %>"
+            </div>
+           <% else %>
+            <%= link_to product_path(@product) do%>
+                <%= image_tag("/back.png") %>
+            <% end %>
+            </div>
+            <div align="center">
+              Back to "<%= @product.name %>"
+            </div>
+           <% end %>
+
+
     <% else %>
         <%= link_to designers_path do%>
             <%= image_tag("/back.png") %>

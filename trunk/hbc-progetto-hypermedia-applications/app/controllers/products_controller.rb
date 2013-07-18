@@ -138,7 +138,7 @@ class ProductsController < ApplicationController
     if(params[:title])
       @title=params[:title]
     elsif(params[:designer_id])
-      @designer_id=params[:title]
+      @designer_id=params[:designer_id]
     elsif(params[:product_type_id])
       @product_type_id=params[:product_type_id]
     end
