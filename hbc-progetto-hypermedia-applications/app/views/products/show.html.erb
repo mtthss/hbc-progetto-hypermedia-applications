@@ -1,3 +1,6 @@
+
+<!-- STRUCTURAL LINKS CONNECTING THE 3 PAGES BELONGING TO THE TOPIC PRODUCT: description, photogallery, datasheets -->
+
 <div class="structuralLinks" xmlns="http://www.w3.org/1999/html">
   <%if(@designer!= nil) %>
     <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product,:designer_id=>@designer.id) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product,:designer_id=>@designer.id) %></h4>
@@ -8,16 +11,19 @@
   <%else%>
     <h4 style="position:absolute; right:50px;">Description  &nbsp; <%= link_to 'Photo-gallery', photogallery_product_path(@product) %> &nbsp; <%= link_to 'Datasheet', datasheet_product_path(@product) %></h4>
   <%end%>
-</div>
+</div><br>
 
-<br>
+<!-- END OF THE STRUCTURAL LINKS -->
 
+
+<!-- PRODUCT HEADER, WITH LINKS TO PREVIOUS AND NEXT PRODUCT IN THE GROUP (ONLY IF ARRIVING FROM NEW, MUST-HAVE OR PRODUCT'S OF A GIVEN DESIGNER) -->
 <div>
     <hr style="clear:both;"/>
     <br>
     <div class="ProductHeader">
         <h1>  <%= @product.name %>
           <span>
+
             <%if(@designer!= nil) %>
                 (
                 <%= link_to "prev", product_path(@prev,:designer_id=>@designer.id) %>
