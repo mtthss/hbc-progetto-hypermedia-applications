@@ -103,7 +103,25 @@ events = Event.create([{name: 'Salone del mobile 2013', location: 'The new Milan
 #SERVICES
 Service.delete_all
 services = Service.create([{name: 'Personalization',
-                            description: 'Scegli quello che vuoi'}
+                            description: 'Designing your own furniture to make it distinctively yours is now more common in interior decorating.
+Providing homeowners with more choice and the ability to be sure their room design and furnishings will not be like their friend’s or neighbor’s is becoming a more common theme in design.
+There is much more ability for consumers to select not only the furniture fabric, but also arm styles, legs, back styles, tailoring, dimensions and other features and benefits. Among our suppliers, for example, Younger has its “Younger Solutions,” Kincaid has its “Custom Select,” Taylor King has its “Design Your Own,” Drexel Heritage has its “Customize,” to name a few.
+TV personality, interior decorator and furniture designer Libby Langdon developed her line of Braxton Culler furniture from thousands of one-on-one conversations with consumers in their personal living spaces. She’s designed a line with a wide array of gorgeous fabrics and variety that can fit how different people live and what they really want, whether it’s for indoor or outdoor spaces.
+Working with a professional decorator can help you achieve more personalization in your favorite rooms.',
+                           image_url: 'personalization.jpg'},
+                           {name: 'Interior design',
+                            description: 'HBC Design provides design services and interior design consultants to the hospitality industry, the residential sector, and to the commercial, educational, and civic entities in your community. We are dedicated to creating the environments where you live, work, learn, and play.
+Our mission is to satisfy the dual goals of unsurpassed client service and interior design excellence. We believe this approach benefits both our clients and the greater community. Our successful projects satisfy the client’s vision while enhancing communities through better design.
+Our team of professional interior designers, interior design consultants, registered architects, project managers, design assistants, and administrative staff are well regarded for their expertise in commercial, civic and residential design with a special emphasis on hotel interior design, restaurant interiors, bar design, and educational facilities.',
+                            image_url: 'interiordesign.jpg'},
+                           {name: 'Assistance',
+                            description: 'blabalblalba',
+                            image_url: 'assistance.jpg'},
+                           {name: 'Repair',
+                            description: 'blabalblalba',
+                            image_url: 'repair.jpg'},
+                            {name: 'Transport', description: 'blabalblalba',
+                             image_url: 'transport.jpg'}
                           ])
 
 #COUNTRIES

@@ -1,12 +1,24 @@
 
 <h1>All services</h1>
+<br>
+<p>
+  HBC Design, has satisfied its customers for over 30 years, from the the first time they enter in the showroom, to the transportation and installation. We work with internal and external collaborators to support the customer in case of necessary renovations,  measurements, choice of color, rendering. Transportation and Installation in Italy and abroad are studied in detail. HBc Design also organizes customized wedding lists, with the collaboration of Wedding Planners when required.
+  For further information on the wide range of services that HBC Design has created for you see the list below and, in case of doubts do not hesitate to contact us.</p>
 
 <br>
 <br>
+<% @services.each do |service| %>
+<div class="serviceGridBox">
+  <%= image_tag("/services/"+service.image_url) %>
+</div>
+<div class="box3">
+  <br><br><br>
+  <h2><%= link_to service.name, service_path(service, :list=>true)%></h2>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
 
-<div>
-  <% @services.each do |service| %>
-        <%= link_to service.name, service_path(service, :list=>true)%>
+
+
   <% end %>
   <br>
   <br>
