@@ -17,6 +17,13 @@ class DesignersController < ApplicationController
     @designer=Designer.find(params[:id])
     if(params[:top])
       @backLink="Top"
+    elsif(params[:product_id])
+       @product=Product.find(params[:product_id])
+       if(params[:product_type_id])
+         @product_type=ProductType.find(params[:product_type_id])
+       elsif(params[:title])
+         @title=params[:title]
+       end
     else
       @backLink=""
     end
