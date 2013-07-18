@@ -5,7 +5,7 @@
   <% @events.each do |event| %>
       <div class="gridBox">
         &nbsp; <%= event.name %>
-        <%= link_to event_path(event) do%>
+        <%= link_to event_path(event, :from=>"eventindex") do%>
             <%= image_tag("/events/#{event.image_url}") %>
         <% end %>
       </div>
