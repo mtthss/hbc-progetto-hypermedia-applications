@@ -34,8 +34,12 @@ class ProductsController < ApplicationController
     end
     if(params[:product_type_id])
       @product_type_id=params[:product_type_id]
+      @product_type=ProductType.find(params[:product_type_id])
     end
-
+    if(params[:presented])
+      @event=Event.find(params[:presented])	
+    end
+    
     if(@products!=nil)
       if((@products.index(@product))+1<@products.size)
         @next=@products.fetch((@products.index(@product))+1)

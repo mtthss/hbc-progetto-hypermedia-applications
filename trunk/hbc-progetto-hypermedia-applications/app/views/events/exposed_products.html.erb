@@ -4,9 +4,25 @@
     <% @products.each do |product| %>
         <div class="gridBox">
           <%= product.name %>
-          <%= link_to product_path(product) do%>
+          <%= link_to product_path(product, :presented=>@event.id) do%>
               <%= image_tag("/products/#{product.image_url}") %>
           <% end %>
         </div>
     <% end  %>
+</div>
+
+
+
+<div id="backLink">
+
+  <div id="imageBack">
+  <%= link_to event_path(@event) do%>
+    <%= image_tag("/back.png") %>
+  <% end %>
+  </div>
+  <div id="textBack">
+    Back to <%= @event.name %>
+  </div>
+
+
 </div>
