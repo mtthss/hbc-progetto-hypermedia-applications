@@ -125,6 +125,7 @@ class ProductsController < ApplicationController
     end
     if(params[:product_type_id])
       @product_type_id=params[:product_type_id]
+      @product_type=ProductType.find(params[:product_type_id])
     end
     @services=@product.services
     @events=@product.events
@@ -152,6 +153,7 @@ class ProductsController < ApplicationController
     end
     if(params[:product_type_id])
       @product_type_id=params[:product_type_id]
+      @product_type=ProductType.find(params[:product_type_id])
     end
     @images=@product.product_images
     @designers=@product.designers
